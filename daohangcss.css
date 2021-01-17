@@ -32,6 +32,15 @@ display:none;
 } }
 
 @media screen and (min-device-width:800px){
+.m-haokan{
+display:none;
+} }
+@media screen and (max-device-width:800px){
+.pc-haokan{
+display:none;
+} }
+
+@media screen and (min-device-width:800px){
 .m-youdao{
 display:none;
 } }
