@@ -9,6 +9,7 @@ var now;var SY;var SM;var SD
 function cyclical(num){
 return(Gan[num%10]+Zhi[num%12])
 }
+
 function lYearDays(y){
 var i,sum=348;
 for(i=0x8000;i>0x8;i>>=1)sum+=(lunarInfo[y-1900] & i)? 1:0
