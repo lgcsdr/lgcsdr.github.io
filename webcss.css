@@ -97,11 +97,12 @@ color:rgb(255,255,255)!important;
 
 
 
-
-details > summary::-webkit-details-marker {
+::-webkit-details-marker {
 display:none!important;
-}
 
+list-style:none !important;
+
+}
 
 
 
