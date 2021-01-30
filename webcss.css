@@ -90,35 +90,24 @@ font-family:'KaiTi' !important;
 font-size:1.5rem !important;
 color:rgb(255,255,255)!important;
 }
-html details:not(:empty){
-font-size:1rem !important;
-color:rgb(90,90,90)!important;
-}
-html summary:not(:empty){
-/* list-style:none !important; */
-
-/* width:0;height:0; */
-outline:none !important;
-font-size:1.5rem !important;
-color:rgb(255,255,255)!important;
-}
 
 
-/* @media screen and (min-device-width:800px){
-summary{
-list-style:none !important;
-} }
-@media screen and (max-device-width:800px){
-summary{
-list-style:none !important;
-} } */
 
 
-details summary::-webkit-details-marker { 
+::-webkit-details-marker {
 display:none!important;
 
-}
+list-style:none !important;
 
+}
+/* details > summary {display:none;} */
+
+details > summary {
+list-style:none !important;
+}
+details > summary::-webkit-details-marker {
+display:none!important;
+}
 
 
 
