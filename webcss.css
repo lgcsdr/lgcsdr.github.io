@@ -8,7 +8,6 @@ text-shadow:5px 5px 5px rgba(0,0,0,.5)!important;
 background-color:rgb(50,50,50)!important;
 }
 
-
 @media screen and (min-device-width:800px){
 .div1{
 background-color:rgb(60,60,60)!important;
@@ -90,22 +89,19 @@ font-family:'KaiTi' !important;
 font-size:1.5rem !important;
 color:rgb(255,255,255)!important;
 }
-
-
-
-
-
-
-
-::-webkit-details-marker {
-
-
-list-style:none !important;
-
+#ziyue details{
+font-size:1rem !important;
+color:rgb(90,90,90)!important;
 }
-
-
-
+#ziyue summary{
+font-size:1.5rem !important;
+color:rgb(255,255,255)!important;
+list-style:none !important;
+outline:none !important;
+}
+::-webkit-details-marker{
+display:none !important;
+}
 
 .inputclick{
 margin:2px auto !important;
@@ -142,14 +138,24 @@ background-color:rgb(255,0,0);
 cursor:pointer;
 }
 
-ul{
+
+#viewContent{
+margin:0 auto !important;
+padding:0 !important;
+width:20rem !important;
+/* position:fixed !important; */
+/* z-index:9 !important; */
+}
+
+
+/* #viewContent{
 margin:0 auto !important;
 padding:0 !important;
 width:20rem !important;
 position:fixed !important;
 z-index:9 !important;
-}
-html li:not(:empty){
+} */
+#viewContent li{
 font-family:'KaiTi' !important;
 font-size:1rem !important;
 list-style:none !important;
@@ -157,7 +163,7 @@ line-height:35px !important;
 color:rgb(255,255,255)!important;
 background-color:rgb(31,32,33)!important;
 }
-html li:hover,html li:hover *{
+#viewContent li:hover{
 background-color:rgb(255,0,0)!important;
 cursor:pointer;
 }
@@ -168,9 +174,6 @@ font-weight:bold !important;
 } }
 .btn,.zhilian{
 font-family:'KaiTi' !important;
-/* font-family:'SimHei' !important; */
-/* font-family:'Microsoft JhengHei' !important; */
-/* font-family:'Sitka Small' !important; */
 font-size:1rem !important;
 text-shadow:5px 5px 5px rgba(0,0,0,.5)!important;
 color:rgb(210,210,210)!important;
