@@ -6,6 +6,7 @@ for(var i in btns)
 window.open(this.getAttribute('data-url')+document.getElementById('searchInput').value);
 } } }
 // 联想开始
+
 var mySearch=(function(){
 var $searchInput=$("#searchInput"),
 $viewContent=$("#viewContent"),
