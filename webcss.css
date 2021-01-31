@@ -139,13 +139,53 @@ cursor:pointer;
 }
 
 
-#viewContent{
+
+
+
+@media screen and (min-device-width:800px){
+.pc-lianx{
+
 margin:0 auto !important;
 padding:0 !important;
 width:20rem !important;
-/* position:fixed !important; */
-/* z-index:9 !important; */
+position:fixed !important;
+z-index:9 !important;
+
+display:none;
+} }
+
+
+@media screen and (max-device-width:800px){
+.m-lianx{
+
+margin:0 auto !important;
+padding:0 !important;
+width:20rem !important;
+
+display:none;
+} }
+
+
+
+
+
+
+
+
+/* #viewContent .m-lianx{
+margin:0 auto !important;
+padding:0 !important;
+width:20rem !important;
+
 }
+
+#viewContent .pc-lianx{
+margin:0 auto !important;
+padding:0 !important;
+width:20rem !important;
+position:fixed !important;
+z-index:9 !important;
+} */
 
 
 /* #viewContent{
