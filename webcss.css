@@ -1,0 +1,305 @@
+html *{
+border:none;
+outline:none;
+}
+body{
+margin:50px auto !important;
+width:21rem !important;
+}
+::-webkit-scrollbar{width:0;height:0;}
+
+@media (prefers-color-scheme:light) {
+body{
+background-color:rgb(251,252,255);
+}
+
+@media (min-device-width:900px){
+.p-minbj{
+border-radius:6px;
+background-color:rgb(222,225,230);
+}
+}
+
+#nonglijieri *,
+#ziyue,
+#ziyue details,
+#ziyue summary,
+.btn,
+.zhilian{
+color:rgb(1,2,3);
+}
+
+.zgzs,
+.cctv,
+.youtube,
+.google,
+.yandex,
+.shiwen,
+.tophub,
+.gengduo{
+border-radius:6px;
+}
+
+#searchinput{
+border-radius:60px;
+}
+
+#zezaoceng{
+background-color:rgb(255,255,255);
+}
+
+#viewcontent li{
+border:1px solid rgb(222,225,230);
+border-radius:60px;
+}
+}
+
+@media (prefers-color-scheme:dark) {
+body{
+background-color:rgb(51,52,53);
+text-shadow:5px 5px 5px rgba(1,2,3,.5);
+}
+
+@media (min-device-width:900px){
+.p-minbj{
+background-color:rgb(61,62,63);
+}
+}
+
+#nonglijieri *,
+#ziyue,
+#ziyue summary{
+color:rgb(255,255,255);
+}
+#ziyue details{
+color:rgb(195,196,199);
+}
+
+.btn,
+.zhilian{
+color:rgb(210,210,210);
+text-shadow:5px 5px 5px rgba(1,2,3,.5);
+}
+
+#searchinput{
+transition:box-shadow 2s;
+}
+#searchinput:hover,
+#searchinput:focus{
+box-shadow:0 0 90px rgb(255,255,255);
+transition:box-shadow 1s;
+}
+
+#zezaoceng{
+background-color:rgb(51,52,53);
+}
+}
+
+@media (min-device-width:900px){
+html *{
+font-family:KaiTi;
+}
+}
+
+@media (max-device-width:900px){
+.p-lrts,
+.p-qingting,
+.p-youku,
+.p-haokan,
+.p-youdao,
+.p-jd,
+.p-zol{
+display:none;
+}
+}
+@media (min-device-width:900px){
+.m-lrts,
+.m-qingting,
+.m-youku,
+.m-haokan,
+.m-youdao,
+.m-jd,
+.m-zol{
+display:none;
+}
+}
+
+#nonglijieri *{
+text-align:center;
+cursor:help;
+}
+#shijian{
+font-size:2.6rem;
+letter-spacing:5px;
+font-weight:bold;
+white-space:nowrap;
+}
+#gongli{
+font-size:1rem;
+}
+#yinli{
+font-size:0.7rem;
+}
+#shengri{
+font-size:0.6rem;
+color:rgb(255,0,0)!important;
+}
+
+#ziyue{
+font-size:1.5rem;
+}
+#ziyue details{
+font-size:1rem;
+}
+#ziyue summary{
+list-style:none;
+list-style-type:none;
+font-size:1.5rem;
+}
+
+/* 非Chrome手机浏览器 */
+summary::-webkit-details-marker{
+display:none;
+}
+
+@media (min-device-width:900px){
+.btn,.zhilian{
+font-weight:bold;
+} }
+.btn,.zhilian{
+font-size:1rem;
+background-color:transparent;
+cursor:pointer;
+}
+.btn:hover,.zhilian:hover,.btn:focus,.zhilian:focus{
+color:rgb(255,255,255)!important;
+background-color:rgb(1,2,3);
+}
+
+.zgzs,
+.cctv,
+.youtube,
+.google,
+.yandex,
+.shiwen,
+.tophub{
+width:79px;
+height:29px;
+font-size:0.75rem;
+color:rgb(255,255,255)!important;
+}
+.zgzs{
+background-color:rgb(51,153,51);
+}
+.cctv{
+background-color:rgb(204,102,0);
+}
+.youtube{
+background-color:rgb(255,0,0);
+}
+.google{
+background-color:rgb(66,132,247);
+}
+.yandex{
+background-color:rgb(255,204,0);
+}
+.mingyi{
+border:1px solid rgb(205,205,205);
+border-radius:20px;
+}
+.shiwen{
+background-color:rgb(153,51,204);
+}
+.tophub{
+background-color:rgb(255,54,108);
+}
+.gengduo{
+border:1px solid rgb(191,158,65);
+color:rgb(255,255,255)!important;
+background-color:rgb(57,60,102);
+}
+
+.Bing{
+color:rgb(0,174,239)!important;
+}
+.Baidu{
+color:rgb(78,110,242)!important;
+}
+
+.sangxia{
+margin:6px auto !important;
+}
+#searchinput{
+width:21rem;
+height:69px;
+padding-left:10px;
+font-size:1.3rem;
+color:rgb(255,255,255);
+background-color:rgb(15,15,18);
+}
+#searchinput::-webkit-input-placeholder{
+color:rgb(151,152,153);
+}
+#searchinput::-webkit-search-cancel-button{
+appearance:none;
+width:15px;
+height:15px;
+border-radius:50px;
+background-color:rgb(255,0,0);
+cursor:pointer;
+}
+
+@media (max-device-width:900px){
+#zzcbutton{
+width:21rem;
+height:69px;
+}
+#searchinput:focus{
+position:fixed;
+top:2px;
+z-index:3;
+}
+#zezaoceng{
+width:100%;
+height:100%;
+position:fixed;
+top:0;
+left:0;
+display:none;
+}
+}
+
+@media (max-device-width:900px){
+#viewcontent{
+position:fixed;
+top:71px;
+z-index:2;
+} }
+@media (min-device-width:900px){
+#viewcontent{
+position:fixed;
+top:35px;
+} }
+#viewcontent{
+margin:0;
+padding:0;
+width:21rem;
+}
+#viewcontent li{
+list-style:none;
+line-height:40px;
+padding-left:10px;
+font-size:1rem;
+color:rgb(255,255,255);
+background-color:rgb(31,32,33);
+}
+#viewcontent li:hover{
+background-color:rgb(255,0,0);
+cursor:pointer;
+}
+
+/* #atianqi *{
+font-size:0.7rem !important;
+text-align:center !important;
+color:rgb(254,115,0)!important;
+} */
