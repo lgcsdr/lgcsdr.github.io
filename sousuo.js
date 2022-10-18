@@ -16,13 +16,35 @@ return false;
 }
 }
 
-// 给某个搜索链接加后缀,特殊处理
+// 给某个搜索链接加后缀,特殊处理--泥巴视频
 var houzui = document.getElementById('nivod');
 houzui.onclick=function(){
 window.open(this.getAttribute('nivodurl')+
 document.getElementById('searchinput').value+('&catId=1'));
 return false;
 }
+
+
+// tv卫视弹窗
+$('#tvweisi').click(function(e){
+// 阻止冒泡
+e.stopPropagation();
+if ($('#tvlianjie').is(':hidden')){
+$('#tvzzc').show();
+$('#tvlianjie').show(200);
+}else{
+$('#tvzzc').hide();
+$('#tvlianjie').hide();
+}
+return false;
+});
+// tv遮罩层,点击任何地方关闭tv弹窗
+$('#tvzzc').add('#tvlianjie').click(function(e) {
+e.stopPropagation();
+$('#tvzzc').hide();
+$("#tvlianjie").hide(300);
+return false;
+});
 
 
 // 联想
@@ -127,7 +149,7 @@ return false;
 }
 });
 
-// 失去焦点就收缩
+// 失去焦点收缩
 /* $("#searchinput").on('blur',function(){
 setTimeout(function(){
 $lianxiang.stop().slideUp(100); // 动画速度
@@ -273,7 +295,7 @@ window.history.back();
 // 回车键/搜索 事件
 $("#searchinput").keydown(function() {
 if (event.keyCode == 13) {
-// 定时,不定时无法响应form/action, 回车后让输入框失去焦点
+// 不定时无法响应form/action, 回车后让输入框失去焦点
 setTimeout(function(){
 // 安卓端软键盘回车后,关闭遮罩层,联想和搜索框,返回原处
 var windowwidth=document.body.offsetWidth;

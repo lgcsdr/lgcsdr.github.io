@@ -118,6 +118,26 @@ border-bottom:2px dashed rgb(255,0,0);
 border-bottom-left-radius:100%;
 }
 
+/* tv遮罩层 */
+.tvzzc{
+display:none;
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background-color:transparent;
+z-index:1;
+}
+/* tv卫视链接 */
+.tvlianjie{
+display:none;
+position:absolute;
+border-radius:9px;
+background-color:rgba(255,240,230,.8);
+z-index:2;
+}
+
 #lianxiang{
 display:none;
 position:fixed;
@@ -286,6 +306,11 @@ color:rgb(255,255,255);
 /* text-shadow:3px 3px 3px rgb(0,0,0,.5); */
 }
 .Confucius details{color:rgb(215,216,219);}
+
+/* tv卫视链接 */
+.tvlianjie{
+background-color:rgba(10,20,30,.8);
+}
 
 #lianxiang li:hover,
 #lianxiang li.active{
