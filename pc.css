@@ -1,0 +1,326 @@
+body,div,summary,button,ul,input{
+margin:0;
+padding:0;
+list-style:none;
+list-style-type:none;
+border:none;
+outline:none;
+-webkit-tap-highlight-color:transparent;
+}
+
+body{
+margin:3% auto;
+font-family:KaiTi;
+color:rgb(0,0,0);
+background-color:rgb(251,252,255);
+/* border:1px solid rgb(95,99,104); */
+}
+
+.pcminbj{
+margin:auto;
+padding:1rem 0;
+width:30rem;
+border-radius:20px;
+background-color:rgb(232,235,240);
+}
+
+.kuandu{
+margin:auto;
+width:90%;
+/* border:1px solid rgb(95,99,104); */
+}
+
+.syimg{
+position:absolute;
+margin:3.6rem 22rem;
+/* height:2.5rem; */
+width:2rem;
+background-repeat:no-repeat!important;
+cursor:pointer;
+/* border:1px solid rgb(100,200,100); */
+}
+
+.time{
+width:100%;
+text-align:center;
+user-select:none;
+cursor:help;
+/* border:1px solid rgb(95,99,104); */
+}
+#sizong{
+font-size:2.6rem;
+font-weight:700;
+/* letter-spacing:5px; */
+letter-spacing:.5rem;
+white-space:nowrap;
+}
+#gongli{
+font-size:1.3rem;
+}
+#yinli{
+font-size:1rem;
+}
+#sengri{
+font-size:1rem;
+color:rgb(255,0,0);
+/* border:1px solid rgb(95,99,104); */
+}
+
+.Confucius{
+margin:1.5rem 0 1.3rem;
+/* border:1px solid rgb(95,99,104); */
+}
+.Confucius details{
+font-size:1.3rem;
+color:rgb(60,70,90);
+}
+.Confucius,
+.Confucius summary{
+font-size:1.6rem;
+color:rgb(0,0,0);
+text-shadow:0 0 0 rgb(0,0,0);
+}
+
+.buttonfont{
+font-size:0;
+/* border:1px solid rgb(95,99,104); */
+/* user-select:none; 千万不能用*/
+}
+
+.sxju{
+margin:.6rem auto;
+}
+
+.m-ximalaya,.m-lrts,.m-qingting,.m-kugou,.m-kuwo,.m-ixigua,.m-baiduvideo,.m-bilibili,.m-toutiao,.m-jd,.m-zol,.m-youdao,.m-wiz{display:none;}
+
+button{
+margin:.2rem;
+padding:0 .3rem;
+height:1.7rem;
+vertical-align:middle;
+text-align:center;
+font-size:1rem;
+text-shadow:0 0 0 rgb(0,0,0);
+background-color:transparent;
+cursor:pointer;
+/* border:1px solid rgb(95,99,104); */
+}
+.zgzs,
+.youtube,
+.google,
+.googlefy{
+height:2rem;
+width:4.3rem;
+border-radius:20px;
+font-size:.8rem;
+color:rgb(255,255,255);
+text-shadow:0 0 0 rgb(255,255,255);
+}
+.zgzs{background-color:rgb(15,157,88);}
+.youtube{background-color:rgb(255,0,0);}
+.google{background-color:rgb(66,133,244);}
+.googlefy{background-color:rgb(204,102,0);}
+
+.gengduo,
+button:hover,
+button:focus{
+border-bottom:2px dashed rgb(255,0,0);
+border-bottom-left-radius:100%;
+}
+
+#lianxiang{
+display:none;
+position:absolute;
+margin-top:-21rem;
+width:27rem;
+}
+#lianxiang li{
+padding:0 1rem;
+line-height:2.5rem;
+font-size:1.3rem;
+border:1px solid rgb(95,99,104,.1);
+border-radius:20px;
+white-space:nowrap;
+overflow:auto;
+background-color:rgb(255,255,255);
+}
+#lianxiang li:hover,
+#lianxiang li.active{
+/* color:rgb(255,255,255); */
+background-color:rgb(74,186,126);
+cursor:pointer;
+}
+
+
+/* 弹性布局,输入框,清除按钮,新闻 */
+.tanxinghezi{
+display:flex;
+flex:1;
+align-items:center;
+}
+
+/* 输入框 */
+.formkuan,
+.inputkuan{
+width:100%;
+}
+.inputkuan{
+display:flex;
+height:3rem;
+padding:0 2.6rem 0 1rem;
+font-size:1.3rem;
+border:1px solid rgb(95,99,104);
+border-radius:30px;
+/* background-color:transparent; */
+background-color:rgb(232,235,240);
+transition:box-shadow 1s;
+}
+
+/* .inputkuan:hover, */
+.inputkuan:focus{
+position:relative;
+box-shadow:0 0 90px rgb(7,193,96)!important;
+}
+
+.inputkuan::-webkit-search-cancel-button{
+appearance:none;
+display:none;
+}
+
+/* 输入框清除按钮 */
+.anniudingwei{
+display:flex;
+display:none;
+position:absolute;
+margin:0 0 0 24.7rem;
+}
+.svgtubiao{
+display:flex;
+width:1.7rem;
+height:1.7rem;
+fill:rgb(100,100,100);
+cursor:pointer;
+}
+
+/* 新闻显示-隐藏 点击搜索框 */
+.dianjiNews{
+display:flex;
+flex:1;
+position:absolute;
+left:0;
+right:0;
+margin:auto;
+width:14.6rem;
+/* background-color:rgb(6,6,6,.6); */
+}
+
+.dianjiNews .zhilian{
+font-size:.9rem;
+border-radius:20px;
+}
+.dianjiNews .xinwen{
+border:1px dashed rgb(23,188,162);
+/* background-color:rgb(174,18,16,.2); */
+}
+.dianjiNews .yingsi{
+border:1px dashed rgb(66,133,244);
+}
+.dianjiNews .yinyue{
+border:1px dashed rgb(255,136,0);
+}
+
+/* 新闻滑动 */
+.swiper{
+display:flex;
+overflow:hidden;
+white-space:nowrap;
+}
+.swiper-wrapper,
+.swiper-slide{
+display:flex;
+}
+
+.tianqilj{
+position:absolute;
+left:0;
+right:0;
+margin:auto;
+height:.8rem;
+width:13rem;
+/* border:1px solid rgb(195,99,104); */
+}
+
+/* 净面 */
+::-webkit-details-marker,
+::-webkit-scrollbar,
+/* [themeweb=light] #sengyin, */
+[themeweb=light] .Confucius,
+[themeweb=light] .buttonfont{
+display:none;
+}
+
+html[themeweb=light] body{
+margin:14rem auto;
+/* text-shadow:0 0 20px rgb(70,152,255); */
+background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255));
+background-repeat:no-repeat;
+}
+
+[themeweb=light] .pcminbj,
+[themeweb=light] .kuandu{
+width:50rem;
+background-color:transparent;
+/* border:1px solid rgb(95,99,104); */
+}
+
+[themeweb=light] .syimg{
+margin:8rem 38rem;
+}
+
+[themeweb=light] .time,
+[themeweb=light] #sizong{
+width:100%;
+font-family:Arial Black;
+font-size:5rem;
+font-weight:900;
+/* text-shadow:3px 3px 3px rgb(0,0,0,.5); */
+/* border:1px solid rgb(95,99,104); */
+}
+
+[themeweb=light] .sxjutq{
+margin-top:2rem;
+}
+
+@media (prefers-color-scheme:dark){
+body{
+background-color:rgb(51,52,53);
+}
+
+.pcminbj{
+background-color:rgb(61,62,63);
+}
+
+body,
+.Confucius,.Confucius summary,
+button{
+color:rgb(255,255,255);
+}
+.Confucius details{color:rgb(215,216,219);}
+
+#lianxiang li{background-color:rgb(32,33,36);}
+#lianxiang li:hover,
+#lianxiang li.active{
+background-color:rgb(255,0,0);
+}
+
+.inputkuan{color:rgb(255,255,255);background-color:rgb(61,62,63);}
+.inputkuan:focus{box-shadow:0 0 90px rgb(255,255,255)!important;}
+
+.svgtubiao{fill:rgb(214,219,223);}
+
+html[themeweb=light] body{
+background-color:rgb(32,33,36);
+background-image:radial-gradient(500px 150px,rgb(7,193,96,.2),rgb(32,33,36));
+}
+
+}

@@ -1,0 +1,88 @@
+body{
+margin:3% auto;
+width:90%;
+font-size:1rem;
+color:rgb(1,2,3);
+background-color:rgb(251,252,255);
+}
+
+p{
+line-height:38px;
+padding-left:16px;
+border-radius:20px;
+color:rgb(1,2,3);
+background-color:rgb(234,229,10);
+}
+
+summary{
+outline:none;
+list-style:none;
+list-style-type:none;
+}
+summary::-webkit-details-marker,
+::-webkit-scrollbar{
+display:none;
+}
+
+li{
+list-style:none;
+line-height:40px;
+}
+
+.gengduo{
+display:none;
+}
+[open] .gengduo{
+display:block;
+}
+
+span{
+font-size:.7rem;
+color:rgb(251,195,30);
+cursor:pointer;
+}
+[open] span{
+font-size:0;
+}
+[open] span::before{
+font-size:.7rem;
+content:'收起-';
+}
+
+a{
+text-decoration:none;
+color:rgb(1,2,3);
+}
+a:hover{
+color:rgb(255,0,0);
+}
+
+@media (min-width:500px){
+.pcminbjgd{
+margin:0 auto;
+width:30rem;
+border-radius:20px;
+background-color:rgb(249,245,235);
+}
+}
+
+@media (prefers-color-scheme:dark) {
+body{
+color:rgb(255,255,255);
+background-color:rgb(51,52,53);
+}
+
+p{
+color:rgb(255,255,255);
+background-color:rgb(29,30,34);
+}
+a{
+color:rgb(255,255,255);
+}
+
+@media (min-width:500px){
+.pcminbjgd{
+background-color:rgb(61,62,63);
+}
+}
+}
