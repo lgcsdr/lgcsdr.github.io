@@ -16,36 +16,13 @@ return false;
 }
 }
 
-// 给某个搜索链接加后缀,特殊处理--泥巴视频
+// 给某个搜索链接加后缀,特殊处理--泥巴
 var houzui = document.getElementById('nivod');
 houzui.onclick=function(){
 window.open(this.getAttribute('nivodurl')+
 document.getElementById('searchinput').value+('&catId=1'));
 return false;
 }
-
-
-// tv卫视弹窗
-$('#tvweisi').click(function(e){
-// 阻止冒泡
-e.stopPropagation();
-if ($('#tvlianjie').is(':hidden')){
-$('#tvzzc').show();
-$('#tvlianjie').show(200);
-}else{
-$('#tvzzc').hide();
-$('#tvlianjie').hide();
-}
-return false;
-});
-// tv遮罩层,点击任何地方关闭tv弹窗
-$('#tvzzc').add('#tvlianjie').click(function(e) {
-e.stopPropagation();
-$('#tvzzc').hide();
-$("#tvlianjie").hide(300);
-return false;
-});
-
 
 // 联想
 var mysearch=(function(){
@@ -109,7 +86,6 @@ $("input").val($("li.active").html());
 }
 });
 
-
 function bindHtml(){
 $.ajax({url:'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+searchKey,
 dataType:'jsonp',
@@ -150,11 +126,6 @@ return false;
 });
 
 // 失去焦点收缩
-/* $("#searchinput").on('blur',function(){
-setTimeout(function(){
-$lianxiang.stop().slideUp(100); // 动画速度
-},100); // 定时
-}); */
 // pc
 var windowwidth=document.body.offsetWidth;
 if (windowwidth > 500) {
@@ -175,7 +146,7 @@ $lianxiang.stop().slideUp(50);
 
 // 绑定li
 $lianxiang.on('click','li', function(e){
-/* var text = $(this).html() */
+/* var text=$(this).html() */
 $searchinput.val($(this).html())
 });
 }
@@ -183,54 +154,69 @@ return{init:init}
 })();
 mysearch.init();
 
-
-// 输入框清除按钮
+// 零件
 $(function(){
-// 点击搜索框 事件
-$('#searchinput').click(function(){
-// input聚焦时,自动滚动到屏幕顶部,让input定位在可见区域
-this.scrollIntoView();
-
-// 点击搜索框隐藏新闻
-$('.dianjiNews').hide();
+// tv卫视弹窗
+$('#tvweisi').click(function(e){
+// 阻止冒泡
+e.stopPropagation();
+if ($('#tvlianjie').is(':hidden')){
+$('#tvzzc').show();
+$('#tvlianjie').show(200);
+}else{
+$('#tvzzc').hide();
+$('#tvlianjie').hide();
+}
+return false;
+});
+// tv遮罩层,点击屏幕关闭tv弹窗
+$('#tvzzc').add('#tvlianjie').click(function(e) {
+e.stopPropagation();
+$('#tvzzc').hide();
+$("#tvlianjie").hide(200);
+return false;
 });
 
-// 监听输入框内容变动
+
+// 点击搜索框时候
+$('#searchinput').click(function(){
+// 点击搜索框隐藏新闻
+$('#news').hide();
+// input聚焦时,自动滚动到屏幕顶部,让input定位在可见区域
+this.scrollIntoView();
+});
+
+
+// 输入框清除按钮 监听输入框内容变动
 $('#searchinput').on('input',function(){
 val = this.value.length;
 // 判断输入框是否有值
 if(val >= 1){
-// 显示清除
-$(this).parents().children('.anniudingwei').show();
 // 隐藏新闻
-$(this).parents().children('.dianjiNews').hide();
+$('#news').hide();
+// 显示清除
+$('#qingcu').show();
 }else{
-$(this).parents().children('.anniudingwei').hide();
-$(this).parents().children('.dianjiNews').show();
+$('#qingcu').hide();
+$('#news').show();
 }
 });
-
-// 判断输入框是否有值,失去指针焦点的时候
+// 判断输入框是否有值,失去指针焦点时候
 $('#searchinput').blur(function(){
 if($(this).val()==''){
-$(this).parents().children('.anniudingwei').hide();
-$(this).parents().children('.dianjiNews').show();
+$('#qingcu').hide();
+$('#news').show();
 }
 });
-
-// 点击清空按钮 事件
-$('.anniudingwei').click(function(){
+// 点击清空按钮时候
+$('#qingcu').click(function(){
 // 清空输入框内容
-/* $(this).parents().find('input').val(''); */
 $('#searchinput').val('');
-
 // 清空后隐藏自己
-$(this).hide();
-
+$('#qingcu').hide();
 // 不失去焦点
 $('#searchinput').focus();
 });
-
 
 // 安卓端
 // focus
@@ -238,7 +224,6 @@ $('#searchinput').focus(function(){
 // 点搜索框显示遮罩层,按着搜索框不动到顶部
 var windowwidth=document.body.offsetWidth;
 if (windowwidth < 500) {
-
 $('#appzzc').css(
 {'display':'block','position':'fixed','top':'0','left':'0','width':'100%','height':'100%',}
 );
@@ -251,7 +236,7 @@ $('#searchinput').css(
 {'position':'fixed','top':'2px','width':'90%','z-index':'1',}
 );
 
-$('#inputclear').css(
+$('#qingcu').css(
 {'position':'fixed','top':'9px','z-index':'1',}
 );
 
@@ -260,14 +245,12 @@ window.history.pushState('','','#sbfbu=1&pi=');
 }
 });
 
-
-// click
+// click 对应 focus
 $('#appzzc').add('#lianxiang').click(function(){
 
 // 点遮罩层,联想,关闭遮罩层,搜索框返回原处
 var windowwidth=document.body.offsetWidth;
 if (windowwidth < 500) {
-
 $('#appzzc').css(
 {'display':'',}
 );
@@ -280,7 +263,7 @@ $('#searchinput').css(
 {'position':'','top':'','width':'','z-index':'',}
 );
 
-$('#inputclear').css(
+$('#qingcu').css(
 {'position':'','top':'','z-index':'',}
 );
 
@@ -288,19 +271,17 @@ $('#inputclear').css(
 window.history.back();
 /* window.history.pushState('','','#sbfbu=1&pi='); */
 }
-
 });
 
 
-// 回车键/搜索 事件
+// 回车键或直接搜索的时候
 $("#searchinput").keydown(function() {
 if (event.keyCode == 13) {
-// 不定时无法响应form/action, 回车后让输入框失去焦点
+// 不定时无法响应form/action
 setTimeout(function(){
-// 安卓端软键盘回车后,关闭遮罩层,联想和搜索框,返回原处
+// 安卓端回车后,关闭遮罩层,联想和搜索框,返回原处
 var windowwidth=document.body.offsetWidth;
 if (windowwidth < 500) {
-
 $('#appzzc').css(
 {'display':'',}
 );
@@ -313,14 +294,14 @@ $('#searchinput').css(
 {'position':'','top':'','width':'','z-index':'',}
 );
 
-$('#inputclear').css(
+$('#qingcu').css(
 {'position':'','top':'','z-index':'',}
 );
 }
 
-// 返回主页
+// 回车后返回主页
 window.history.back();
-// 输入框失去焦点
+// 回车后让输入框失去焦点
 $('#searchinput').blur();
 },2000);
 // 这里的时间要大于$lianxiang.stop().slideUp(50);
@@ -333,7 +314,6 @@ window.addEventListener('popstate',function(e){
 // 点返回键关闭遮罩层,input返回原处
 var windowwidth=document.body.offsetWidth;
 if (windowwidth < 500) {
-
 $('#appzzc').css(
 {'display':'',}
 );
@@ -346,11 +326,11 @@ $('#searchinput').css(
 {'position':'','top':'','width':'','z-index':'',}
 );
 
-$('#inputclear').css(
+$('#qingcu').css(
 {'position':'','top':'','z-index':'',}
 );
 
-// 点返回键让input失去焦点
+// 点返回键让输入框失去焦点
 $('#searchinput').blur();
 }
 });

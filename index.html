@@ -8,10 +8,9 @@
 
 <link rel="stylesheet" media="(max-width:500px)" href="mini.css">
 <link rel="stylesheet" media="(min-width:500px)" href="pc.css">
-
 </head>
-<body>
 
+<body>
 <main class="pcminbj">
 <div class="kuandu">
 
@@ -28,12 +27,10 @@
 </section>
 
 <article class="buttonfont">
-
 <div class="sxju">
 <button class="zhilian zgzs" zhilianurl="https://www.radio.cn/pc-portal/erji/radioStation.html">Radio</button>
 
-<button class="zhilian" zhilianurl="https://newsradio.cri.cn/">环球资讯</button>
-<button class="zhilian" zhilianurl="http://ezfm.cri.cn/">调频</button>
+<button class="zhilian" zhilianurl="http://ezfm.cri.cn/">环球调频</button>
 
 <button class="sousuo p-ximalaya" sousuourl="https://www.ximalaya.com/so/">喜马拉雅</button>
 <button class="sousuo m-ximalaya" sousuourl="https://m.ximalaya.com/so/">喜马拉雅</button>
@@ -54,42 +51,48 @@
 
 <button class="zhilian" zhilianurl="https://fm.douban.com/">fm</button>
 <button class="zhilian" zhilianurl="http://www.djyule.com/">dj</button>
-
 </div>
 
 <div>
-<!-- <button class="zhilian" zhilianurl="https://tv.cctv.com/live/cctv1/">CCTV</button> -->
 <button class="sousuo" sousuourl="https://search.cctv.com/search.php?qtext=">CCTV</button>
 
 <!-- tv卫视弹窗 -->
 <button id="tvweisi">tv</button>
 <!-- tv遮罩层,点击任何地方关闭tv弹窗 -->
-<div class="tvzzc" id="tvzzc"></div>
-
+<div class="tvzzcs" id="tvzzc"></div>
 <!-- tv卫视链接 -->
-<div class="tvlianjie" id="tvlianjie">
-
-<button class="zhilian" zhilianurl="http://v.iqilu.com/">山东卫视</button>
-<button class="zhilian" zhilianurl="https://www.hntv.tv/">湖南卫视</button>
-<button class="zhilian" zhilianurl="https://news.hbtv.com.cn/">湖北卫视</button>
+<div class="tvlianjies" id="tvlianjie">
+<div>
+<button class="zhilian" zhilianurl="https://tv.cctv.com/cctvnav/m">央视</button>
+<button class="zhilian" zhilianurl="http://v.iqilu.com/">山东</button>
+</div>
 
 <div>
-<button class="zhilian" zhilianurl="https://live.kankanews.com/huikan/">上海卫视</button>
-<button class="zhilian" zhilianurl="https://live.jstv.com/">江苏卫视</button>
-<button class="zhilian" zhilianurl="https://www.hebtv.com/19/19js/st/xdszb/index.shtml">河北卫视</button>
+<button class="zhilian" zhilianurl="http://www.imastv.com/live/live.shtml">澳门</button>
+<button class="zhilian" zhilianurl="https://news.tvb.com/tc/live/83">香港</button>
+<button class="zhilian" zhilianurl="https://fnc.ebc.net.tw/">台湾</button>
+<button class="zhilian" zhilianurl="https://news.ebc.net.tw/">東森</button>
+<button class="zhilian" zhilianurl="https://www.youtube.com/watch?v=_QbRXRnHMVY">中天</button>
 </div>
 
+<div>
+<button class="zhilian" zhilianurl="https://static.hntv.tv/kds/">河南</button>
+<button class="zhilian" zhilianurl="http://www.jlntv.cn/newpc/wlt/live/index.php?channel_id=9">吉林</button>
+<button class="zhilian" zhilianurl="https://www.hljtv.com/live/">黑龙江</button>
 </div>
 
+<div>
+<button class="zhilian" zhilianurl="https://www.hebtv.com/19/19js/st/xdszb/index.shtml">河北</button>
+<button class="zhilian" zhilianurl="https://www.gstv.com.cn/zxc.jhtml">甘肃</button>
+<button class="zhilian" zhilianurl="https://live.kankanews.com/huikan/">上海</button>
+<button class="zhilian" zhilianurl="http://www.weishizaixian.com/weishi/">卫视</button>
+</div>
+</div>
 
 <button class="sousuo" sousuourl="https://www.555yy1.com/vodsearch/-------------.html?wd=">555</button>
-
 <button class="sousuo" sousuourl="https://www.cctv365.co/vodsearch/-------------.html?wd=">365</button>
-
 <button id="nivod" nivodurl="https://www.nivod.tv/search.html?keyword=">niba</button>
-
 <button class="sousuo" sousuourl="https://www.tangrenjie.tv/vod/search.html?wd=">trj</button>
-
 <button class="zhilian" zhilianurl="https://m.rr.tv/">dd</button>
 
 </div>
@@ -108,104 +111,62 @@
 
 <button class="sousuo p-baiduvideo" sousuourl="https://www.baidu.com/sf/vsearch?pd=video&tn=&wd=">,</button>
 <button class="sousuo m-baiduvideo" sousuourl="https://m.baidu.com/sf/vsearch?pd=video&atn=index&tn=&word=">,</button>
-
 </div>
 
 <div class="sxju">
-
 <div>
-<ul class="one" id="lianxiang"></ul>
+<ul id="lianxiang">
+</ul>
 </div>
 
 <div class="tanxinghezi">
 
 <form class="formkuan" action="https://bing.com/search?" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" target="_blank">
-
 <input class="inputkuan" id="searchinput" type="search" name="q">
-
 </form>
 
-<div class="anniudingwei">
-<div id="inputclear">
-
+<div class="qingcus" id="qingcu">
 <span class="svgtubiao">
 <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
 </span>
-
-</div>
 </div>
 
-<div class="dianjiNews">
+<div class="newss" id="news">
 <div class="swiper">
 <div class="swiper-wrapper">
 
 <div class="swiper-slide">
-
 <button class="zhilian xinwen" zhilianurl="https://www.google.com/alerts">快讯</button>
-
 <button class="zhilian xinwen" zhilianurl="https://news.google.com/">新闻</button>
-
 <button class="zhilian xinwen" zhilianurl="https://cn.nytimes.com/">纽约</button>
-
 <button class="zhilian xinwen" zhilianurl="https://sputniknews.cn/">苏联</button>
-
-<button class="zhilian xinwen" zhilianurl="https://www.epochtimes.com/b5/instant-news.htm">纪元</button>
-
-<button class="zhilian xinwen" zhilianurl="https://www.voachinese.com/z/1739">美音</button>
-
-<button class="zhilian xinwen" zhilianurl="https://cn.wsj.com/">日报</button>
-
-<button class="zhilian xinwen" zhilianurl="https://cn.yna.co.kr/news">韩国</button>
-
-<button class="zhilian xinwen" zhilianurl="https://m.guancha.cn/internation?s=dhguoji">观察</button>
-
 <button class="zhilian xinwen" zhilianurl="https://www.rfi.fr/cn/%E6%BB%9A%E5%8A%A8%E6%96%B0%E9%97%BB/">法国</button>
-
+<button class="zhilian xinwen" zhilianurl="https://www.voachinese.com/z/1739">美音</button>
+<button class="zhilian xinwen" zhilianurl="https://cn.wsj.com/">日报</button>
+<button class="zhilian xinwen" zhilianurl="https://cn.yna.co.kr/news">韩国</button>
+<button class="zhilian xinwen" zhilianurl="https://www.6park.com/jpm.shtml">日本</button>
+<button class="zhilian xinwen" zhilianurl="https://m.guancha.cn/internation?s=dhguoji">观察</button>
+<button class="zhilian xinwen" zhilianurl="https://www.epochtimes.com/b5/instant-news.htm">纪元</button>
 <button class="zhilian xinwen" zhilianurl="https://www.huanqiu.com/">环球</button>
-
 <button class="zhilian xinwen" zhilianurl="https://imil.ifeng.com/shanklist/14-35083-">凤凰</button>
-
 <button class="zhilian xinwen" zhilianurl="https://top.baidu.com/board?tab=realtime">百度</button>
-
 <button class="zhilian xinwen" zhilianurl="https://www.tiatiatoutiao.com/m/">今日</button>
-
 <button class="zhilian xinwen" zhilianurl="https://i.snssdk.com/feoffline/hotspot_and_local/html/hot_list/index.html">头条</button>
-
 <button class="zhilian xinwen" zhilianurl="https://m.weibo.cn/p/106003type=25&t=3&disable_hot=1&filter_type=realtimehot">微博</button>
-
 <button class="zhilian xinwen" zhilianurl="https://www.zhihu.com/billboard">知乎</button>
-
 <button class="zhilian xinwen" zhilianurl="https://www.chinaz.com/">站长</button>
-
 <button class="zhilian xinwen" zhilianurl="https://www.ithome.com/">科技</button>
-
 <button class="zhilian xinwen" zhilianurl="https://m.huxiu.com/moment">虎嗅</button>
 
-<button class="zhilian xinwen" zhilianurl="https://www.6park.com/jpm.shtml">日本</button>
-
-<!-- </div>
-<div class="swiper-slide"> -->
-
 <button class="zhilian yingsi" zhilianurl="https://piaofang.maoyan.com/">票房</button>
-
 <button class="zhilian yingsi" zhilianurl="https://i.maoyan.com/asgard/board/aggregation">猫眼</button>
-
 <button class="zhilian yingsi" zhilianurl="https://m.douban.com/movie/">豆瓣</button>
-
 <button class="zhilian yingsi" zhilianurl="https://m.bilibili.com/ranking">哔哩</button>
 
-<!-- </div>
-<div class="swiper-slide"> -->
-
 <button class="zhilian yinyue" zhilianurl="https://music.163.com/playlist?id=19723756">网易</button>
-
 <button class="zhilian yinyue" zhilianurl="https://m.kuwo.cn/newh5app/ranklist">酷我</button>
-
 <button class="zhilian yinyue" zhilianurl="https://i.y.qq.com/n2/m/?tab=toplist">企鹅</button>
-
 <button class="zhilian yinyue" zhilianurl="https://m.kugou.com/rank/list/">酷狗</button>
-
-<!-- </div> -->
 
 </div>
 
@@ -226,17 +187,12 @@
 </div>
 
 <div>
-
 <button class="sousuo" sousuourl="https://search.yahoo.com/search?p=">雅虎</button>
-
 <button class="sousuo" sousuourl="https://www.facebook.com/watch/search/?q=">脸谱</button>
 <button class="sousuo" sousuourl="https://twitter.com/search?q=">推特</button>
-
 <button class="sousuo" sousuourl="https://www.zhihu.com/search?type=content&q=">{知乎}</button>
-
 <button class="sousuo" sousuourl="https://zh.wikipedia.org/wiki/">维基</button>
 <button class="sousuo" sousuourl="https://baike.baidu.com/search?word=">百科</button>
-
 <button class="sousuo" sousuourl="https://aiqicha.baidu.com/s?q=">企查</button>
 <button class="sousuo" sousuourl="https://dict.baidu.com/s?wd=">词典</button>
 <button class="sousuo" sousuourl="https://s.weibo.com/weibo?q=">微博</button>
@@ -244,7 +200,6 @@
 
 <button class="sousuo p-toutiao" sousuourl="https://so.toutiao.com/search?dvpf=pc&source=sug&keyword=">头条</button>
 <button class="sousuo m-toutiao" sousuourl="https://so.toutiao.com/search/?keyword=">头条</button>
-
 </div>
 
 <div class="sxju">
@@ -271,11 +226,9 @@
 
 <button class="zhilian gengduo" zhilianurl="gengduo.html">更多</button>
 </div>
-
 </div>
 
 <div class="sxju">
-
 <div>
 <button class="sousuo" sousuourl="https://play.google.com/store/search?q=">play</button>
 <button class="sousuo" sousuourl="https://apkpure.com/cn/search?q=">apk</button>
@@ -295,22 +248,16 @@
 <button class="zhilian p-wiz" zhilianurl="https://www.wiz.cn/xapp">wiz</button>
 <button class="zhilian m-wiz" zhilianurl="https://www.wiz.cn/mapp">wiz</button>
 </div>
-
 </div>
-
 </article>
 
-<!-- <footer class="sxjutq">
+<footer class="sxjutq">
 <div class="zhilian tianqilj" zhilianurl="https://html5.moji.com/tpd/mojiweatheraggr/index.html#/home?ad=2&platform=jinritoutiao&cityid=537"></div>
-
-<div>
 <iframe width="100%" height="15" scrolling="no" frameborder="0" allowtransparency="true" src="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=10&color=fe7300&skin=mango"></iframe>
-</div>
-</footer> -->
+</footer>
 
 </div>
 </main>
-
 <script src="sengyin.js"></script>
 <script src="shijian.js"></script>
 <script src="ziyue.js"></script>
@@ -318,9 +265,7 @@
 <script src="huadong.min.js"></script>
 <script src="huadong.js"></script>
 
-<!-- <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script> -->
 <script src="jquery.js"></script>
 <script src="sousuo.js"></script>
-
 </body>
 </html>
