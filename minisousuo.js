@@ -218,14 +218,10 @@ window.history.pushState('','','#sbfbu=1&pi=');
 // click 对应 focus
 $('#appzzc').add('#lianxiang').click(function(){
 // 点遮罩层,联想,关闭遮罩层,搜索框返回原处
-$('#searchinput').css({'position':'','top':'','width':'','z-index':'',
-/* 'box-shadow':'0 0 90px rgb(7,193,96)', */
-});
-
+$('#searchinput').css({'position':'','top':'','width':'','z-index':'','box-shadow':'0 0 90px rgb(7,193,96)',});
 if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-$('#searchinput').css({'box-shadow':'0 0 90px rgb(255,0,0)',});
+$('#searchinput').css({'box-shadow':'0 0 90px rgb(255,255,255)',});
 }
-
 $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
 $('#appzzc').css({'display':'',});
@@ -241,13 +237,10 @@ if (event.keyCode == 13) {
 // 不定时无法响应form/action
 setTimeout(function(){
 // 安卓端回车后,关闭遮罩层,联想和搜索框,返回原处
-$('#searchinput').css({'position':'','top':'','width':'','z-index':'',
-/* 'box-shadow':'0 0 90px rgb(7,193,96)', */
-});
-/* if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+$('#searchinput').css({'position':'','top':'','width':'','z-index':'','box-shadow':'0 0 90px rgb(7,193,96)',});
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
 $('#searchinput').css({'box-shadow':'0 0 90px rgb(255,255,255)',});
-} */
-
+}
 $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
 $('#appzzc').css({'display':'',});
@@ -264,13 +257,10 @@ $('#searchinput').blur();
 // 返回键 popstate
 window.addEventListener('popstate',function(){
 // 点返回键关闭遮罩层,input返回原处
-$('#searchinput').css({'position':'','top':'','width':'','z-index':'',
-// 'box-shadow':'0 0 90px rgb(7,193,96)',
-});
-/* if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+$('#searchinput').css({'position':'','top':'','width':'','z-index':'','box-shadow':'0 0 90px rgb(7,193,96)',});
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
 $('#searchinput').css({'box-shadow':'0 0 90px rgb(255,255,255)',});
-} */
-
+}
 $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
 $('#appzzc').css({'display':'',});
