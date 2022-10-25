@@ -207,7 +207,7 @@ $('#searchinput').css({'box-shadow':'none',});
 $('#searchinput').focus(function(){
 // 点搜索框显示遮罩层,按着搜索框不动到顶部
 $('#searchinput').css({'position':'fixed','top':'2px','width':'90%','z-index':'1','box-shadow':'none',});
-$('#qingcu').css({'position':'fixed','top':'9px','z-index':'1',});
+$('#qingcu').css({'position':'fixed','top':'11px','z-index':'1',});
 $('#lianxiang').css({'display':'block','z-index':'1',});
 $('#appzzc').css({'display':'block',});
 
