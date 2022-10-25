@@ -12,36 +12,34 @@ body{
 margin:3% auto;
 color:rgb(0,0,0);
 background-color:rgb(251,252,255);
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 
 .kuandu{
 margin:auto;
 width:90%;
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 
 .syimg{
 position:absolute;
-margin:3.8rem 17.8rem;
+right:0;
+margin:3.8rem 8%;
 width:2rem;
 background-repeat:no-repeat!important;
-cursor:pointer;
-/* border:1px solid rgb(100,200,100); */
+/* border:1px solid rgb(250,0,0); */
 }
 
 .time{
 width:100%;
 text-align:center;
 user-select:none;
-cursor:help;
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 #sizong{
-font-size:2.5rem;
+font-size:2.4rem;
 font-weight:700;
-/* letter-spacing:5px; */
-letter-spacing:.4rem;
+letter-spacing:.3rem;
 white-space:nowrap;
 }
 #gongli{
@@ -53,12 +51,12 @@ font-size:.6rem;
 #sengri{
 font-size:.6rem;
 color:rgb(255,0,0);
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 
 .Confucius{
 margin:1rem 0 .8rem;
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 .Confucius details{
 font-size:1rem;
@@ -73,15 +71,12 @@ text-shadow:0 0 0 rgb(0,0,0);
 
 .buttonfont{
 font-size:0;
-/* border:1px solid rgb(95,99,104); */
-/* user-select:none; 千万不能用*/
+/* border:1px solid rgb(0,0,0); */
 }
 
-.sxju{
+.sxjianju{
 margin:.6rem auto;
 }
-
-.p-ximalaya,.p-lrts,.p-qingting,.p-kugou,.p-kuwo,.p-ixigua,.p-baiduvideo,.p-bilibili,.p-toutiao,.p-jd,.p-zol,.p-youdao,.p-wiz{display:none;}
 
 button{
 margin:.2rem;
@@ -92,8 +87,7 @@ text-align:center;
 font-size:1rem;
 text-shadow:0 0 0 rgb(0,0,0);
 background-color:transparent;
-cursor:pointer;
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 .zgzs,
 .youtube,
@@ -112,7 +106,6 @@ text-shadow:0 0 0 rgb(255,255,255);
 .googlefy{background-color:rgb(204,102,0);}
 
 .gengduo,
-button:hover,
 button:focus{
 border-bottom:2px dashed rgb(255,0,0);
 border-bottom-left-radius:100%;
@@ -129,7 +122,6 @@ left:0;
 background-color:transparent;
 z-index:1;
 }
-/* tv卫视链接 */
 .tvlianjies{
 display:none;
 position:absolute;
@@ -138,36 +130,11 @@ background-color:rgba(255,230,200,.8);
 z-index:2;
 }
 
-#lianxiang{
-display:none;
-position:fixed;
-top:2.8rem;
-width:90%;
-}
-#lianxiang li{
-padding:0 1rem;
-line-height:2.5rem;
-font-size:1rem;
-border:1px solid rgb(95,99,104,.1);
-border-radius:20px;
-white-space:nowrap;
-overflow:auto;
-background-color:rgb(255,255,255);
-}
-#lianxiang li:hover,
-#lianxiang li.active{
-color:rgb(255,255,255);
-background-color:rgb(74,186,126);
-cursor:pointer;
-}
-
-/* 弹性布局,输入框,清除按钮,新闻 */
 .tanxinghezi{
 display:flex;
 flex:1;
 align-items:center;
 }
-
 /* 输入框 */
 .formkuan,
 .inputkuan{
@@ -177,12 +144,17 @@ width:100%;
 display:flex;
 height:2.6rem;
 padding:0 2.6rem 0 1rem;
-font-size:1.2rem;
-border:1px solid rgb(95,99,104);
+font-size:1rem;
+
+border:1px solid rgb(150,160,170);
 border-radius:30px;
-/* background-color:transparent; */
-background-color:rgb(251,252,253);
-/* transition:box-shadow 1s; */
+background-color:transparent;
+}
+.inputkuan:focus{
+/* position:relative; */
+border:0;
+border-bottom:1px solid rgb(150,160,170);
+border-radius:0;
 }
 
 .inputkuan::-webkit-search-cancel-button{
@@ -192,38 +164,53 @@ display:none;
 
 /* 输入框清除按钮 */
 .qingcus{
-display:flex;
 display:none;
 position:absolute;
-margin:0 0 0 18rem;
+right:0;
+margin-right:7%;
+/* background-color:rgb(255,0,0,.5); */
 }
 .svgtubiao{
 display:flex;
-width:1.7rem;
-height:1.7rem;
+width:1.4rem;
+height:1.4rem;
 fill:rgb(100,100,100);
-cursor:pointer;
+}
+
+#lianxiang{
+display:none;
+position:fixed;
+top:3.3rem;
+width:90%;
+background-color:rgb(255,255,255);
+}
+#lianxiang li{
+padding:0 1rem;
+line-height:2.5rem;
+font-size:1rem;
+white-space:nowrap;
+overflow:auto;
+}
+#lianxiang li.active{
+background-color:rgb(232,235,240);
 }
 
 /* 点击搜索框 新闻显示-隐藏 */
 .newss{
 display:flex;
-flex:1;
 position:absolute;
 left:0;
 right:0;
 margin:auto;
 width:11rem;
-/* background-color:rgb(6,6,6,.6); */
+/* background-color:rgba(6,6,6,.6); */
 }
-
 .newss .zhilian{
 font-size:.8rem;
 border-radius:20px;
 }
 .newss .xinwen{
 border:1px dashed rgb(23,188,162);
-/* background-color:rgb(174,18,16,.2); */
 }
 .newss .yingsi{
 border:1px dashed rgb(66,133,244);
@@ -231,7 +218,6 @@ border:1px dashed rgb(66,133,244);
 .newss .yinyue{
 border:1px dashed rgb(255,136,0);
 }
-
 /* 新闻滑动 */
 .swiper{
 display:flex;
@@ -245,6 +231,11 @@ display:flex;
 
 #appzzc{
 display:none;
+position:fixed;
+top:0;
+left:0;
+height:100%;
+width:100%;
 background-color:rgb(255,255,255);
 }
 
@@ -263,66 +254,72 @@ width:13rem;
 ::-webkit-scrollbar,
 /* [themeweb=light] #sengyin, */
 [themeweb=light] .Confucius,
-[themeweb=light] .buttonfont{
+[themeweb=light] article{
 display:none;
 }
 
 html[themeweb=light] body{
 margin:14rem auto;
-/* text-shadow:0 0 20px rgb(70,152,255); */
-background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255))!important;
+background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255));
 background-repeat:no-repeat;
 }
 
 [themeweb=light] .kuandu{
 width:90%;
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 
 [themeweb=light] .time,
 [themeweb=light] #sizong{
 width:100%;
 font-weight:900;
-/* text-shadow:3px 3px 3px rgb(0,0,0,.5); */
 }
 
-[themeweb=light] .sxjutq{
+[themeweb=light] .tqjianju{
 margin-top:2rem;
 }
 
+
 @media (prefers-color-scheme:dark){
-body,
-#lianxiang li,
-.inputkuan,
-#appzzc{
+body{
 color:rgb(255,255,255);
 background-color:rgb(32,33,36);
 }
 
-body,
 .Confucius,.Confucius summary,
 button{
 color:rgb(255,255,255);
-/* text-shadow:3px 3px 3px rgb(0,0,0,.5); */
 }
 .Confucius details{color:rgb(215,216,219);}
 
-/* tv卫视链接 */
 .tvlianjies{
 background-color:rgba(10,20,30,.8);
 }
 
-#lianxiang li:hover,
-#lianxiang li.active{
-background-color:rgb(255,0,0);
+.inputkuan{
+border:1px solid rgb(63,66,70);
+color:rgb(255,255,255);
+}
+.inputkuan:focus{
+border-bottom:1px solid rgb(63,66,70);
 }
 
 .svgtubiao{fill:rgb(214,219,223);}
 
-html[themeweb=light] body{
-/* text-shadow:0 0 20px rgb(7,193,96); */
+#lianxiang{
 background-color:rgb(32,33,36);
-background-image:radial-gradient(500px 150px,rgb(7,193,96,.2),rgb(32,33,36))!important;
+}
+#lianxiang li.active{
+background-color:rgb(42,43,46);
+}
+
+#appzzc{
+background-color:rgb(32,33,36);
+}
+
+html[themeweb=light] body{
+background-color:rgb(32,33,36);
+background-image:radial-gradient(500px 150px,rgb(7,193,96,.2),rgb(32,33,36));
 }
 
 }

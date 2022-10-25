@@ -13,7 +13,7 @@ margin:3% auto;
 font-family:KaiTi;
 color:rgb(0,0,0);
 background-color:rgb(251,252,255);
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 
 .pcminbj{
@@ -27,7 +27,7 @@ background-color:rgb(232,235,240);
 .kuandu{
 margin:auto;
 width:90%;
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 
 .syimg{
@@ -45,12 +45,11 @@ width:100%;
 text-align:center;
 user-select:none;
 cursor:help;
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 #sizong{
 font-size:2.6rem;
 font-weight:700;
-/* letter-spacing:5px; */
 letter-spacing:.5rem;
 white-space:nowrap;
 }
@@ -63,12 +62,12 @@ font-size:1rem;
 #sengri{
 font-size:1rem;
 color:rgb(255,0,0);
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 
 .Confucius{
 margin:1.5rem 0 1.3rem;
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 .Confucius details{
 font-size:1.3rem;
@@ -81,17 +80,15 @@ color:rgb(0,0,0);
 text-shadow:0 0 0 rgb(0,0,0);
 }
 
-.buttonfont{
+/* 按钮之间间距 user-select:none不要用 */
+/* .buttonfont{
 font-size:0;
-/* border:1px solid rgb(95,99,104); */
-/* user-select:none; 千万不能用*/
-}
+border:1px solid rgb(0,0,0);
+} */
 
-.sxju{
+.sxjianju{
 margin:.6rem auto;
 }
-
-.m-ximalaya,.m-lrts,.m-qingting,.m-kugou,.m-kuwo,.m-ixigua,.m-baiduvideo,.m-bilibili,.m-toutiao,.m-jd,.m-zol,.m-youdao,.m-wiz{display:none;}
 
 button{
 margin:.2rem;
@@ -103,7 +100,7 @@ font-size:1rem;
 text-shadow:0 0 0 rgb(0,0,0);
 background-color:transparent;
 cursor:pointer;
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 .zgzs,
 .youtube,
@@ -148,36 +145,12 @@ background-color:rgba(255,230,200,.8);
 z-index:2;
 }
 
-#lianxiang{
-display:none;
-position:absolute;
-margin-top:-21rem;
-width:27rem;
-}
-#lianxiang li{
-padding:0 1rem;
-line-height:2.5rem;
-font-size:1.3rem;
-border:1px solid rgb(95,99,104,.1);
-border-radius:20px;
-white-space:nowrap;
-overflow:auto;
-background-color:rgb(255,255,255);
-}
-#lianxiang li:hover,
-#lianxiang li.active{
-/* color:rgb(255,255,255); */
-background-color:rgb(74,186,126);
-cursor:pointer;
-}
-
 /* 弹性布局,输入框,清除按钮,新闻 */
 .tanxinghezi{
 display:flex;
 flex:1;
 align-items:center;
 }
-
 /* 输入框 */
 .formkuan,
 .inputkuan{
@@ -187,20 +160,19 @@ width:100%;
 display:flex;
 height:3rem;
 padding:0 2.6rem 0 1rem;
-font-size:1.3rem;
-border:1px solid rgb(95,99,104);
+font-size:1.2rem;
+
+border:1px solid rgb(150,160,170);
 border-radius:30px;
-/* background-color:transparent; */
-background-color:rgb(232,235,240);
+background-color:transparent;
 transition:box-shadow 1s;
 }
-
-/* .inputkuan:hover, */
 .inputkuan:focus{
 position:relative;
-box-shadow:0 0 90px rgb(7,193,96)!important;
+border:0;
+box-shadow:0 0 90px rgb(7,193,96),0 0 3px rgb(200,200,200)!important;
+background-color:rgb(255,255,255);
 }
-
 .inputkuan::-webkit-search-cancel-button{
 appearance:none;
 display:none;
@@ -208,7 +180,6 @@ display:none;
 
 /* 输入框清除按钮 */
 .qingcus{
-display:flex;
 display:none;
 position:absolute;
 margin:0 0 0 24.7rem;
@@ -221,18 +192,40 @@ fill:rgb(100,100,100);
 cursor:pointer;
 }
 
+#lianxiang{
+display:none;
+position:absolute;
+margin-top:-20rem;
+width:27rem;
+
+border-radius:20px 20px 0 0;
+box-shadow:0 -1px 3px rgb(200,200,200);
+background-color:rgb(255,255,255);
+}
+#lianxiang li{
+/* padding-left:26px; */
+padding:0 1rem;
+line-height:2.5rem;
+font-size:1.2rem;
+white-space:nowrap;
+overflow:auto;
+}
+#lianxiang li:hover,
+#lianxiang li.active{
+background-color:rgb(232,235,240);
+cursor:pointer;
+}
+
 /* 新闻显示-隐藏 点击搜索框 */
 .newss{
 display:flex;
-flex:1;
 position:absolute;
 left:0;
 right:0;
 margin:auto;
 width:14.6rem;
-/* background-color:rgb(6,6,6,.6); */
+/* background-color:rgba(6,6,6,.6); */
 }
-
 .newss .zhilian{
 font-size:.9rem;
 border-radius:20px;
@@ -247,7 +240,6 @@ border:1px dashed rgb(66,133,244);
 .newss .yinyue{
 border:1px dashed rgb(255,136,0);
 }
-
 /* 新闻滑动 */
 .swiper{
 display:flex;
@@ -266,7 +258,7 @@ right:0;
 margin:auto;
 height:.8rem;
 width:13rem;
-/* border:1px solid rgb(195,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 
 /* 净面 */
@@ -274,7 +266,7 @@ width:13rem;
 ::-webkit-scrollbar,
 /* [themeweb=light] #sengyin, */
 [themeweb=light] .Confucius,
-[themeweb=light] .buttonfont{
+[themeweb=light] article{
 display:none;
 }
 
@@ -289,7 +281,7 @@ background-repeat:no-repeat;
 [themeweb=light] .kuandu{
 width:50rem;
 background-color:transparent;
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 
 [themeweb=light] .syimg{
@@ -303,15 +295,16 @@ font-family:Arial Black;
 font-size:5rem;
 font-weight:900;
 /* text-shadow:3px 3px 3px rgb(0,0,0,.5); */
-/* border:1px solid rgb(95,99,104); */
+/* border:1px solid rgb(0,0,0); */
 }
 
-[themeweb=light] .sxjutq{
+[themeweb=light] .tqjianju{
 margin-top:2rem;
 }
 
 @media (prefers-color-scheme:dark){
 body{
+color:rgb(255,255,255);
 background-color:rgb(51,52,53);
 }
 
@@ -319,7 +312,6 @@ background-color:rgb(51,52,53);
 background-color:rgb(61,62,63);
 }
 
-body,
 .Confucius,.Confucius summary,
 button{
 color:rgb(255,255,255);
@@ -330,16 +322,25 @@ color:rgb(255,255,255);
 background-color:rgba(10,20,30,.8);
 }
 
-#lianxiang li{background-color:rgb(32,33,36);}
-#lianxiang li:hover,
-#lianxiang li.active{
-background-color:rgb(255,0,0);
+.inputkuan{
+border:1px solid rgb(93,96,100);
+color:rgb(255,255,255);
+}
+.inputkuan:focus{
+box-shadow:0 0 90px rgb(255,255,255),0 0 3px rgb(41,42,43)!important;
+background-color:rgb(61,62,63);
 }
 
-.inputkuan{color:rgb(255,255,255);background-color:rgb(61,62,63);}
-.inputkuan:focus{box-shadow:0 0 90px rgb(255,255,255)!important;}
-
 .svgtubiao{fill:rgb(214,219,223);}
+
+#lianxiang{
+box-shadow:0 -1px 3px rgb(41,42,43);
+background-color:rgb(51,52,53);
+}
+#lianxiang li:hover,
+#lianxiang li.active{
+background-color:rgb(61,62,63);
+}
 
 html[themeweb=light] body{
 background-color:rgb(32,33,36);

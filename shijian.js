@@ -8,12 +8,10 @@ function onThemeClick() {
 colorIndex=colorIndex < colors.length - 1 ? colorIndex + 1:0;
 localStorage.shijian=colorIndex;
 setTheme();
-return false;
 }
 function setTheme() {
 var shijian=localStorage.shijian > - 1 ? colors[localStorage.shijian]:'';
 document.documentElement.setAttribute("themeweb", shijian);
-return false;
 }
 return false;
 })();
@@ -236,17 +234,6 @@ function cyclical(num) {
 return (Gan[num % 10] + Zhi[num % 12]);
 }
 
-function refreshCalendarClock() {
-now = new Date();
-var HH = now.getHours();
-var mm = now.getMinutes();
-var ss = now.getSeconds();
-if (HH == 0 && mm == 0 && ss == 0)
-ShowDate();
-else
-document.getElementById("sizong").innerHTML = GetTime();
-}
-
 function GetTime() {
 var HH = now.getHours();
 var mm = now.getMinutes();
@@ -313,18 +300,15 @@ step = "睡吧";
 clock = clock + ':' + step;
 return (clock);
 }
-/* function refreshCalendarClock() {
+function refreshCalendarClock() {
 now = new Date();
 var HH = now.getHours();
 var mm = now.getMinutes();
 var ss = now.getSeconds();
 if (HH == 0 && mm == 0 && ss == 0)
 ShowDate();
-else
 document.getElementById("sizong").innerHTML = GetTime();
 }
-*/
-
 
 // 有问题
 function solarDay() {
@@ -332,7 +316,6 @@ var sDObj = new Date(SY, SM, SD);
 var lDObj = new Lunar(sDObj);
 var lDPOS = new Array(3);
 var festival = '',
-// solarTerms = '',
 solarFestival = '',
 lunarFestival = '',
 solarTerms = '',
