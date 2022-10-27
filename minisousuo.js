@@ -28,14 +28,13 @@ var mysearch=(function(){
 var $searchinput=$('#searchinput'),
 $lianxiang=$('#lianxiang'),
 searchKey='';
-
 function callback(data){
-var str='';
-var data=data.s;
-for(var i=0,len=data.length;i<len;i++){
+var data=data.AS.Results[0].Suggests;
+str='';
+for (var i = 0; i < data.length; i++){
 // 默认显示?条
 if(i<=7){
-str+='<li>'+data[i]+'</li>';
+str+='<li>'+data[i].Txt+'</li>';
 }
 }
 $lianxiang.html(str);
@@ -85,7 +84,7 @@ $("input").val($("li.active").html());
 
 function bindHtml(){
 $.ajax({
-url:'https://suggestion.baidu.com/su?wd='+searchKey,
+url:'https://api.bing.com/qsonhs.aspx?type=cb&q='+searchKey,
 dataType:'jsonp',
 jsonp:'cb',
 success:callback,

@@ -28,14 +28,20 @@ var mysearch=(function(){
 var $searchinput=$('#searchinput'),
 $lianxiang=$('#lianxiang'),
 searchKey='';
-
 function callback(data){
-var str='';
-var data=data.s;
-for(var i=0,len=data.length;i<len;i++){
+// 必应API接口
+var data=data.AS.Results[0].Suggests;
+/* var str=''; */
+str='';
+// 百度API接口
+/* var data=data.s; */
+/* for(var i=0, len=data.length; i<len; i++) */
+for (var i = 0; i < data.length; i++){
 // 默认显示?条
 if(i<=7){
-str+='<li>'+data[i]+'</li>';
+// 百度API接口
+/* str+='<li>'+data[i]+'</li>'; */
+str+='<li>'+data[i].Txt+'</li>';
 }
 }
 $lianxiang.html(str);
@@ -86,7 +92,9 @@ $("input").val($("li.active").html());
 
 function bindHtml(){
 $.ajax({
-url:'https://suggestion.baidu.com/su?wd='+searchKey,
+/* url:'https://suggestion.baidu.com/su?wd='+searchKey, */
+/* url:'https://sg1.api.bing.com/qsonhs.aspx?type=cb&q='+searchKey, */
+url:'https://api.bing.com/qsonhs.aspx?type=cb&q='+searchKey,
 dataType:'jsonp',
 jsonp:'cb',
 success:callback,
@@ -129,12 +137,11 @@ $('#lianxiang').css({'height':'0',});
 }
 });
 
-// 失去焦点收缩 on('blur',
+// 失去焦点收缩
 $("#searchinput").blur(function(){
 setTimeout(function(){
 // 美化
 $('.inputkuan').css({'border-radius':'30px',});
-/* $lianxiang.stop().slideUp(0); */
 $('#lianxiang').slideUp(100);
 },100);
 });
