@@ -12,7 +12,18 @@ body{
 margin:3% auto;
 color:rgb(0,0,0);
 background-color:rgb(251,252,255);
+/* 可有可无 美化 */
+background-image:url(https://open.saintic.com/api/bingPic);
+background-repeat:no-repeat!important;
+background-position:center center;
+background-size:cover;
 /* border:1px solid rgb(0,0,0); */
+}
+
+/* 可有可无 美化 */
+.pcminibj{
+margin:auto;
+background-color:rgba(251,252,255,.5);
 }
 
 .kuandu{
@@ -24,7 +35,7 @@ width:90%;
 .syimg{
 position:absolute;
 right:0;
-margin:3.8rem 8%;
+margin:3.7rem 8%;
 width:2rem;
 background-repeat:no-repeat!important;
 /* border:1px solid rgb(250,0,0); */
@@ -174,7 +185,7 @@ margin-right:8.4%;
 display:flex;
 width:1.4rem;
 height:1.4rem;
-fill:rgb(100,100,100);
+fill:rgb(0,0,0);
 }
 
 #lianxiang{
@@ -182,7 +193,8 @@ display:none;
 position:fixed;
 top:3.3rem;
 width:90%;
-background-color:rgb(255,255,255);
+/* background-color:rgb(255,255,255); */
+background-color:transparent;
 }
 #lianxiang li{
 padding:0 1rem;
@@ -236,10 +248,11 @@ top:0;
 left:0;
 height:100%;
 width:100%;
-background-color:rgb(255,255,255);
+/* background-color:rgb(255,255,255); */
+background-color:rgba(255,255,255,.9);
 }
 
-.tianqilj{
+.tqlianjie{
 position:absolute;
 left:0;
 right:0;
@@ -252,38 +265,47 @@ width:13rem;
 /* 净面 */
 ::-webkit-details-marker,
 ::-webkit-scrollbar,
-/* [themeweb=light] #sengyin, */
-[themeweb=light] .Confucius,
-[themeweb=light] article{
+/* [miniweb=light] #sengyin, */
+[miniweb=light] .Confucius,
+[miniweb=light] article{
 display:none;
 }
 
-html[themeweb=light] body{
+html[miniweb=light] body{
 margin:14rem auto;
 background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255));
-background-repeat:no-repeat;
+
+/* background-image:url(https://open.saintic.com/api/bingPic); */
+background-repeat:no-repeat!important;
+/* background-position:center center;
+background-size:cover; */
 }
 
-[themeweb=light] .kuandu{
+[miniweb=light] .pcminibj,
+[miniweb=light] .kuandu{
 width:90%;
+background-color:transparent;
 /* border:1px solid rgb(0,0,0); */
 }
 
-[themeweb=light] .time,
-[themeweb=light] #sizong{
+[miniweb=light] .time,
+[miniweb=light] #sizong{
 width:100%;
 font-weight:900;
 }
 
-[themeweb=light] .tqjianju{
+[miniweb=light] .tqjianju{
 margin-top:2rem;
 }
-
 
 @media (prefers-color-scheme:dark){
 body{
 color:rgb(255,255,255);
 background-color:rgb(32,33,36);
+}
+
+.pcminibj{
+background-color:rgba(32,33,36,.5);
 }
 
 .Confucius,.Confucius summary,
@@ -304,20 +326,22 @@ color:rgb(255,255,255);
 border-bottom:1px solid rgb(63,66,70);
 }
 
-.svgtubiao{fill:rgb(214,219,223);}
+.svgtubiao{fill:rgb(255,255,255);}
 
 #lianxiang{
-background-color:rgb(32,33,36);
+/* background-color:rgb(32,33,36); */
+background-color:transparent;
 }
 #lianxiang li.active{
 background-color:rgb(42,43,46);
 }
 
 #appzzc{
-background-color:rgb(32,33,36);
+/* background-color:rgb(32,33,36); */
+background-color:rgba(32,33,36,.9);
 }
 
-html[themeweb=light] body{
+html[miniweb=light] body{
 background-color:rgb(32,33,36);
 background-image:radial-gradient(500px 150px,rgb(7,193,96,.2),rgb(32,33,36));
 }
