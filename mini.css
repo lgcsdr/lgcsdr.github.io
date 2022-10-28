@@ -9,10 +9,9 @@ outline:none;
 }
 
 body{
-margin:3% auto;
+margin:0 auto;
 color:rgb(0,0,0);
 background-color:rgb(251,252,255);
-/* 可有可无 美化 */
 background-image:url(https://open.saintic.com/api/bingPic);
 background-repeat:no-repeat!important;
 background-position:center center;
