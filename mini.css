@@ -204,8 +204,8 @@ position:absolute;
 left:0;
 right:0;
 margin:auto;
-width:11rem;
-/* background-color:rgba(6,6,6,.6); */
+width:11.2rem;
+/* background-color:rgb(200,0,0); */
 }
 .newss .zhilian{
 font-size:.8rem;
@@ -247,10 +247,10 @@ background-color:rgb(255,255,255);
 position:absolute;
 left:0;
 right:0;
-margin:0 auto;
+margin:auto;
 height:.8rem;
 width:12rem;
-/* border:1px solid rgb(0,0,0); */
+/* border:1px solid rgb(200,0,0); */
 }
 
 /* 净面 */
