@@ -12,12 +12,12 @@ body{
 margin:3% auto;
 font-family:KaiTi;
 color:rgb(0,0,0);
-background-color:rgb(251,252,255);
 /* 可有可无 美化 */
 background-image:url(https://open.saintic.com/api/bingPic);
-background-repeat:no-repeat!important;
-background-position:center center;
-background-size:cover;
+background-position:center;
+/* background-size:cover; */
+background-repeat:no-repeat;
+background-color:rgb(251,252,255);
 /* border:1px solid rgb(0,0,0); */
 /* https://bing.ioliu.cn */
 }
@@ -286,7 +286,7 @@ background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255)
 
 /* background-image:url(https://open.saintic.com/api/bingPic); */
 background-repeat:no-repeat!important;
-/* background-position:center center;
+/* background-position:center;
 background-size:cover; */
 }
 

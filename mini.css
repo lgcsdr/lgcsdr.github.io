@@ -8,20 +8,23 @@ outline:none;
 -webkit-tap-highlight-color:transparent;
 }
 
+html,
 body{
 margin:0 auto;
+height:100%;
 color:rgb(0,0,0);
-background-color:rgb(251,252,255);
 background-image:url(https://open.saintic.com/api/bingPic);
-background-repeat:no-repeat!important;
-background-position:center center;
+background-position:center;
 background-size:cover;
+background-repeat:no-repeat!important;
+background-color:rgb(251,252,255);
 /* border:1px solid rgb(0,0,0); */
 }
 
-/* 可有可无 美化 */
+/* 可有可无 美化图片 */
 .pcminibj{
 margin:auto;
+height:100%;
 background-color:rgba(251,252,255,.5);
 }
 
@@ -245,8 +248,10 @@ display:none;
 position:fixed;
 top:0;
 left:0;
-height:100%;
-width:100%;
+right:0;
+bottom:0;
+/* height:100%;
+width:100%; */
 /* background-color:rgb(255,255,255); */
 background-color:rgba(255,255,255,.9);
 }
@@ -270,25 +275,27 @@ width:13rem;
 display:none;
 }
 
-html[miniweb=light] body{
-margin:14rem auto;
-background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255));
 
-/* background-image:url(https://open.saintic.com/api/bingPic); */
+html[miniweb=light] body{
+/* margin:14rem auto; */
+background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255));
 background-repeat:no-repeat!important;
-/* background-position:center center;
-background-size:cover; */
 }
 
 [miniweb=light] .pcminibj,
 [miniweb=light] .kuandu{
 width:90%;
 background-color:transparent;
-/* border:1px solid rgb(0,0,0); */
+}
+
+[miniweb=light] .syimg{
+padding:18rem 0 0 0;
 }
 
 [miniweb=light] .time,
 [miniweb=light] #sizong{
+/* 因为背景图片padding */
+padding:9rem 0 0 0;
 width:100%;
 font-weight:900;
 }
