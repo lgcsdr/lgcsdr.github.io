@@ -8,24 +8,12 @@ outline:none;
 -webkit-tap-highlight-color:transparent;
 }
 
-html,
 body{
 margin:0 auto;
 height:100%;
 color:rgb(0,0,0);
-background-image:url(https://open.saintic.com/api/bingPic);
-background-position:center;
-background-size:cover;
-background-repeat:no-repeat!important;
 background-color:rgb(251,252,255);
 /* border:1px solid rgb(0,0,0); */
-}
-
-/* 可有可无 美化图片 */
-.pcminibj{
-margin:auto;
-height:100%;
-background-color:rgba(251,252,255,.5);
 }
 
 .kuandu{
@@ -252,8 +240,7 @@ right:0;
 bottom:0;
 /* height:100%;
 width:100%; */
-/* background-color:rgb(255,255,255); */
-background-color:rgba(255,255,255,.9);
+background-color:rgb(255,255,255);
 }
 
 .tqlianjie{
@@ -277,7 +264,7 @@ display:none;
 
 
 html[miniweb=light] body{
-/* margin:14rem auto; */
+margin:14rem auto;
 background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255));
 background-repeat:no-repeat!important;
 }
@@ -288,16 +275,11 @@ width:90%;
 background-color:transparent;
 }
 
-[miniweb=light] .syimg{
-padding:18rem 0 0 0;
-}
-
 [miniweb=light] .time,
 [miniweb=light] #sizong{
-/* 因为背景图片padding */
-padding:9rem 0 0 0;
 width:100%;
 font-weight:900;
+/* border:1px solid rgb(0,0,0); */
 }
 
 [miniweb=light] .tqjianju{
@@ -308,10 +290,6 @@ margin-top:2rem;
 body{
 color:rgb(255,255,255);
 background-color:rgb(32,33,36);
-}
-
-.pcminibj{
-background-color:rgba(32,33,36,.5);
 }
 
 .Confucius,.Confucius summary,
@@ -343,8 +321,7 @@ background-color:rgb(42,43,46);
 }
 
 #appzzc{
-/* background-color:rgb(32,33,36); */
-background-color:rgba(32,33,36,.9);
+background-color:rgb(32,33,36);
 }
 
 html[miniweb=light] body{
