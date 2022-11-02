@@ -98,10 +98,19 @@ margin:.6rem auto;
 }
 
 button{
+/* margin:.3rem; */
+/* padding:0 .3rem; */
+/* height:1.7rem; */
+/* vertical-align:middle; */
+/* height:1.7rem; */
 margin:.3rem;
-padding:0 .3rem;
-height:1.7rem;
-vertical-align:middle;
+padding:.2rem;
+/* height:2rem; */
+/* width:3rem; */
+
+
+
+
 text-align:center;
 font-size:1rem;
 text-shadow:0 0 0 rgb(0,0,0);
@@ -125,12 +134,20 @@ text-shadow:0 0 0 rgb(255,255,255);
 .google{background-color:rgb(66,133,244);}
 .googlefy{background-color:rgb(204,102,0);}
 
-.gengduo,
+/* .gengduo{
+border-bottom:2px dashed rgb(255,0,0);
+border-bottom-left-radius:100%;
+}
+ */
+
+/* .gengduo,
 button:hover,
 button:focus{
 border-bottom:2px dashed rgb(255,0,0);
 border-bottom-left-radius:100%;
-}
+background-color:rgb(161,62,63);
+transform:rotate(15deg);
+} */
 
 /* tv遮罩层 */
 .tvzzcs{
@@ -200,6 +217,17 @@ fill:rgb(0,0,0);
 cursor:pointer;
 }
 
+
+
+.lxbaowei{
+/* display:flex; */
+
+height:20rem;
+width:30rem;
+
+background-color:rgba(255,0,0,.9);
+}
+
 #lianxiang{
 display:none;
 position:absolute;
@@ -232,7 +260,7 @@ position:absolute;
 left:0;
 right:0;
 margin:auto;
-width:15.5rem;
+width:14.7rem;
 /* background-color:rgb(200,0,0); */
 }
 .newss .zhilian{
