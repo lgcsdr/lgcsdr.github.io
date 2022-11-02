@@ -12,16 +12,17 @@ body{
 margin:3% auto;
 font-family:KaiTi;
 color:rgb(0,0,0);
-/* 可有可无美化 */
+/* 可无美化 */
 background-image:url(https://open.saintic.com/api/bingPic);
 background-repeat:no-repeat;
 background-attachment:fixed;
 background-color:rgb(251,252,255);
 /* border:1px solid rgb(0,0,0); */
-
-/* background-position:center center;
-https://bing.ioliu.cn */
 }
+/* background-position:center center;
+https://bing.ioliu.cn/v1/rand?&w=1920&h=1080
+https://bing.ioliu.cn/v1/rand/?w=1920&h=1200
+https://bing.ioliu.cn */
 
 .pcminibj{
 margin:auto;
