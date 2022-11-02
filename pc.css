@@ -98,20 +98,8 @@ margin:.6rem auto;
 }
 
 button{
-/* margin:.3rem; */
-/* padding:0 .3rem; */
-/* height:1.7rem; */
-/* vertical-align:middle; */
-/* height:1.7rem; */
 margin:.3rem;
 padding:.2rem;
-/* height:2rem; */
-/* width:3rem; */
-
-
-
-
-text-align:center;
 font-size:1rem;
 text-shadow:0 0 0 rgb(0,0,0);
 background-color:transparent;
@@ -133,12 +121,6 @@ text-shadow:0 0 0 rgb(255,255,255);
 .youtube{background-color:rgb(255,0,0);}
 .google{background-color:rgb(66,133,244);}
 .googlefy{background-color:rgb(204,102,0);}
-
-/* .gengduo{
-border-bottom:2px dashed rgb(255,0,0);
-border-bottom-left-radius:100%;
-}
- */
 
 /* .gengduo,
 button:hover,
@@ -185,9 +167,8 @@ display:flex;
 height:3rem;
 padding:0 2.6rem 0 1rem;
 font-size:1.2rem;
-
 border:1px solid rgb(150,160,170);
-border-radius:30px;
+border-radius:24px;
 background-color:transparent;
 transition:box-shadow 1s;
 }
@@ -217,24 +198,12 @@ fill:rgb(0,0,0);
 cursor:pointer;
 }
 
-
-
-.lxbaowei{
-/* display:flex; */
-
-height:20rem;
-width:30rem;
-
-background-color:rgba(255,0,0,.9);
-}
-
 #lianxiang{
 display:none;
 position:absolute;
 margin-top:-20rem;
 width:27rem;
-
-border-radius:20px 20px 0 0;
+border-radius:24px 24px 0 0;
 box-shadow:0 -1px 3px rgb(200,200,200);
 /* background-color:rgb(255,255,255); */
 background-color:rgba(255,255,255,.9);
@@ -309,13 +278,12 @@ display:none;
 
 html[miniweb=light] body{
 margin:14rem auto;
-/* text-shadow:0 0 20px rgb(70,152,255); */
 background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255));
-
 /* background-image:url(https://open.saintic.com/api/bingPic); */
 background-repeat:no-repeat!important;
 /* background-position:center;
 background-size:cover; */
+/* text-shadow:0 0 20px rgb(70,152,255); */
 }
 
 [miniweb=light] .pcminibj,

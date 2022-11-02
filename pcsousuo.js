@@ -123,7 +123,7 @@ searchKey=$(this).val();
 if(searchKey.length>0){
 bindHtml();
 // pc 美化
-$('.inputkuan').css({'border-radius':'0 0 20px 20px',});
+$('#searchinput').css({'border-radius':'0 0 24px 24px',});
 $('#lianxiang').css({'height':'20rem',});
 /* return false; */
 }
@@ -132,7 +132,7 @@ $('#lianxiang').css({'height':'20rem',});
 if(this.value.length === 0){
 clearContent();
 // pc 美化
-$('.inputkuan').css({'border-radius':'30px',});
+$('#searchinput').css({'border-radius':'24px',});
 $('#lianxiang').css({'height':'0',});
 }
 });
@@ -141,7 +141,7 @@ $('#lianxiang').css({'height':'0',});
 $("#searchinput").blur(function(){
 setTimeout(function(){
 // 美化
-$('.inputkuan').css({'border-radius':'30px',});
+$('#searchinput').css({'border-radius':'24px',});
 $('#lianxiang').slideUp(100);
 },100);
 });
