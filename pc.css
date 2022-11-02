@@ -12,14 +12,15 @@ body{
 margin:3% auto;
 font-family:KaiTi;
 color:rgb(0,0,0);
-/* 可有可无 美化 */
+/* 可有可无美化 */
 background-image:url(https://open.saintic.com/api/bingPic);
-background-position:center;
-/* background-size:cover; */
 background-repeat:no-repeat;
+background-attachment:fixed;
 background-color:rgb(251,252,255);
 /* border:1px solid rgb(0,0,0); */
-/* https://bing.ioliu.cn */
+
+/* background-position:center center;
+https://bing.ioliu.cn */
 }
 
 .pcminibj{
@@ -281,8 +282,7 @@ margin:14rem auto;
 background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255));
 /* background-image:url(https://open.saintic.com/api/bingPic); */
 background-repeat:no-repeat!important;
-/* background-position:center;
-background-size:cover; */
+background-attachment:scroll;
 /* text-shadow:0 0 20px rgb(70,152,255); */
 }
 
