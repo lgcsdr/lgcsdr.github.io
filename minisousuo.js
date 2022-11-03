@@ -226,8 +226,10 @@ $('#lianxiang').css({'display':'','z-index':'',});
 $('#appzzc').css({'display':'',});
 
 // 点遮罩层或联想,返回主页
-history.go(-2);
-window.history.back();
+/* history.go(-2); */
+history.back();
+history.back();
+
 });
 
 
@@ -265,7 +267,7 @@ $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
 $('#appzzc').css({'display':'',});
 
-window.history.back();
+/* window.history.back(); */
 // 点返回键让输入框失去焦点
 $('#searchinput').blur();
 });
