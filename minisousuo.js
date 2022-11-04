@@ -284,7 +284,7 @@ $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
 $('#appzzc').css({'display':'',});
 // 返回主页
-/* history.back(); */
+history.back();
 });
 
 // 回车键直接搜索时
@@ -315,7 +315,7 @@ $('#appzzc').css({'display':'',});
 if ($("#appzzc").css('display') == "block"){
 $("#appzzc").hide();
 } else {
-history.back()
+/* history.back() */
 }
 
 
