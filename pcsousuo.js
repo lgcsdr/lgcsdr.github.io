@@ -160,7 +160,6 @@ mysearch.init();
 
 
 // 零件
-
 // tv卫视弹窗
 $('#tvweisi').click(function(e){
 // 阻止冒泡
@@ -237,7 +236,6 @@ $('#searchinput').css({'border-radius':'24px',});
 $('#lianxiang').slideUp(100);
 },100);
 });
-
 
 // 回车键直接搜索的时候
 $("#searchinput").keydown(function() {

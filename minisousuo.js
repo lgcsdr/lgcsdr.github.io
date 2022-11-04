@@ -116,6 +116,7 @@ searchKey=$(this).val();
 if(searchKey.length >= 1){
 bindHtml();
 $('#lianxiang').css({'display':'block','z-index':'1',});
+return false;
 }
 // 没有值收缩
 if(this.value.length === 0){
@@ -182,10 +183,9 @@ $('#qingcu').hide();
 $('#qingcu').click(function(){
 // 清空输入框内容 不失焦点
 $('#searchinput').val('').focus();
+/* $('#searchinput').val(''); */
 // 清空后隐藏自己
 $('#qingcu').hide();
-// 不失去焦点
-/* $('#searchinput').focus(); */
 });
 
 // 失去指针焦点时判断输入框是否有值
@@ -205,14 +205,51 @@ $('#lianxiang').slideUp(50);
 
 
 // 安卓端 click focus 点击小零件时
-$('#searchinput').focus(function(){
-// 点搜索框追加网址后缀#, 为了返回键能关闭遮罩层
-window.history.pushState('','','#sbfbu=1&pi=');
-/* return false; */
+$('#searchinput').focus(function()
+
+/* $('#searchinput').on('input',function() */
+{
+
+/* $('#nullhttp').click(function(){ */
+
+
+/* val = this.value.length; */
+// 判断输入框是否有值
+/* if(val >= 1){ */
+
+// 不失去焦点
+/* $('#searchinput').focus(); */
+window.history.pushState('null','','#sbfbu=1&pi=');
+
+/* } */
+
+// 追加网址后缀, 为了返回键能关闭遮罩层
+/* window.history.pushState('null','','#sbfbu=1&pi='); */
 });
+/* }); */
+
+
+
+window.addEventListener("popstate", function(e) {
+if ($("#appzzc").css('display') == "block"){
+$("#appzzc").hide();
+} else {
+history.back()
+}
+}, false);
+
+
+
 
 // 到顶部
-$('#searchinput').add('#qingcu').click(function(e){
+$('#searchinput').add('#qingcu').click(function(e)
+/* $('#nullhttp').add('#qingcu').click(function(e) */
+{
+
+// 不失去焦点
+/* $('#searchinput').focus(); */
+
+
 e.stopPropagation();
 // 点搜索框显示遮罩层,按着搜索框不动到顶部
 $('#searchinput').css({'position':'fixed','top':'2px','width':'90%','z-index':'1','box-shadow':'none',});
@@ -220,6 +257,24 @@ $('#qingcu').css({'position':'fixed','top':'11px','z-index':'1',});
 /* $('#lianxiang').css({'display':'block','z-index':'1',}); */
 $('#appzzc').css({'display':'block',});
 });
+
+
+
+/* $('#searchinput').blur(); */
+/* $('#qingcu').focus(function(){
+$('#searchinput').css({'position':'','top':'','width':'','z-index':'',});
+
+$('#qingcu').css({'position':'','top':'','z-index':'',});
+$('#qingcu').hide();
+
+$('#searchinput').focus();
+}); */
+
+
+
+
+
+
 
 // 返回原处
 $('#appzzc').add('#lianxiang').click(function(){
@@ -258,6 +313,6 @@ $('#appzzc').css({'display':'',});
 
 // 让输入框失去焦点
 $('#searchinput').blur();
-});
+},false);
 
 });
