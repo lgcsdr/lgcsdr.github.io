@@ -116,7 +116,7 @@ function init(){
 $('#searchinput').on('click keyup',function(e){
 e.stopPropagation();
 
-// 按上下键不监听
+// 按上下键不监听 联想
 if(event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 32){
 return false;
 }
@@ -181,7 +181,7 @@ $("#tvlianjie").hide(200);
 return false;
 });
 
-// 点击搜索框时候
+// 点击搜索框时
 $('#searchinput').click(function(){
 // 点击搜索框隐藏新闻
 $('#news').hide();
@@ -212,15 +212,14 @@ $('#qingcu').hide();
 
 // 点击清空按钮时
 $('#qingcu').click(function(){
-// 清空输入框内容
+// 清空输入框内容 不失焦点
 $('#searchinput').val('').focus();
 // 清空后隐藏自己
 $('#qingcu').hide();
-// 不失去焦点
-/* $('#searchinput').focus(); */
+// 不失去焦点 $('#searchinput').focus();
 });
 
-// 判断输入框是否有值 失去指针焦点时候
+// 失去指针焦点时判断输入框是否有值
 $('#searchinput').blur(function(){
 if($(this).val()==''){
 $('#qingcu').hide();
@@ -237,7 +236,7 @@ $('#lianxiang').slideUp(100);
 },100);
 });
 
-// 回车键直接搜索的时候
+// 回车键直接搜索时
 $("#searchinput").keydown(function() {
 if (event.keyCode == 13) {
 // 不定时无法响应form/action
