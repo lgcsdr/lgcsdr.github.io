@@ -284,7 +284,7 @@ $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
 $('#appzzc').css({'display':'',});
 // 返回主页
-history.back();
+/* history.back(); */
 });
 
 // 回车键直接搜索时
@@ -309,7 +309,7 @@ $('#searchinput').css({'box-shadow':'0 0 90px rgb(255,255,255)',});
 }
 $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
-/* $('#appzzc').css({'display':'',}); */
+$('#appzzc').css({'display':'',});
 
 
 if ($("#appzzc").css('display') == "block"){
