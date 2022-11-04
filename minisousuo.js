@@ -230,13 +230,13 @@ window.history.pushState('null','','#sbfbu=1&pi=');
 
 
 
-window.addEventListener("popstate", function(e) {
+/* window.addEventListener("popstate", function(e) {
 if ($("#appzzc").css('display') == "block"){
 $("#appzzc").hide();
 } else {
 history.back()
 }
-}, false);
+}, false); */
 
 
 
@@ -309,10 +309,19 @@ $('#searchinput').css({'box-shadow':'0 0 90px rgb(255,255,255)',});
 }
 $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
-$('#appzzc').css({'display':'',});
+/* $('#appzzc').css({'display':'',}); */
+
+
+if ($("#appzzc").css('display') == "block"){
+$("#appzzc").hide();
+} else {
+history.back()
+}
+
+
 
 // 让输入框失去焦点
-$('#searchinput').blur();
+/* $('#searchinput').blur(); */
 },false);
 
 });
