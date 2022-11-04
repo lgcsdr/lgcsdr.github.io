@@ -205,12 +205,25 @@ $('#lianxiang').slideUp(50);
 
 
 // 安卓端 click focus 点击小零件时
-$('#searchinput').focus(function()
+$('#searchinput').add('#qingcu').click(function()
 
 /* $('#searchinput').on('input',function() */
 {
 
 /* $('#nullhttp').click(function(){ */
+
+if ($("#appzzc").css('display') == "none"){
+/* $("#appzzc").hide(); */
+
+window.history.pushState('null','','#sbfbu=1&pi=');
+$('#appzzc').css({'display':'block',});
+} else {
+
+/* window.history.pushState('null','','#sbfbu=1&pi='); */
+$('#appzzc').css({'display':'none',});
+/* history.back(); */
+
+}
 
 
 /* val = this.value.length; */
@@ -219,7 +232,7 @@ $('#searchinput').focus(function()
 
 // 不失去焦点
 /* $('#searchinput').focus(); */
-window.history.pushState('null','','#sbfbu=1&pi=');
+/* window.history.pushState('null','','#sbfbu=1&pi='); */
 
 /* } */
 
@@ -235,6 +248,7 @@ if ($("#appzzc").css('display') == "block"){
 $("#appzzc").hide();
 } else {
 history.back()
+
 }
 }, false); */
 
@@ -295,13 +309,13 @@ setTimeout(function(){
 // 回车返回主页
 history.back();
 // 回车后让输入框失去焦点
-/* $('#searchinput').blur(); */
+$('#searchinput').blur();
 },2000);
 }
 });
 
 // 返回键 popstate
-window.addEventListener('popstate',function(){
+window.addEventListener('popstate',function(e){
 // 点返回键关闭遮罩层,input返回原处
 $('#searchinput').css({'position':'','top':'','width':'','z-index':'','box-shadow':'0 0 90px rgb(7,193,96)',});
 if(window.matchMedia('(prefers-color-scheme: dark)').matches){
@@ -311,17 +325,15 @@ $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
 $('#appzzc').css({'display':'',});
 
-
-if ($("#appzzc").css('display') == "block"){
+/* if ($("#appzzc").css('display') == "block"){
 $("#appzzc").hide();
 } else {
-/* history.back() */
+history.back()
 }
-
-
+*/
 
 // 让输入框失去焦点
-/* $('#searchinput').blur(); */
+$('#searchinput').blur();
 },false);
 
 });
