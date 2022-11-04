@@ -24,6 +24,7 @@ return false;
 }
 
 // 联想
+$(function(){
 var mysearch=(function(){
 var $searchinput=$('#searchinput'),
 $lianxiang=$('#lianxiang'),
@@ -110,9 +111,11 @@ searchResult.removeChild(searchResult.childNodes[i]);
 }
 }
 
-// 获取搜索框关键字 focus click keyup
+// 获取搜索框关键字 keyup=focus click
 function init(){
-$('#searchinput').on('click keyup',function(){
+$('#searchinput').on('click keyup',function(e){
+e.stopPropagation();
+
 // 按上下键不监听
 if(event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 32){
 return false;
@@ -120,12 +123,12 @@ return false;
 
 // 如果输入框有值
 searchKey=$(this).val();
-if(searchKey.length>0){
+if(searchKey.length >= 1){
 bindHtml();
 // pc 美化
 $('#searchinput').css({'border-radius':'0 0 24px 24px',});
 $('#lianxiang').css({'height':'20rem',});
-/* return false; */
+return false;
 }
 
 // 没值联想收缩
@@ -138,13 +141,13 @@ $('#lianxiang').css({'height':'0',});
 });
 
 // 失去焦点收缩
-$("#searchinput").blur(function(){
+/* $("#searchinput").blur(function(){
 setTimeout(function(){
 // 美化
 $('#searchinput').css({'border-radius':'24px',});
 $('#lianxiang').slideUp(100);
 },100);
-});
+}); */
 
 // 绑定li
 $lianxiang.on('click','li', function(){
@@ -157,7 +160,7 @@ mysearch.init();
 
 
 // 零件
-$(function(){
+
 // tv卫视弹窗
 $('#tvweisi').click(function(e){
 // 阻止冒泡
@@ -208,14 +211,14 @@ $('#qingcu').hide();
 }
 });
 
-// 点击清空按钮时候
+// 点击清空按钮时
 $('#qingcu').click(function(){
 // 清空输入框内容
-$('#searchinput').val('');
+$('#searchinput').val('').focus();
 // 清空后隐藏自己
 $('#qingcu').hide();
 // 不失去焦点
-$('#searchinput').focus();
+/* $('#searchinput').focus(); */
 });
 
 // 判断输入框是否有值 失去指针焦点时候
@@ -223,10 +226,16 @@ $('#searchinput').blur(function(){
 if($(this).val()==''){
 $('#qingcu').hide();
 $('#news').show();
-
 // 美化
 $('#searchinput').css({'box-shadow':'none',});
 }
+
+// 定时器防止点不住联想
+setTimeout(function(){
+// 美化
+$('#searchinput').css({'border-radius':'24px',});
+$('#lianxiang').slideUp(100);
+},100);
 });
 
 

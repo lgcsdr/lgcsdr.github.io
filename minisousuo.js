@@ -24,6 +24,7 @@ return false;
 }
 
 // 联想
+$(function(){
 var mysearch=(function(){
 var $searchinput=$('#searchinput'),
 $lianxiang=$('#lianxiang'),
@@ -100,9 +101,11 @@ searchResult.removeChild(searchResult.childNodes[i]);
 }
 }
 
-// 获取搜索框关键字 focus click keyup
+// 获取搜索框关键字 keyup=focus click
 function init(){
-$('#searchinput').on('focus keyup',function(){
+$('#searchinput').on('click keyup',function(e){
+e.stopPropagation();
+
 // 按上下键不监听
 if(event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 32){
 return false;
@@ -110,20 +113,15 @@ return false;
 
 // 如果输入框有值
 searchKey=$(this).val();
-if(searchKey.length>0){
+if(searchKey.length >= 1){
 bindHtml();
+$('#lianxiang').css({'display':'block','z-index':'1',});
 }
 // 没有值收缩
 if(this.value.length === 0){
 clearContent();
+/* $('#lianxiang').css({'display':'','z-index':'',}); */
 }
-});
-
-// 失去焦点收缩 手机
-$("#searchinput").blur(function(){
-setTimeout(function(){
-$('#lianxiang').slideUp(50);
-},50);
 });
 
 // 绑定li
@@ -137,7 +135,6 @@ mysearch.init();
 
 
 // 零件
-$(function(){
 // tv卫视弹窗
 $('#tvweisi').click(function(e){
 // 阻止冒泡
@@ -159,9 +156,9 @@ $("#tvlianjie").hide(200);
 return false;
 });
 
-// 点击搜索框时候
+// 点击搜索框时
 $('#searchinput').click(function(){
-// 点击搜索框隐藏新闻
+// 隐藏新闻
 $('#news').hide();
 // input聚焦时,自动滚动到屏幕顶部,让input定位在可见区域
 this.scrollIntoView();
@@ -181,17 +178,17 @@ $('#qingcu').hide();
 }
 });
 
-// 点击清空按钮时候
+// 点击清空按钮时
 $('#qingcu').click(function(){
-// 清空输入框内容
-$('#searchinput').val('');
+// 清空输入框内容 不失焦点
+$('#searchinput').val('').focus();
 // 清空后隐藏自己
 $('#qingcu').hide();
 // 不失去焦点
-$('#searchinput').focus();
+/* $('#searchinput').focus(); */
 });
 
-// 判断输入框是否有值 失去指针焦点时候
+// 失去指针焦点时判断输入框是否有值
 $('#searchinput').blur(function(){
 if($(this).val()==''){
 $('#qingcu').hide();
@@ -199,62 +196,54 @@ $('#news').show();
 // 美化
 $('#searchinput').css({'box-shadow':'none',});
 }
+
+// 定时器防止点不住联想
+setTimeout(function(){
+$('#lianxiang').slideUp(50);
+},50);
 });
 
-// 安卓端
-// focus $('#searchinput').add('#qingcu').click
+
+// 安卓端 click focus 点击小零件时
 $('#searchinput').focus(function(){
+// 点搜索框追加网址后缀#, 为了返回键能关闭遮罩层
+window.history.pushState('','','#sbfbu=1&pi=');
+/* return false; */
+});
+
+// 到顶部
+$('#searchinput').add('#qingcu').click(function(e){
+e.stopPropagation();
 // 点搜索框显示遮罩层,按着搜索框不动到顶部
 $('#searchinput').css({'position':'fixed','top':'2px','width':'90%','z-index':'1','box-shadow':'none',});
 $('#qingcu').css({'position':'fixed','top':'11px','z-index':'1',});
-$('#lianxiang').css({'display':'block','z-index':'1',});
+/* $('#lianxiang').css({'display':'block','z-index':'1',}); */
 $('#appzzc').css({'display':'block',});
-
-// 点搜索框追加网址后缀#, 为了返回键能关闭遮罩层
-window.history.pushState('','','#sbfbu=1&pi=');
 });
 
-// click 对应 focus
+// 返回原处
 $('#appzzc').add('#lianxiang').click(function(){
 // 点遮罩层,联想,关闭遮罩层,搜索框返回原处
-$('#searchinput').css({'position':'','top':'','width':'','z-index':'','box-shadow':'0 0 90px rgb(7,193,96)',});
-if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-$('#searchinput').css({'box-shadow':'0 0 90px rgb(255,255,255)',});
-}
+$('#searchinput').css({'position':'','top':'','width':'','z-index':'',});
 $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
 $('#appzzc').css({'display':'',});
-
-// 点遮罩层或联想,返回主页
-/* history.go(-2); */
+// 返回主页
 history.back();
-history.back();
-
 });
 
-
-// 回车键直接搜索的时候
+// 回车键直接搜索时
 $("#searchinput").keydown(function() {
 if (event.keyCode == 13) {
 // 不定时无法响应form/action
 setTimeout(function(){
-// 安卓端回车后,关闭遮罩层,联想和搜索框,返回原处
-$('#searchinput').css({'position':'','top':'','width':'','z-index':'','box-shadow':'0 0 90px rgb(7,193,96)',});
-if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-$('#searchinput').css({'box-shadow':'0 0 90px rgb(255,255,255)',});
-}
-$('#qingcu').css({'position':'','top':'','z-index':'',});
-$('#lianxiang').css({'display':'','z-index':'',});
-$('#appzzc').css({'display':'',});
-
-// 回车后返回主页
-window.history.back();
+// 回车返回主页
+history.back();
 // 回车后让输入框失去焦点
-$('#searchinput').blur();
+/* $('#searchinput').blur(); */
 },2000);
 }
 });
-
 
 // 返回键 popstate
 window.addEventListener('popstate',function(){
@@ -267,8 +256,7 @@ $('#qingcu').css({'position':'','top':'','z-index':'',});
 $('#lianxiang').css({'display':'','z-index':'',});
 $('#appzzc').css({'display':'',});
 
-/* window.history.back(); */
-// 点返回键让输入框失去焦点
+// 让输入框失去焦点
 $('#searchinput').blur();
 });
 
