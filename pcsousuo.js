@@ -26,38 +26,12 @@ return false;
 // 联想
 $(function(){
 var mysearch=(function(){
-var $searchinput=$('#searchinput'),
-$lianxiang=$('#lianxiang'),
-searchKey='';
-function callback(data){
-// 必应API接口
-var data=data.AS.Results[0].Suggests;
-/* var str=''; */
-str='';
-// 百度API接口
-/* var data=data.s; */
-/* for(var i=0, len=data.length; i<len; i++) */
-for (var i = 0; i < data.length; i++){
-// 默认显示?条
-if(i<=7){
-// 百度API接口
-/* str+='<li>'+data[i]+'</li>'; */
-str+='<li>'+data[i].Txt+'</li>';
-}
-}
-$lianxiang.html(str);
-$lianxiang.show();
-};
-
 // 联想上下键
 $("#searchinput").keydown(function(e){
-/* var keycode = (event.keyCode ? event.keyCode : event.which); */
-var keycode = (event.keyCode || event.button);
-
+var keycode = (event.keyCode);
 if(keycode == 38){
 // 阻止光标跑到第一
 event.preventDefault();
-
 var active = $("li.active");
 if (active.length) {
 var prev = active.prev();
@@ -69,13 +43,11 @@ $("li:last").addClass("active").siblings().removeClass("active");
 }else{
 $("li:last").addClass("active");
 }
-
 $("input").val($("li.active").html());
 }
 
 else if (e.keyCode == 40){
 event.preventDefault();
-
 var active = $("li.active");
 if (active.length) {
 var next = active.next();
@@ -91,6 +63,33 @@ $("input").val($("li.active").html());
 }
 });
 
+// 搜索联想 searchKey
+var $searchinput=$('#searchinput'),
+$lianxiang=$('#lianxiang'),
+searchKey='';
+function callback(data){
+// 必应API接口
+if (data.AS.FullResults != 0){
+var data=data.AS.Results[0].Suggests;
+str='';
+// 百度API接口
+/* var str='';
+var data=data.s;
+for(var i=0, len=data.length; i<len; i++) */
+// 必应API接口
+for (var i=0; i<data.length; i++){
+// 默认显示?条
+if(i<=7){
+// 百度API接口
+/* str+='<li>'+data[i]+'</li>'; */
+str+='<li>'+data[i].Txt+'</li>';
+}
+}
+$lianxiang.html(str);
+$lianxiang.show();
+}
+};
+
 function bindHtml(){
 $.ajax({
 /* url:'https://suggestion.baidu.com/su?wd='+searchKey, */
@@ -102,26 +101,16 @@ success:callback,
 })
 };
 
-// 清除搜索框内容
-var searchResult=document.getElementById("lianxiang");
-function clearContent(){
-var size = searchResult.childNodes.length;
-for(var i = size - 1; i >= 0; i--) {
-searchResult.removeChild(searchResult.childNodes[i]);
-}
-}
-
 // 获取搜索框关键字 keyup=focus click
 function init(){
 $('#searchinput').on('click keyup',function(e){
 e.stopPropagation();
-
 // 按上下键不监听 联想
 if(event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 32){
 return false;
 }
 
-// 如果输入框有值
+// 输入框有值 开始 searchKey
 searchKey=$(this).val();
 if(searchKey.length >= 1){
 bindHtml();
@@ -131,12 +120,14 @@ $('#lianxiang').css({'height':'20rem',});
 return false;
 }
 
-// 没值联想收缩
-if(this.value.length === 0){
-clearContent();
+// 没值联想收起
+if(searchKey.length === 0){
+/* $lianxiang.stop().slideUp(100); */
+$('#lianxiang').hide();
 // pc 美化
 $('#searchinput').css({'border-radius':'24px',});
 $('#lianxiang').css({'height':'0',});
+return false;
 }
 });
 
@@ -155,9 +146,9 @@ $searchinput.val($(this).html())
 });
 }
 return{init:init}
+return false;
 })();
 mysearch.init();
-
 
 // 零件
 // tv卫视弹窗
@@ -174,7 +165,7 @@ $('#tvlianjie').hide();
 return false;
 });
 // tv遮罩层,点击屏幕关闭tv弹窗
-$('#tvzzc').add('#tvlianjie').click(function(e) {
+$('#tvzzc').add('#tvlianjie').click(function(e){
 e.stopPropagation();
 $('#tvzzc').hide();
 $("#tvlianjie").hide(200);
@@ -199,7 +190,6 @@ $('#searchinput').css({'box-shadow':'0 0 90px rgb(7,193,96)',});
 if(window.matchMedia('(prefers-color-scheme: dark)').matches){
 $('#searchinput').css({'box-shadow':'0 0 90px rgb(255,255,255)',});
 }
-
 // 隐藏新闻
 $('#news').hide();
 // 显示清除
@@ -227,7 +217,6 @@ $('#news').show();
 // 美化
 $('#searchinput').css({'box-shadow':'none',});
 }
-
 // 定时器防止点不住联想
 setTimeout(function(){
 // 美化
@@ -243,7 +232,7 @@ if (event.keyCode == 13) {
 setTimeout(function(){
 // 回车后让输入框失去焦点
 $('#searchinput').blur();
-},1000);
+},2000);
 // 这里时间要大于$lianxiang.stop().slideUp(50);
 }
 });

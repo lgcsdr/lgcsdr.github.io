@@ -1,4 +1,3 @@
-// 乱七八糟测试 input button
 var btnss=document.getElementsByClassName('zhilian');
 for(var z in btnss){
 btnss[z].onclick=function(){
@@ -25,24 +24,9 @@ return false;
 // 联想
 $(function(){
 var mysearch=(function(){
-var $searchinput=$('#searchinput'),
-$lianxiang=$('#lianxiang'),
-searchKey='';
-function callback(data){
-var data=data.AS.Results[0].Suggests;
-str='';
-for (var i = 0; i < data.length; i++){
-if(i<=7){
-str+='<li>'+data[i].Txt+'</li>';
-}
-}
-$lianxiang.html(str);
-$lianxiang.show();
-};
-
 // 联想上下键
 $("#searchinput").keydown(function(e){
-var keycode = (event.keyCode || event.button);
+var keycode = (event.keyCode);
 if(keycode == 38){
 // 阻止光标跑到第一
 event.preventDefault();
@@ -62,7 +46,6 @@ $("input").val($("li.active").html());
 
 else if (e.keyCode == 40){
 event.preventDefault();
-
 var active = $("li.active");
 if (active.length) {
 var next = active.next();
@@ -78,6 +61,24 @@ $("input").val($("li.active").html());
 }
 });
 
+// 搜索联想 searchKey
+var $searchinput=$('#searchinput'),
+$lianxiang=$('#lianxiang'),
+searchKey='';
+function callback(data){
+if (data.AS.FullResults != 0){
+var data=data.AS.Results[0].Suggests;
+str='';
+for (var i=0; i<data.length; i++){
+if(i<=7){
+str+='<li>'+data[i].Txt+'</li>';
+}
+}
+$lianxiang.html(str);
+$lianxiang.show();
+}
+};
+
 function bindHtml(){
 $.ajax({
 url:'https://api.bing.com/qsonhs.aspx?type=cb&q='+searchKey,
@@ -87,15 +88,6 @@ success:callback,
 })
 };
 
-// 清除搜索框内容
-var searchResult=document.getElementById("lianxiang");
-function clearContent(){
-var size = searchResult.childNodes.length;
-for(var i = size - 1; i >= 0; i--) {
-searchResult.removeChild(searchResult.childNodes[i]);
-}
-}
-
 // 获取搜索框关键字 keyup=focus click
 function init(){
 $('#searchinput').on('click keyup',function(e){
@@ -104,17 +96,18 @@ e.stopPropagation();
 if(event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 32){
 return false;
 }
-// 如果输入框有值
+// 输入框有值 开始 searchKey
 searchKey=$(this).val();
 if(searchKey.length >= 1){
 bindHtml();
 $('#lianxiang').css({'display':'block','z-index':'1',});
 return false;
 }
-// 没有值收缩
-if(this.value.length === 0){
-clearContent();
+// 没值联想收起
+if(searchKey.length === 0){
+$('#lianxiang').hide();
 /* $('#lianxiang').css({'display':'','z-index':'',}); */
+return false;
 }
 });
 // 绑定li
@@ -123,6 +116,7 @@ $searchinput.val($(this).html())
 });
 }
 return{init:init}
+return false;
 })();
 mysearch.init();
 
@@ -188,8 +182,8 @@ $('#searchinput').css({'box-shadow':'none',});
 }
 // 定时器防止点不住联想
 setTimeout(function(){
-$('#lianxiang').slideUp(50);
-},50);
+$('#lianxiang').slideUp(100);
+},100);
 });
 
 // 安卓端 click focus 点击小零件时
@@ -219,7 +213,7 @@ history.back();
 });
 
 // 回车键直接搜索时
-$("#searchinput").keydown(function() {
+$("#searchinput").keydown(function(){
 if (event.keyCode == 13) {
 // 不定时无法响应form/action
 setTimeout(function(){
@@ -232,7 +226,7 @@ $('#searchinput').blur();
 });
 
 // 返回键 popstate
-window.addEventListener('popstate',function(e){
+window.addEventListener('popstate',function(){
 // 返回原处
 $('#searchinput').css({'position':'','top':'','width':'','z-index':'','box-shadow':'0 0 90px rgb(7,193,96)',});
 if(window.matchMedia('(prefers-color-scheme: dark)').matches){
