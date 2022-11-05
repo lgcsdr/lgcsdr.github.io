@@ -1,3 +1,4 @@
+(function(){
 var btnss=document.getElementsByClassName('zhilian');
 for(var z in btnss){
 btnss[z].onclick=function(){
@@ -20,6 +21,7 @@ window.open(this.getAttribute('nivodurl')+
 document.getElementById('searchinput').value+('&catId=1'));
 return false;
 }
+})();
 
 // 联想
 $(function(){

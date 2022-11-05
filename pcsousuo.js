@@ -1,4 +1,5 @@
 // 乱七八糟测试 input button
+(function(){
 var btnss=document.getElementsByClassName('zhilian');
 for(var z in btnss){
 btnss[z].onclick=function(){
@@ -16,12 +17,13 @@ return false;
 }
 
 // 给某个搜索链接加后缀,特殊处理--泥巴
-var houzui = document.getElementById('nivod');
+var houzui=document.getElementById('nivod');
 houzui.onclick=function(){
 window.open(this.getAttribute('nivodurl')+
 document.getElementById('searchinput').value+('&catId=1'));
 return false;
 }
+})();
 
 // 联想
 $(function(){

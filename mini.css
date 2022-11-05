@@ -56,7 +56,8 @@ color:rgb(255,0,0);
 }
 
 .Confucius{
-margin:1rem 0 .4rem;
+/* margin:1rem 0 .4rem; */
+margin:1rem 0;
 /* border:1px solid rgb(0,0,0); */
 }
 .Confucius details{
@@ -72,6 +73,7 @@ text-shadow:0 0 0 rgb(0,0,0);
 
 .sxjianju{
 margin:.6rem auto;
+/* border:1px solid rgb(220,0,0); */
 }
 
 button{
