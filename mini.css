@@ -56,7 +56,6 @@ color:rgb(255,0,0);
 }
 
 .Confucius{
-/* margin:1rem 0 .4rem; */
 margin:1rem 0;
 /* border:1px solid rgb(0,0,0); */
 }
@@ -118,10 +117,16 @@ background-color:rgba(255,230,200,.8);
 z-index:2;
 }
 
-.tanxinghezi{
+.txhezis{
 display:flex;
 flex:1;
 align-items:center;
+left:0;
+right:0;
+margin:auto;
+border:1px solid rgb(150,160,170);
+border-radius:24px;
+background-color:transparent;
 }
 /* 输入框 */
 .formkuan,
@@ -131,18 +136,16 @@ width:100%;
 .inputkuan{
 display:flex;
 height:2.6rem;
-padding:0 2.6rem 0 1rem;
+padding:0 1rem;
 font-size:1rem;
-border:1px solid rgb(150,160,170);
-border-radius:24px;
 background-color:transparent;
 }
-.inputkuan:focus{
+/* .inputkuan:focus{ */
 /* position:relative; */
-border:0;
+/* border:0;
 border-bottom:1px solid rgb(150,160,170);
-border-radius:0;
-}
+border-radius:0; */
+/* } */
 
 .inputkuan::-webkit-search-cancel-button{
 appearance:none;
@@ -152,10 +155,8 @@ display:none;
 /* 输入框清除按钮 */
 .qingcus{
 display:none;
-position:absolute;
-right:0;
-margin-right:8.4%;
-/* background-color:rgb(255,0,0,.5); */
+padding-right:.5rem;
+/* border:1px solid rgb(200,0,0); */
 }
 .svgtubiao{
 display:flex;
@@ -168,9 +169,13 @@ fill:rgb(0,0,0);
 display:none;
 position:fixed;
 top:3.3rem;
+left:0;
+right:0;
+margin:auto;
 width:90%;
-/* background-color:rgb(255,255,255); */
 background-color:transparent;
+/* background-color:rgb(255,255,255);
+border:1px solid rgb(200,0,0); */
 }
 #lianxiang li{
 padding:0 1rem;
@@ -248,7 +253,6 @@ width:12rem;
 display:none;
 }
 
-
 html[miniweb=light] body{
 margin:14rem auto;
 background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255));
@@ -288,13 +292,16 @@ color:rgb(255,255,255);
 background-color:rgba(10,20,30,.8);
 }
 
-.inputkuan{
+.txhezis{
 border:1px solid rgb(63,66,70);
+}
+.inputkuan{
+/* border:1px solid rgb(63,66,70); */
 color:rgb(255,255,255);
 }
-.inputkuan:focus{
+/* .inputkuan:focus{
 border-bottom:1px solid rgb(63,66,70);
-}
+} */
 
 .svgtubiao{fill:rgb(255,255,255);}
 

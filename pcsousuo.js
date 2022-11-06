@@ -1,5 +1,4 @@
 // 乱七八糟测试 input button
-(function(){
 var btnss=document.getElementsByClassName('zhilian');
 for(var z in btnss){
 btnss[z].onclick=function(){
@@ -23,7 +22,6 @@ window.open(this.getAttribute('nivodurl')+
 document.getElementById('searchinput').value+('&catId=1'));
 return false;
 }
-})();
 
 // 联想
 $(function(){
@@ -117,7 +115,8 @@ searchKey=$(this).val();
 if(searchKey.length >= 1){
 bindHtml();
 // pc 美化
-$('#searchinput').css({'border-radius':'0 0 24px 24px',});
+/* $('#searchinput').css({'border-radius':'0 0 24px 24px',}); */
+$('#txhezi').css({'border-radius':'0 0 24px 24px',});
 $('#lianxiang').css({'height':'20rem',});
 return false;
 }
@@ -127,7 +126,8 @@ if(searchKey.length === 0){
 /* $lianxiang.stop().slideUp(100); */
 $('#lianxiang').hide();
 // pc 美化
-$('#searchinput').css({'border-radius':'24px',});
+/* $('#searchinput').css({'border-radius':'24px',}); */
+$('#txhezi').css({'border-radius':'24px',});
 $('#lianxiang').css({'height':'0',});
 return false;
 }
@@ -180,6 +180,20 @@ $('#searchinput').click(function(){
 $('#news').hide();
 // input聚焦时,自动滚动到屏幕顶部,让input定位在可见区域
 this.scrollIntoView();
+// 美化
+$('#txhezi').css({
+'position':'relative',
+/* 'border':'none', */
+'border':'1px solid transparent',
+'box-shadow':'0 0 90px rgb(7,193,96),0 0 3px rgb(200,200,200)',
+'background-color':'rgba(255,255,255,.5)',
+});
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+$('#txhezi').css({
+'box-shadow':'0 0 90px rgb(255,255,255),0 0 3px rgb(41,42,43)',
+'background-color':'rgba(61,62,63,.5)',
+});
+}
 });
 
 // 输入框清除按钮 监听输入框内容变动
@@ -188,10 +202,11 @@ val = this.value.length;
 // 判断输入框是否有值
 if(val >= 1){
 // 美化
-$('#searchinput').css({'box-shadow':'0 0 90px rgb(7,193,96)',});
+$('#txhezi').css({'box-shadow':'0 0 90px rgb(7,193,96)',});
 if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-$('#searchinput').css({'box-shadow':'0 0 90px rgb(255,255,255)',});
+$('#txhezi').css({'box-shadow':'0 0 90px rgb(255,255,255)',});
 }
+
 // 隐藏新闻
 $('#news').hide();
 // 显示清除
@@ -217,18 +232,29 @@ if($(this).val()==''){
 $('#qingcu').hide();
 $('#news').show();
 // 美化
-$('#searchinput').css({'box-shadow':'none',});
+$('#txhezi').css({'box-shadow':'none',});
 }
 // 定时器防止点不住联想
 setTimeout(function(){
 // 美化
-$('#searchinput').css({'border-radius':'24px',});
+$('#txhezi').css({'border-radius':'24px',});
 $('#lianxiang').slideUp(100);
 },100);
+
+$('#txhezi').css({
+'border':'1px solid rgb(150,160,170)',
+'background-color':'transparent',
+});
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+$('#txhezi').css({
+'border':'1px solid rgb(93,96,100)',
+});
+}
+
 });
 
 // 回车键直接搜索时
-$("#searchinput").keydown(function() {
+$("#searchinput").keydown(function(){
 if (event.keyCode == 13) {
 // 不定时无法响应form/action
 setTimeout(function(){

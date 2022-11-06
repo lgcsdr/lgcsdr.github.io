@@ -40,9 +40,21 @@ width:90%;
 /* border:1px solid rgb(0,0,0); */
 }
 
-.syimg{
+.sengyins{
+display:flex;
 position:absolute;
-margin:3.6rem 22rem;
+/* margin:3.6rem 22rem; */
+/* height:2.5rem; */
+width:2rem;
+/* right:0; */
+background-repeat:no-repeat!important;
+cursor:pointer;
+/* border:1px solid rgb(100,200,100); */
+}
+.syimg{
+display:flex;
+/* position:absolute; */
+/* margin:3.6rem 22rem; */
 /* height:2.5rem; */
 width:2rem;
 background-repeat:no-repeat!important;
@@ -158,10 +170,13 @@ z-index:2;
 }
 
 /* 弹性布局,输入框,清除按钮,新闻 */
-.tanxinghezi{
+.txhezis{
 display:flex;
 flex:1;
 align-items:center;
+border:1px solid rgb(150,160,170);
+border-radius:24px;
+background-color:transparent;
 }
 /* 输入框 */
 .formkuan,
@@ -171,20 +186,21 @@ width:100%;
 .inputkuan{
 display:flex;
 height:3rem;
-padding:0 2.6rem 0 1rem;
+/* padding:0 2.6rem 0 1rem; */
+padding:0 1rem;
 font-size:1.2rem;
-border:1px solid rgb(150,160,170);
-border-radius:24px;
 background-color:transparent;
 transition:box-shadow 1s;
+/* border:1px solid rgb(200,0,0); */
 }
+/* .txhezis:focus,
 .inputkuan:focus{
 position:relative;
 border:0;
 box-shadow:0 0 90px rgb(7,193,96),0 0 3px rgb(200,200,200)!important;
-/* background-color:rgb(255,255,255); */
+background-color:rgb(255,255,255);
 background-color:rgba(255,255,255,.5);
-}
+} */
 .inputkuan::-webkit-search-cancel-button{
 appearance:none;
 display:none;
@@ -193,8 +209,8 @@ display:none;
 /* 输入框清除按钮 */
 .qingcus{
 display:none;
-position:absolute;
-margin:0 0 0 24.7rem;
+padding-right:.5rem;
+/* border:1px solid rgb(200,0,0); */
 }
 .svgtubiao{
 display:flex;
@@ -206,9 +222,11 @@ cursor:pointer;
 
 #lianxiang{
 display:none;
-position:absolute;
+/* z-index:1; */
+/* position:absolute; */
+position:relative;
 margin-top:-20rem;
-width:27rem;
+/* width:27rem; */
 border-radius:24px 24px 0 0;
 box-shadow:0 -1px 3px rgb(200,200,200);
 /* background-color:rgb(255,255,255); */
@@ -336,15 +354,18 @@ color:rgb(255,255,255);
 background-color:rgba(10,20,30,.8);
 }
 
-.inputkuan{
+.txhezis{
 border:1px solid rgb(93,96,100);
+}
+.inputkuan{
+/* border:1px solid rgb(93,96,100); */
 color:rgb(255,255,255);
 }
-.inputkuan:focus{
+/* .inputkuan:focus{
 box-shadow:0 0 90px rgb(255,255,255),0 0 3px rgb(41,42,43)!important;
-/* background-color:rgb(61,62,63); */
+background-color:rgb(61,62,63);
 background-color:rgba(61,62,63,.5);
-}
+} */
 
 .svgtubiao{fill:rgb(255,255,255);}
 
