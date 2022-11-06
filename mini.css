@@ -22,20 +22,18 @@ width:90%;
 /* border:1px solid rgb(0,0,0); */
 }
 
-.syimg{
-position:absolute;
-right:0;
-margin:3.7rem 8%;
-width:2rem;
-background-repeat:no-repeat!important;
-/* border:1px solid rgb(250,0,0); */
+.sijianjz{
+text-align:center;
+/* border:1px solid rgb(220,0,0); */
 }
-
+.sengyinjz{
+display:inline-block;
+}
 .time{
-width:100%;
+display:inline-block;
 text-align:center;
 user-select:none;
-/* border:1px solid rgb(0,0,0); */
+/* background-color:rgba(0,0,0,.3); */
 }
 #sizong{
 font-size:2.4rem;
@@ -52,7 +50,19 @@ font-size:.6rem;
 #sengri{
 font-size:.6rem;
 color:rgb(255,0,0);
-/* border:1px solid rgb(0,0,0); */
+/* background-color:rgba(90,0,0,.3); */
+}
+
+.sengyins{
+position:absolute;
+}
+.syimg{
+position:relative;
+top:4rem;
+right:2rem;
+width:2rem;
+background-repeat:no-repeat!important;
+/* border:1px solid rgb(250,0,0); */
 }
 
 .Confucius{
@@ -247,7 +257,7 @@ width:12rem;
 /* 净面 */
 ::-webkit-details-marker,
 ::-webkit-scrollbar,
-/* [miniweb=light] #sengyin, */
+/* [miniweb=light] .sengyins, */
 [miniweb=light] .Confucius,
 [miniweb=light] article{
 display:none;
@@ -259,7 +269,6 @@ background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255)
 background-repeat:no-repeat!important;
 }
 
-[miniweb=light] .pcminibj,
 [miniweb=light] .kuandu{
 width:90%;
 background-color:transparent;

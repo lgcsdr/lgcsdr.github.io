@@ -40,34 +40,21 @@ width:90%;
 /* border:1px solid rgb(0,0,0); */
 }
 
-.sengyins{
-display:flex;
-position:absolute;
-/* margin:3.6rem 22rem; */
-/* height:2.5rem; */
-width:2rem;
-/* right:0; */
-background-repeat:no-repeat!important;
-cursor:pointer;
-/* border:1px solid rgb(100,200,100); */
+.sijianjz{
+text-align:center;
+/* margin:0 auto;
+width:100%; */
+/* border:1px solid rgb(220,0,0); */
 }
-.syimg{
-display:flex;
-/* position:absolute; */
-/* margin:3.6rem 22rem; */
-/* height:2.5rem; */
-width:2rem;
-background-repeat:no-repeat!important;
-cursor:pointer;
-/* border:1px solid rgb(100,200,100); */
+.sengyinjz{
+display:inline-block;
 }
-
 .time{
-width:100%;
+display:inline-block;
 text-align:center;
 user-select:none;
 cursor:help;
-/* border:1px solid rgb(0,0,0); */
+/* background-color:rgba(0,0,0,.3); */
 }
 #sizong{
 font-size:2.6rem;
@@ -84,11 +71,24 @@ font-size:1rem;
 #sengri{
 font-size:1rem;
 color:rgb(255,0,0);
-/* border:1px solid rgb(0,0,0); */
+/* background-color:rgba(90,0,0,.3); */
+/* display:none; */
+}
+
+.sengyins{
+position:absolute;
+}
+.syimg{
+position:relative;
+top:4rem;
+right:2rem;
+width:2rem;
+background-repeat:no-repeat!important;
+cursor:pointer;
+/* border:1px solid rgb(100,200,100); */
 }
 
 .Confucius{
-/* margin:1.5rem auto .9rem; */
 margin:1.5rem 0;
 /* border:1px solid rgb(0,0,0); */
 }
@@ -186,7 +186,6 @@ width:100%;
 .inputkuan{
 display:flex;
 height:3rem;
-/* padding:0 2.6rem 0 1rem; */
 padding:0 1rem;
 font-size:1.2rem;
 background-color:transparent;
@@ -222,8 +221,6 @@ cursor:pointer;
 
 #lianxiang{
 display:none;
-/* z-index:1; */
-/* position:absolute; */
 position:relative;
 margin-top:-20rem;
 /* width:27rem; */
@@ -294,7 +291,7 @@ width:13rem;
 /* 净面 */
 ::-webkit-details-marker,
 ::-webkit-scrollbar,
-/* [miniweb=light] #sengyin, */
+/* [miniweb=light] .sengyins, */
 [miniweb=light] .Confucius,
 [miniweb=light] article{
 display:none;
@@ -310,13 +307,15 @@ background-attachment:scroll; */
 
 [miniweb=light] .pcminibj,
 [miniweb=light] .kuandu{
-width:50rem;
+/* margin:0 auto; */
+width:100%;
 background-color:transparent;
 /* border:1px solid rgb(0,0,0); */
 }
 
 [miniweb=light] .syimg{
-margin:8rem 38rem;
+top:9rem;
+right:9rem;
 }
 
 [miniweb=light] .time,
