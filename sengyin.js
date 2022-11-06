@@ -1,4 +1,9 @@
-// getAttribute playpause
+/* getAttribute playpause
+年代音乐959
+https://lhttp.qingting.fm/live/4804/64k.mp3
+怀旧音乐895
+https://lhttp.qingting.fm/live/5021381/64k.mp3 */
+
 var simage=document.getElementById('syanniu');
 simage.onclick=function(){
 var mysrc=simage.getAttribute('src');
