@@ -19,7 +19,7 @@ background-color:rgb(251,252,255);
 .kuandu{
 margin:auto;
 width:90%;
-/* border:1px solid rgb(0,0,0); */
+border:1px solid rgb(0,0,0);
 }
 
 .sijianjz{
@@ -55,11 +55,13 @@ color:rgb(255,0,0);
 
 .sengyins{
 position:absolute;
+/* position:relative; */
 }
 .syimg{
-position:relative;
+position:absolute;
+/* position:relative; */
 top:4rem;
-right:2rem;
+right:1rem;
 width:2rem;
 background-repeat:no-repeat!important;
 /* border:1px solid rgb(250,0,0); */
