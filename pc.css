@@ -88,26 +88,20 @@ cursor:pointer;
 /* border:1px solid rgb(100,200,100); */
 }
 
-.Confucius{
+.confucius{
 margin:1.5rem 0;
 /* border:1px solid rgb(0,0,0); */
 }
-.Confucius details{
+.confucius details{
 font-size:1.3rem;
 color:rgb(60,70,90);
 }
-.Confucius,
-.Confucius summary{
+.confucius,
+.confucius summary{
 font-size:1.6rem;
 color:rgb(0,0,0);
 text-shadow:0 0 0 rgb(0,0,0);
 }
-
-/* 按钮之间间距 user-select:none不要用 */
-/* .buttonfont{
-font-size:0;
-border:1px solid rgb(0,0,0);
-} */
 
 .sxjianju{
 margin:.6rem auto;
@@ -116,8 +110,6 @@ margin:.6rem auto;
 
 button{
 margin:.3rem;
-/* margin-left:0; */
-/* margin:.3rem .3rem .3rem auto; */
 padding:.2rem;
 font-size:1rem;
 text-shadow:0 0 0 rgb(0,0,0);
@@ -141,15 +133,6 @@ text-shadow:0 0 0 rgb(255,255,255);
 .google{background-color:rgb(66,133,244);}
 .googlefy{background-color:rgb(204,102,0);}
 
-/* .gengduo,
-button:hover,
-button:focus{
-border-bottom:2px dashed rgb(255,0,0);
-border-bottom-left-radius:100%;
-background-color:rgb(161,62,63);
-transform:rotate(15deg);
-} */
-
 /* tv遮罩层 */
 .tvzzcs{
 display:none;
@@ -160,7 +143,6 @@ right:0;
 bottom:0;
 background-color:transparent;
 }
-/* tv卫视链接 */
 .tvlianjies{
 display:none;
 position:absolute;
@@ -178,7 +160,6 @@ border:1px solid rgb(150,160,170);
 border-radius:24px;
 background-color:transparent;
 }
-/* 输入框 */
 .formkuan,
 .inputkuan{
 width:100%;
@@ -192,20 +173,7 @@ background-color:transparent;
 transition:box-shadow 1s;
 /* border:1px solid rgb(200,0,0); */
 }
-/* .txhezis:focus,
-.inputkuan:focus{
-position:relative;
-border:0;
-box-shadow:0 0 90px rgb(7,193,96),0 0 3px rgb(200,200,200)!important;
-background-color:rgb(255,255,255);
-background-color:rgba(255,255,255,.5);
-} */
-.inputkuan::-webkit-search-cancel-button{
-appearance:none;
-display:none;
-}
 
-/* 输入框清除按钮 */
 .qingcus{
 display:none;
 padding-right:.6rem;
@@ -215,7 +183,7 @@ padding-right:.6rem;
 display:flex;
 width:1.7rem;
 height:1.7rem;
-fill:rgb(0,0,0);
+fill:rgb(50,50,50);
 cursor:pointer;
 }
 
@@ -223,14 +191,14 @@ cursor:pointer;
 display:none;
 position:relative;
 margin-top:-20rem;
-/* width:27rem; */
+height:20rem;
+/* width:100%; */
 border-radius:24px 24px 0 0;
 box-shadow:0 -1px 3px rgb(200,200,200);
 /* background-color:rgb(255,255,255); */
 background-color:rgba(255,255,255,.9);
 }
 #lianxiang li{
-/* padding-left:26px; */
 padding:0 1rem;
 line-height:2.5rem;
 font-size:1.2rem;
@@ -242,8 +210,7 @@ overflow:auto;
 background-color:rgb(232,235,240);
 cursor:pointer;
 }
-
-/* 新闻显示-隐藏 点击搜索框 */
+/* 新闻滑动 */
 .newss{
 display:flex;
 position:absolute;
@@ -267,7 +234,6 @@ border:1px dashed rgb(66,133,244);
 .newss .yinyue{
 border:1px dashed rgb(255,136,0);
 }
-/* 新闻滑动 */
 .swiper{
 display:flex;
 overflow:hidden;
@@ -289,11 +255,13 @@ width:13rem;
 }
 
 /* 净面 */
+::-webkit-search-cancel-button,
 ::-webkit-details-marker,
 ::-webkit-scrollbar,
 /* [miniweb=light] .sengyins, */
-[miniweb=light] .Confucius,
+[miniweb=light] .confucius,
 [miniweb=light] article{
+appearance:none;
 display:none;
 }
 
@@ -323,7 +291,6 @@ width:100%;
 font-family:Arial Black;
 font-size:5rem;
 font-weight:900;
-/* text-shadow:3px 3px 3px rgb(0,0,0,.5); */
 /* border:1px solid rgb(0,0,0); */
 }
 
@@ -342,11 +309,11 @@ background-color:rgb(51,52,53);
 background-color:rgba(61,62,63,.7);
 }
 
-.Confucius,.Confucius summary,
+.confucius,.confucius summary,
 button{
 color:rgb(255,255,255);
 }
-.Confucius details{color:rgb(215,216,219);}
+.confucius details{color:rgb(215,216,219);}
 
 .tvlianjies{
 background-color:rgba(10,20,30,.8);
@@ -356,14 +323,8 @@ background-color:rgba(10,20,30,.8);
 border:1px solid rgb(93,96,100);
 }
 .inputkuan{
-/* border:1px solid rgb(93,96,100); */
 color:rgb(255,255,255);
 }
-/* .inputkuan:focus{
-box-shadow:0 0 90px rgb(255,255,255),0 0 3px rgb(41,42,43)!important;
-background-color:rgb(61,62,63);
-background-color:rgba(61,62,63,.5);
-} */
 
 .svgtubiao{fill:rgb(255,255,255);}
 

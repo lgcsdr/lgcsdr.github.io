@@ -65,16 +65,16 @@ background-repeat:no-repeat!important;
 /* border:1px solid rgb(250,0,0); */
 }
 
-.Confucius{
+.confucius{
 margin:1rem 0;
 /* border:1px solid rgb(0,0,0); */
 }
-.Confucius details{
+.confucius details{
 font-size:1rem;
 color:rgb(60,70,90);
 }
-.Confucius,
-.Confucius summary{
+.confucius,
+.confucius summary{
 font-size:1.3rem;
 color:rgb(0,0,0);
 text-shadow:0 0 0 rgb(0,0,0);
@@ -138,7 +138,7 @@ border:1px solid rgb(150,160,170);
 border-radius:24px;
 background-color:transparent;
 }
-/* 输入框 */
+
 .formkuan,
 .inputkuan{
 width:100%;
@@ -150,19 +150,7 @@ padding:0 1rem;
 font-size:1rem;
 background-color:transparent;
 }
-/* .inputkuan:focus{ */
-/* position:relative; */
-/* border:0;
-border-bottom:1px solid rgb(150,160,170);
-border-radius:0; */
-/* } */
 
-.inputkuan::-webkit-search-cancel-button{
-appearance:none;
-display:none;
-}
-
-/* 输入框清除按钮 */
 .qingcus{
 display:none;
 padding-right:.6rem;
@@ -179,9 +167,6 @@ fill:rgb(0,0,0);
 display:none;
 position:fixed;
 top:3.3rem;
-left:0;
-right:0;
-margin:auto;
 width:90%;
 background-color:transparent;
 /* background-color:rgb(255,255,255);
@@ -198,7 +183,6 @@ overflow:auto;
 background-color:rgb(232,235,240);
 }
 
-/* 点击搜索框 新闻显示-隐藏 */
 .newss{
 display:flex;
 position:absolute;
@@ -239,8 +223,6 @@ top:0;
 left:0;
 right:0;
 bottom:0;
-/* height:100%;
-width:100%; */
 background-color:rgb(255,255,255);
 }
 
@@ -255,11 +237,13 @@ width:12rem;
 }
 
 /* 净面 */
+::-webkit-search-cancel-button,
 ::-webkit-details-marker,
 ::-webkit-scrollbar,
 /* [miniweb=light] .sengyins, */
-[miniweb=light] .Confucius,
+[miniweb=light] .confucius,
 [miniweb=light] article{
+appearance:none;
 display:none;
 }
 
@@ -291,11 +275,11 @@ color:rgb(255,255,255);
 background-color:rgb(32,33,36);
 }
 
-.Confucius,.Confucius summary,
+.confucius,.confucius summary,
 button{
 color:rgb(255,255,255);
 }
-.Confucius details{color:rgb(215,216,219);}
+.confucius details{color:rgb(215,216,219);}
 
 .tvlianjies{
 background-color:rgba(10,20,30,.8);
@@ -305,19 +289,15 @@ background-color:rgba(10,20,30,.8);
 border:1px solid rgb(63,66,70);
 }
 .inputkuan{
-/* border:1px solid rgb(63,66,70); */
 color:rgb(255,255,255);
 }
-/* .inputkuan:focus{
-border-bottom:1px solid rgb(63,66,70);
-} */
 
 .svgtubiao{fill:rgb(255,255,255);}
 
-#lianxiang{
-/* background-color:rgb(32,33,36); */
+/* #lianxiang{
+background-color:rgb(32,33,36);
 background-color:transparent;
-}
+} */
 #lianxiang li.active{
 background-color:rgb(42,43,46);
 }

@@ -396,15 +396,15 @@ ShowTime();
 // 主题
 var colors=['light',''];
 var colorIndex = -3;
-var app=new(function() {
+var app=new(function(){
 document.querySelector('#shijian').addEventListener('click', onThemeClick);
 setTheme();
-function onThemeClick() {
+function onThemeClick(){
 colorIndex=colorIndex < colors.length - 1 ? colorIndex + 1:0;
 localStorage.shijian=colorIndex;
 setTheme();
 }
-function setTheme() {
+function setTheme(){
 var shijian=localStorage.shijian > - 1 ? colors[localStorage.shijian]:'';
 document.documentElement.setAttribute('miniweb', shijian);
 }

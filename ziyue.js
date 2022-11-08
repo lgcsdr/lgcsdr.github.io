@@ -586,10 +586,5 @@ var says=[
 '<details><summary>治家格言：守分安命，顺时听天；为人若此，庶乎近焉。</summary>解释：</details>',
 '<details><summary>治家格言：心好命又好，富贵直到老。命好心不好，福变为祸兆。</summary><summary>心好命不好，祸转为福报。心命俱不好，遭殃且贫夭。心可挽乎命，最要存仁道。命实造于心，吉凶惟人召。信命不修心，阴阳恐虚矫。修心一听命，天地自相保。</summary>解释：</details>'
 ];
-
-var timer=null;
-var ran=~~(Math.random()*says.length);
-var ziyue=document.getElementById('ziyue').innerHTML=says[ran];
-
-/* var randomItem=says[~~(Math.random()*says.length)];
-document.getElementById('ziyue').innerHTML=[randomItem]; */
+var ran=says[~~(Math.random()*says.length)];
+document.getElementById('ziyue').innerHTML=[ran];
