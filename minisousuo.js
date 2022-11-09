@@ -163,31 +163,33 @@ $txhezi.css({
 'border-bottom':'1px solid rgb(150,160,170)',
 });
 if(window.matchMedia('(prefers-color-scheme:dark)').matches){
-$txhezi.css({
-'border-bottom':'1px solid rgb(63,66,70)',
-});
-}
+$txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
 });
 
-// 返回键 popstate
+// 返回键 popstate 返回原处
 window.addEventListener('popstate',function(){
 $appzzc.hide();
 $lianxiang.hide();
-// 返回原处
 $txhezi.css({
 'position':'',
 'top':'',
 'width':'',
 'z-index':'',
-'border':'1px solid rgb(150,160,170)',
+'border':'0',
 'border-radius':'24px',
 'box-shadow':'0 0 90px rgb(7,193,96)',
 });
 if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+$txhezi.css({'box-shadow':'0 0 90px rgb(255,255,255)',});}
+// 有没有值
+if($searchinput.val()==''){
 $txhezi.css({
-'border':'1px solid rgb(63,66,70)',
-'box-shadow':'0 0 90px rgb(255,255,255)',
+'border':'1px solid rgb(150,160,170)',
+'box-shadow':'none',
 });
+if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+$txhezi.css({'border':'1px solid rgb(63,66,70)',});}
+$('#news').show();
 }
 $searchinput.blur();
 },false);
@@ -223,16 +225,6 @@ $qingcu.click(function(){
 $qingcu.hide();
 $lianxiang.hide();
 $searchinput.val('').focus();
-});
-
-// 失去焦点时 是否有值
-$searchinput.blur(function(){
-if($(this).val()==''){
-$qingcu.hide();
-$('#news').show();
-// 美化
-$txhezi.css({'box-shadow':'none',});
-}
 });
 
 });

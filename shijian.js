@@ -405,7 +405,7 @@ localStorage.shijian=colorIndex;
 setTheme();
 }
 function setTheme(){
-var shijian=localStorage.shijian > - 1 ? colors[localStorage.shijian]:'';
+var shijian=localStorage.shijian > - 3 ? colors[localStorage.shijian]:'';
 document.documentElement.setAttribute('miniweb', shijian);
 }
 return false;

@@ -173,8 +173,7 @@ if(window.matchMedia('(prefers-color-scheme:dark)').matches){
 $txhezi.css({
 'background-color':'rgba(61,62,63,.5)',
 'box-shadow':'0 0 90px rgb(255,255,255),0 0 3px rgb(41,42,43)',
-});
-}
+});}
 });
 
 // 点窗口时
@@ -226,10 +225,7 @@ $txhezi.css({
 'box-shadow':'none',
 });
 if(window.matchMedia('(prefers-color-scheme:dark)').matches){
-$txhezi.css({
-'border':'1px solid rgb(93,96,100)',
-});
-}
+$txhezi.css({'border':'1px solid rgb(93,96,100)',});}
 }
 });
 
