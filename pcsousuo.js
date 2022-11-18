@@ -68,13 +68,12 @@ success:callback,
 
 // 获取关键字 keyup=focus click
 $searchinput.on('click keyup',function(){
-/* e.stopPropagation(); */
 // 阻止监视关键字
 if(event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 32){
 return false;
 }
 
-// 有值开始联想 searchtext searchtext=$searchinput.val();
+// 有值开始联想 searchtext=$searchinput.val();
 searchtext=$(this).val();
 if(searchtext.length>=1){
 bindapi();
@@ -83,7 +82,7 @@ return false;
 
 // 没值收起联想
 if(searchtext.length==''){
-// 不延迟清空快了会带起联想
+// 不延迟删除键快了会带起联想
 setTimeout(function(){
 $lianxiang.hide();
 $txhezi.css({'border-radius':'24px',});

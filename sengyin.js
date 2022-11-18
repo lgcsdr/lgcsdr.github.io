@@ -1,8 +1,6 @@
 /* getAttribute playpause
-年代音乐959
-https://lhttp.qingting.fm/live/4804/64k.mp3
-怀旧音乐895
-https://lhttp.qingting.fm/live/5021381/64k.mp3 */
+年代音乐959 https://lhttp.qingting.fm/live/4804/64k.mp3
+怀旧音乐895 https://lhttp.qingting.fm/live/5021381/64k.mp3 */
 var syin=document.getElementById('sengyin');
 syin.addEventListener('click', playpause, false);
 var audio=null;
