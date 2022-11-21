@@ -254,7 +254,7 @@ width:13rem;
 /* border:1px solid rgb(200,0,0); */
 }
 .baise{
-display:none;
+/* display:none; */
 }
 
 /* 净面 */
@@ -284,11 +284,6 @@ background-color:transparent;
 /* border:1px solid rgb(0,0,0); */
 }
 
-[miniweb=light] .syimg{
-top:9rem;
-right:4rem;
-}
-
 [miniweb=light] .time,
 [miniweb=light] #sizong{
 width:100%;
@@ -298,10 +293,35 @@ font-weight:900;
 /* border:1px solid rgb(0,0,0); */
 }
 
+[miniweb=light] .syimg{
+top:9rem;
+right:4rem;
+}
+
 [miniweb=light] .baise{
 display:block;
 margin-top:2rem;
+
+color:rgb(251,52,53)!important;
 }
+
+
+[miniweb=light] #displayDiv{
+display:block;
+/* margin-top:2rem; */
+
+color:rgb(251,252,253)!important;
+/* background-color:rgb(251,52,53); */
+
+height:33rem;
+width:33rem;
+
+}
+
+
+
+
+
 
 @media (prefers-color-scheme:dark){
 body{

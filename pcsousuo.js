@@ -1,3 +1,69 @@
+
+
+/* xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+if(xhr.readystate == 4 && xhr.status == 200) {
+document.getElementById('displayDiv').innerHTML = xhr.responseText;
+}
+};
+xhr.open('GET', 'https://tianqiapi.com/api.php?style=tc&align=center&fontsize=18&color=ffffff&skin=mango&city=青岛', true);
+xhr.send();
+*/
+
+
+
+/* document.getElementById("displayDiv").innerHTML = '<object type="text/html" data="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=18&skin=mango&city=青岛" width="100%" height="100%"></object>'; */
+
+
+/* $("#displayDiv").load("https://tianqiapi.com/api.php?style=tc&align=center&fontsize=18"); */
+
+/* document.getElementById("displayDiv").innerHTML = page1.import.body.innerHTML; */
+
+
+/* $(document).ready(function() {
+           $("#displayDiv").load("https://tianqiapi.com/api.php?style=tc&align=center&fontsize=18&color=ffffff"); 
+    });
+ */
+ 
+/*  function jump(){
+    $("#displayDiv")window.load("https://tianqiapi.com/api.php?style=tc&align=center&fontsize=18&color=ffffff"),
+    
+    function(){ $("#displayDiv").fadeIn(100);}
+
+} */
+
+
+var parames={
+"type1":"paramer1","type2":"paramer2"};
+$.ajax({
+url:'https://tianqiapi.com/api.php?style=tc&align=center&fontsize=18&color=ffffff',
+type:'post',
+dataType:'html',
+data:parames,
+
+/* dataType:'jsonp', */
+/* jsonp:'cb', */
+/* success:callback, */
+
+/* error: function(){alert('error');}, */
+success:function(data){
+$("#displayDiv").html(data);
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 乱七八糟测试 input button
 var btnss=document.getElementsByClassName('zhilian');
 for(var z in btnss){
