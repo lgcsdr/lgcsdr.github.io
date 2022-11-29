@@ -244,14 +244,17 @@ white-space:nowrap;
 display:flex;
 }
 
+.tqtxhz{
+display:flex;
+}
 .tqlianjie{
 position:absolute;
 left:0;
 right:0;
 margin:auto;
-height:.8rem;
+height:.9rem;
 width:13rem;
-/* border:1px solid rgb(200,0,0); */
+border:1px solid rgb(200,0,0);
 }
 .baise{
 display:none;
@@ -298,6 +301,7 @@ top:9rem;
 right:4rem;
 }
 
+[miniweb=light] .tqlianjie,
 [miniweb=light] .baise{
 display:block;
 margin-top:2rem;

@@ -226,14 +226,17 @@ bottom:0;
 background-color:rgb(255,255,255);
 }
 
+.tqtxhz{
+display:flex;
+}
 .tqlianjie{
 position:absolute;
 left:0;
 right:0;
 margin:auto;
-height:.8rem;
+height:.9rem;
 width:12rem;
-/* border:1px solid rgb(200,0,0); */
+border:1px solid rgb(200,0,0);
 }
 
 /* 净面 */
@@ -265,7 +268,8 @@ font-weight:900;
 /* border:1px solid rgb(0,0,0); */
 }
 
-[miniweb=light] .tqjianju{
+[miniweb=light] .tqlianjie,
+[miniweb=light] .tianqi{
 margin-top:2rem;
 }
 
