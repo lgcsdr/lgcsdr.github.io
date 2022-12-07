@@ -137,7 +137,8 @@ return false;
 });
 
 // 安卓端 点击时 click focus
-($searchinput).add($qingcu).on('click focus',function(e){
+/* ($searchinput).add($qingcu).on('click focus',function(e){ */
+($searchinput).add($qingcu).focus(function(e){
 e.stopPropagation();
 // 监视弹层 追加网址后缀 为了返回键能关闭遮罩层
 if ($appzzc.css('display') === 'none'){
@@ -164,6 +165,8 @@ $txhezi.css({
 });
 if(window.matchMedia('(prefers-color-scheme:dark)').matches){
 $txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
+
+$searchinput.click();
 });
 
 // 返回键 popstate 返回原处
