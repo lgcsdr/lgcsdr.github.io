@@ -226,7 +226,7 @@ bottom:0;
 background-color:rgb(255,255,255);
 }
 
-.tqtxhz{
+/* .tqtxhz{
 display:flex;
 }
 .tqlianjie{
@@ -236,8 +236,8 @@ right:0;
 margin:auto;
 height:.9rem;
 width:12rem;
+} */
 /* border:1px solid rgb(200,0,0); */
-}
 
 /* 净面 */
 ::-webkit-search-cancel-button,
@@ -245,7 +245,8 @@ width:12rem;
 ::-webkit-scrollbar,
 /* [miniweb=light] .sengyins, */
 [miniweb=light] .confucius,
-[miniweb=light] article{
+[miniweb=light] article,
+[miniweb=light] .huangse{
 appearance:none;
 display:none;
 }
@@ -268,10 +269,10 @@ font-weight:900;
 /* border:1px solid rgb(0,0,0); */
 }
 
-[miniweb=light] .tqlianjie,
-[miniweb=light] .tianqi{
+/* [miniweb=light] .tqlianjie, */
+/* [miniweb=light] .tianqi{
 margin-top:2rem;
-}
+} */
 
 @media (prefers-color-scheme:dark){
 body{
