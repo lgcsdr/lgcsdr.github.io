@@ -6,7 +6,7 @@ syin.addEventListener('click', playpause, false);
 var audio=null;
 function playpause(){
 if(audio==null){
-audio=new Audio('https://lhttp.qingting.fm/live/5021381/64k.mp3');
+audio=new Audio('https://lhttp.qingting.fm/live/4804/64k.mp3');
 audio.pause();
 }
 if(audio.paused){
