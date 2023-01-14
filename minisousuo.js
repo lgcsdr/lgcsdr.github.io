@@ -183,7 +183,10 @@ $txhezi.css({
 'box-shadow':'0 0 90px rgb(7,193,96)',
 });
 if(window.matchMedia('(prefers-color-scheme:dark)').matches){
-$txhezi.css({'box-shadow':'0 0 90px rgb(255,255,255)',});}
+$txhezi.css({
+'box-shadow':'0 0 90px rgb(255,255,255)',
+});
+}
 // 有没有值
 if($searchinput.val()==''){
 $txhezi.css({
@@ -191,7 +194,10 @@ $txhezi.css({
 'box-shadow':'none',
 });
 if(window.matchMedia('(prefers-color-scheme:dark)').matches){
-$txhezi.css({'border':'1px solid rgb(63,66,70)',});}
+$txhezi.css({
+'border':'1px solid rgb(63,66,70)',
+});
+}
 $('#news').show();
 }
 $searchinput.blur();
