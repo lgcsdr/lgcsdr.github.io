@@ -10,7 +10,7 @@ syin.addEventListener('click', playpause, false);
 var audio=null;
 function playpause(){
 if(audio==null){
-audio=new Audio('https://ytcastmp3.radio.cn/76/stream_11254.mp3?type=1&key=c06504ee997809532395585a96c3f22b&time=63c2c1a0');
+audio=new Audio('http://sk.cri.cn/915.m3u8');
 audio.pause();
 }
 if(audio.paused){
