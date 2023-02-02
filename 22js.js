@@ -1,0 +1,1 @@
+javascript:if(document.body.style.zoom===''){document.body.style.zoom='150%'}else{document.body.style.zoom=''}void(0);
