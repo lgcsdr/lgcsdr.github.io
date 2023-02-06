@@ -245,8 +245,7 @@ width:12rem;
 ::-webkit-scrollbar,
 /* [miniweb=light] .sengyins, */
 [miniweb=light] .confucius,
-[miniweb=light] article,
-[miniweb=light] .huangse{
+[miniweb=light] article{
 appearance:none;
 display:none;
 }
