@@ -168,9 +168,9 @@ display:none;
 position:fixed;
 top:3.3rem;
 width:90%;
-background-color:transparent;
-/* background-color:rgb(255,255,255);
-border:1px solid rgb(200,0,0); */
+background-color:rgba(255,255,255,.3);
+/* background-color:transparent; */
+/* border:1px solid rgb(200,0,0); */
 }
 #lianxiang li{
 padding:0 1rem;
@@ -299,10 +299,10 @@ color:rgb(255,255,255);
 
 .svgtubiao{fill:rgb(255,255,255);}
 
-/* #lianxiang{
-background-color:rgb(32,33,36);
-background-color:transparent;
-} */
+#lianxiang{
+background-color:rgba(32,33,36,.3);
+/* background-color:transparent; */
+}
 #lianxiang li.active{
 background-color:rgb(42,43,46);
 }

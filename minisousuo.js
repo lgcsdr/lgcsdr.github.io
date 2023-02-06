@@ -171,8 +171,12 @@ $searchinput.click();
 
 // 返回键 popstate 返回原处
 window.addEventListener('popstate',function(){
+// 不延迟返回快了会带起联想在主页出现
 $appzzc.hide();
+setTimeout(function(){
 $lianxiang.hide();
+},200);
+
 $txhezi.css({
 'position':'',
 'top':'',
@@ -185,6 +189,8 @@ $txhezi.css({
 if(window.matchMedia('(prefers-color-scheme:dark)').matches){
 $txhezi.css({
 'box-shadow':'0 0 90px rgb(255,255,255)',
+// 为了手机端浏览器开启黑暗模式后搜索框没有虚线
+'border':'1px solid rgb(63,66,70)',
 });
 }
 // 有没有值
@@ -205,6 +211,8 @@ $searchinput.blur();
 
 // 返回原处
 ($appzzc).add($lianxiang).click(function(){
+$appzzc.hide();
+$lianxiang.hide();
 history.back();
 });
 

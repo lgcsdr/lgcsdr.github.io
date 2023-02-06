@@ -1,16 +1,9 @@
-/* getAttribute playpause
-年代音乐959 https://lhttp.qingting.fm/live/4804/64k.mp3
-怀旧音乐895 https://lhttp.qingting.fm/live/5021381/64k.mp3
-
-https://ytcastmp3.radio.cn/76/stream_11254.mp3?type=1&key=c06504ee997809532395585a96c3f22b&time=63c2c1a0
-https://ytcastmp3.radio.cn/65/stream_22399.mp3?type=1&key=610a96f0dbb31e3c493a84c1f14fb0b0&time=63c2cbc1
- */
 var syin=document.getElementById('sengyin');
 syin.addEventListener('click', playpause, false);
 var audio=null;
 function playpause(){
 if(audio==null){
-audio=new Audio('http://sk.cri.cn/915.m3u8');
+audio=new Audio('https://uk2.streamingpulse.com/ssl/vcr1');
 audio.pause();
 }
 if(audio.paused){
@@ -30,3 +23,27 @@ simage.setAttribute('src','2sengyin.gif');
 simage.setAttribute('src','1sengyin.svg');
 }
 }
+
+/*
+getAttribute playpause
+
+纯音乐
+http://174.36.206.197:8000/stream?type=http&nocache=62263
+https://uk2.streamingpulse.com/ssl/vcr1
+https://uk2.streamingpulse.com/ssl/vcr2
+舞曲的在线广播电台
+https://securestreams5.autopo.st:1827/stream
+https://retrowave.ru/audio/f16634c904054356c844418d7261a864408607bf.mp3?client_id=72f1f3786c2a1312a14218b942fab596
+
+https://www.hlsplayer.net/#type=m3u8&src=https://sk.cri.cn/915.m3u8
+https://www.hlsplayer.org/play?url=
+
+https://sk.cri.cn/915.m3u8
+https://http-live.sr.se/p4malmo-aac-192
+
+895怀集音乐之声
+https://lhttp.qtfm.cn/live/4804/64k.mp3
+959年代音乐怀旧好声音
+https://lhttp.qtfm.cn/live/5021381/64k.mp3
+
+*/
