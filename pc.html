@@ -3,19 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>lgc.ss</title>
 <link rel="icon" href="0search.png">
 
 <script>
 if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
-}else{location.href='pc.html';}
+window.location.href='mini.html';
+}else{}
 </script>
 
-<link rel="stylesheet" href="mini.css">
+<link rel="stylesheet" href="pc.css">
 </head>
 
 <body>
+<main class="pcminibj">
 <div class="kuandu">
 
 <header class="sijianjz">
@@ -39,14 +40,14 @@ if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
 <button class="zhilian zgzs" zhilianurl="https://www.radio.cn/pc-portal/erji/radioStation.html">Radio</button>
 <button class="zhilian" zhilianurl="http://ezfm.cri.cn/">调频</button>
 <button class="zhilian" zhilianurl="https://fm.douban.com/">豆瓣</button>
-<button class="zhilian" zhilianurl="https://m.vvvdj.com/">dj</button>
-<button class="sousuo" sousuourl="https://m.ximalaya.com/so/">喜马拉雅</button>
-<button class="sousuo" sousuourl="https://m.lrts.me/search?keyword=">懒人</button>
-<button class="sousuo" sousuourl="https://m.qingting.fm/search/all/">蜻蜓</button>
+<button class="zhilian" zhilianurl="https://www.vvvdj.com/">dj</button>
+<button class="sousuo" sousuourl="https://www.ximalaya.com/so/">喜马拉雅</button>
+<button class="sousuo" sousuourl="https://www.lrts.me/search/book/">懒人</button>
+<button class="sousuo" sousuourl="https://www.qingting.fm/search/all/">蜻蜓</button>
 <button class="sousuo" sousuourl="http://so.zgpingshu.com/cse/search?s=13126086106729577956&nsid=&q=">评书</button>
 <button class="sousuo" sousuourl="https://tonzhon.com/search?keyword=">铜钟</button>
 <button class="sousuo" sousuourl="https://www.zz123.com/search/?key=">种子</button>
-<button class="zhilian" zhilianurl="https://m.kuwo.cn/newh5app/search/">酷我</button>
+<button class="sousuo" sousuourl="https://www.kuwo.cn/search/list?key=">酷我</button>
 </div>
 
 <div class="sxjianju">
@@ -55,7 +56,9 @@ if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
 
 <!-- tv卫视弹窗 -->
 <button id="tvweisi">tv</button>
+<!-- tv遮罩层,点击任何地方关闭tv弹窗 -->
 <div class="tvzzcs" id="tvzzc"></div>
+<!-- tv卫视链接 -->
 <div class="tvlianjies" id="tvlianjie">
 <div>
 <button class="zhilian" zhilianurl="https://tv.cctv.com/cctvnav/m">央视</button>
@@ -91,29 +94,30 @@ if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
 <button id="nivod" nivodurl="https://www.nivod.tv/search.html?keyword=">niba</button>
 <button class="sousuo" sousuourl="https://www.tangrenjie.tv/vod/search.html?wd=">trj</button>
 <button class="sousuo" sousuourl="https://www.iyf.tv/search/">iyf</button>
+
 </div>
 
 <div>
 <button class="sousuo youtube" sousuourl="https://www.youtube.com/results?search_query=">YouTube</button>
-<button class="sousuo" sousuourl="https://m.bilibili.com/search?keyword=">bili</button>
+<button class="sousuo" sousuourl="https://search.bilibili.com/all?keyword=">bili</button>
 <button class="sousuo" sousuourl="https://www.kuaishou.com/search/video?searchKey=">ks</button>
 <button class="sousuo" sousuourl="https://www.douyin.com/search/">dy</button>
-<button class="sousuo" sousuourl="https://m.ixigua.com/ugsearch/">xg</button>
-<button class="sousuo" sousuourl="https://m.baidu.com/sf/vsearch?pd=video&atn=index&tn=&word=">hk</button>
+<button class="sousuo" sousuourl="https://www.ixigua.com/search/">xg</button>
+<button class="sousuo" sousuourl="https://www.baidu.com/sf/vsearch?pd=video&tn=&wd=">hk</button>
 <button class="sousuo" sousuourl="https://www.xvideos.com/?k=">,</button>
 </div>
 </div>
 
+<ul id="lianxiang"></ul>
 <div class="txhezis" id="txhezi">
 
 <form class="formkuan" action="https://bing.com/search?" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" target="_blank">
 <input class="inputkuan" id="searchinput" type="search" name="q">
-<ul id="lianxiang"></ul>
 </form>
 
 <div class="qingcus" id="qingcu">
 <span class="svgtubiao">
-<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"></path></svg>
+<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
 </span>
 </div>
 
@@ -160,7 +164,6 @@ if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
 </div>
 
 </div>
-<div id="appzzc"></div>
 
 <div class="sxjianju">
 <div>
@@ -182,7 +185,7 @@ if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
 <button class="sousuo" sousuourl="https://dict.baidu.com/s?wd=">词典</button>
 <button class="sousuo" sousuourl="https://s.weibo.com/weibo?q=">微博</button>
 <button class="sousuo" sousuourl="https://mingyi.sogou.com/mingyi?query=">医+疗</button>
-<button class="sousuo" sousuourl="https://so.toutiao.com/search/?keyword=">头条</button>
+<button class="sousuo" sousuourl="https://so.toutiao.com/search?dvpf=pc&source=sug&keyword=">头条</button>
 </div>
 </div>
 
@@ -190,15 +193,15 @@ if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
 <button class="sousuo googlefy" sousuourl="https://translate.google.com/?sl=auto&tl=auto&text=">translate</button>
 <button class="sousuo" sousuourl="https://www.bing.com/translator?text=">必应</button>
 <button class="sousuo" sousuourl="https://fanyi.sogou.com/text?keyword=">搜狗</button>
-<button class="sousuo" sousuourl="https://m.youdao.com/m/?lang=en&word=">有道</button>
+<button class="sousuo" sousuourl="https://dict.youdao.com/w/">有道</button>
 <button class="sousuo" sousuourl="https://www.lljyj.com/search/?q=">诗文</button>
 <button class="zhilian" zhilianurl="https://www.duanwenxue.com/">短文</button>
 </div>
 
 <div>
 <button class="sousuo" sousuourl="http://s.taobao.com/search?q=">淘宝￥</button>
-<button class="sousuo" sousuourl="https://so.m.jd.com/ware/search.action?keyword=">京东￥</button>
-<button class="sousuo" sousuourl="https://wap.zol.com.cn/index.php?c=List_List&keyword=">中关村￥</button>
+<button class="sousuo" sousuourl="https://search.jd.com/Search?keyword=">京东￥</button>
+<button class="sousuo" sousuourl="https://detail.zol.com.cn/index.php?c=SearchList&kword=">中关村￥</button>
 <button class="zhilian gengduo" zhilianurl="gengduo.html">更多</button>
 </div>
 
@@ -218,20 +221,28 @@ if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
 <button class="zhilian" zhilianurl="https://mail.qq.com/">qmail</button>
 <button class="zhilian" zhilianurl="https://mail.163.com/">163</button>
 <button class="zhilian" zhilianurl="https://pan.baidu.com/">pan</button>
-<button class="zhilian" zhilianurl="https://www.wiz.cn/mapp">wiz</button>
+<button class="zhilian" zhilianurl="https://www.wiz.cn/xapp">wiz</button>
 </div>
 </div>
 </article>
 
 <footer>
 <div class="tqtxhz">
+<!-- 武汉cityid=537 青岛=1407 菏泽=1543 -->
 <span class="zhilian tqlianjie" zhilianurl="https://html5.moji.com/tpd/mojiweatheraggr/index.html#/home?cityid=1407"></span>
 
-<iframe class="tianqi" width="100%" height="15" scrolling="no" frameborder="0" allowtransparency="true" src="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=10&color=a0a06a&city=青岛"></iframe>
+<!--
+city=武汉 青岛 菏泽
+https://tianqiapi.com/api.php?&align=center&fontsize=10&color=e3790d&skin=banana&city=青岛
+f5e09b faf0cb a0a06a
+-->
+<iframe class="huangse" width="100%" height="15" scrolling="no" frameborder="0" allowtransparency="true" src="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=10&color=faf0cb&city=青岛"></iframe>
+<!-- <iframe class="baise" width="100%" height="25" scrolling="no" frameborder="0" allowtransparency="true" src="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=18&color=fff&skin=mango&city=青岛"></iframe> -->
 </div>
 </footer>
 
 </div>
+</main>
 <script src="sengyin.js"></script>
 <script src="shijian.js"></script>
 <script src="ziyue.js"></script>
@@ -240,6 +251,6 @@ if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
 <script src="huadong.js"></script>
 
 <script src="jquery.js"></script>
-<script src="minisousuo.js"></script>
+<script src="pcsousuo.js"></script>
 </body>
 </html>

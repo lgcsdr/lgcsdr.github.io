@@ -17,10 +17,10 @@ var simage=document.getElementById('syanniu');
 simage.addEventListener('click', yinyue, false);
 function yinyue(){
 var mysrc=simage.getAttribute('src');
-if(mysrc=='1sengyin.svg'){
+if(mysrc=='1sengyin.png'){
 simage.setAttribute('src','2sengyin.gif');
 }else{
-simage.setAttribute('src','1sengyin.svg');
+simage.setAttribute('src','1sengyin.png');
 }
 }
 
