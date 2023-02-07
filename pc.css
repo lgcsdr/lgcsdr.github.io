@@ -12,7 +12,7 @@ body{
 margin:3% auto;
 font-family:KaiTi;
 color:rgb(0,0,0);
-/* 可无美化 */
+/* 美化可无 */
 background-image:url(https://open.saintic.com/api/bingPic);
 background-repeat:no-repeat;
 background-attachment:fixed;
@@ -256,18 +256,18 @@ height:.9rem;
 width:13rem;
 /* border:1px solid rgb(200,0,0); */
 }
-.baise{
+/* .baise{
 display:none;
-}
+} */
 
 /* 净面 */
 ::-webkit-search-cancel-button,
 ::-webkit-details-marker,
 ::-webkit-scrollbar,
 /* [miniweb=light] .sengyins, */
+/* [miniweb=light] .huangse, */
 [miniweb=light] .confucius,
-[miniweb=light] article,
-[miniweb=light] .huangse{
+[miniweb=light] article{
 appearance:none;
 display:none;
 }
@@ -301,9 +301,9 @@ top:9rem;
 right:4rem;
 }
 
+/* [miniweb=light] .baise, */
 [miniweb=light] .tqlianjie,
-[miniweb=light] .baise{
-display:block;
+[miniweb=light] .huangse{
 margin-top:2rem;
 }
 
