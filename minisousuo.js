@@ -72,13 +72,13 @@ if(searchtext.length>=1){
 bindapi();
 
 // 带起几个按钮 方便搜索
-$('#google').add('#baidu').show();
+$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').show();
 
-$('#google').add('#baidu').css({
-/* 'position':'fixed', */
+$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').css({
+'position':'fixed',
 /* 'position':'sticky', */
-'position':'relative',
-/* 'top':'50px', */
+/* 'position':'relative', */
+'top':'340px',
 /* 'top':'50px', */
 'z-index':'1',
 /* 'margin':'0 10px', */
@@ -93,9 +93,23 @@ $('#google').add('#baidu').css({
 'backgroundColor':'rgb(250,50,50,.5)',
 });
 
-$('#baidu').css({
-'right':'55px',
+$('#google').css({
+'left':'9px',
 });
+$('#youtube').css({
+'right':'9px',
+});
+$('#baidu').css({
+'left':'76px',
+});
+$('#zhihu').css({
+'left':'144px',
+});
+$('#wiki').css({
+'left':'212px',
+});
+
+
 
 return false;
 }
@@ -105,7 +119,7 @@ setTimeout(function(){
 $lianxiang.hide();
 },100);
 
-$('#google').add('#baidu').hide();
+$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').hide();
 return false;
 }
 });
@@ -230,18 +244,14 @@ $txhezi.css({
 }
 
 
-$('#google').add('#baidu').css({
-/* 'position':'fixed', */
-/* 'position':'sticky', */
+$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').css({
 'position':'',
-/* 'top':'50px', */
-/* 'top':'50px', */
+'top':'',
 'z-index':'',
 /* 'margin':'0 10px', */
 /* 'padding':'0 20px', */
 /* 'left':'0',
 'right':'0', */
-/* 'bottom':'0', */
 'height':'',
 'width':'',
 'border-radius':'',
@@ -267,9 +277,9 @@ $searchinput.blur();
 },false);
 
 // 返回原处
-$($appzzc).add($lianxiang).add('#google').add('#baidu').click(function(){
+$($appzzc).add($lianxiang).add('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').click(function(){
 ($appzzc).add($lianxiang).hide();
-$('#google').add('#baidu').show();
+$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').show();
 history.back();
 });
 
