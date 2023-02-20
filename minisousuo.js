@@ -72,26 +72,22 @@ if(searchtext.length>=1){
 bindapi();
 
 // 带起几个按钮 方便搜索
-$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').show();
-
-$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').css({
+$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').show().css({
 'position':'fixed',
-/* 'position':'sticky', */
-/* 'position':'relative', */
 'top':'340px',
-/* 'top':'50px', */
 'z-index':'1',
-/* 'margin':'0 10px', */
-/* 'padding':'0 20px', */
-/* 'left':'0',
-'right':'0', */
-/* 'bottom':'0', */
 'height':'1.8rem',
 'width':'3.9rem',
 'border-radius':'20px',
 'fontSize':'.75rem',
-'backgroundColor':'rgb(250,50,50,.5)',
+'color':'rgb(5,5,5)',
+'backgroundColor':'rgb(42,174,103,.5)',
 });
+if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').css({
+'color':'rgb(255,255,255)',
+'backgroundColor':'rgb(250,50,50,.5)',
+});}
 
 $('#google').css({
 'left':'9px',
@@ -100,16 +96,14 @@ $('#youtube').css({
 'right':'9px',
 });
 $('#baidu').css({
-'left':'76px',
+'left':'77px',
 });
 $('#zhihu').css({
-'left':'144px',
+'left':'145px',
 });
 $('#wiki').css({
-'left':'212px',
+'left':'213px',
 });
-
-
 
 return false;
 }
@@ -243,22 +237,17 @@ $txhezi.css({
 });
 }
 
-
 $('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').css({
 'position':'',
 'top':'',
 'z-index':'',
-/* 'margin':'0 10px', */
-/* 'padding':'0 20px', */
-/* 'left':'0',
-'right':'0', */
 'height':'',
 'width':'',
 'border-radius':'',
 'fontSize':'',
+'color':'',
 'backgroundColor':'',
 });
-
 
 // 有没有值
 if($searchinput.val()==''){
@@ -273,7 +262,9 @@ $txhezi.css({
 }
 $('#news').show();
 }
+
 $searchinput.blur();
+$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').show();
 },false);
 
 // 返回原处
