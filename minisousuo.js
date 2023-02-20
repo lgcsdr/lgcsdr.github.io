@@ -6,19 +6,26 @@ return false;
 }
 }
 
-var btns=document.getElementsByClassName('sousuo');
-for(var i in btns){
-btns[i].onclick=function(){
-window.open(this.getAttribute('sousuourl')+document.getElementById('searchinput').value);
+var sousuoss=document.getElementsByClassName('sousuo');
+for(var i in sousuoss){
+sousuoss[i].onclick=function(){
+s=''+document.getElementById('searchinput').value;
+window.open(
+this.getAttribute('sousuourl')+(s?''+this.getAttribute('s')+(s):'')
+);
 return false;
 }
 }
 
-var houzui=document.getElementById('nivod');
-houzui.onclick=function(){
-window.open(this.getAttribute('nivodurl')+
-document.getElementById('searchinput').value+('&catId=1'));
+var weibawb=document.getElementsByClassName('weiba');
+for(var w in weibawb){
+weibawb[w].onclick=function(){
+s=''+document.getElementById('searchinput').value;
+window.open(
+this.getAttribute('weibaurl')+(s?''+this.getAttribute('s')+(s):'')+(s?''+this.getAttribute('sq')+(''):'')
+);
 return false;
+}
 }
 
 // 联想
@@ -35,7 +42,7 @@ if (data.AS.FullResults != 0){
 var data=data.AS.Results[0].Suggests;
 str='';
 for (var i=0; i<data.length; i++){
-if(i<=7){
+if(i<=6){
 str+='<li>'+data[i].Txt+'</li>';
 }
 }
@@ -63,6 +70,33 @@ return false;
 searchtext=$(this).val();
 if(searchtext.length>=1){
 bindapi();
+
+// 带起几个按钮 方便搜索
+$('#google').add('#baidu').show();
+
+$('#google').add('#baidu').css({
+/* 'position':'fixed', */
+/* 'position':'sticky', */
+'position':'relative',
+/* 'top':'50px', */
+/* 'top':'50px', */
+'z-index':'1',
+/* 'margin':'0 10px', */
+/* 'padding':'0 20px', */
+/* 'left':'0',
+'right':'0', */
+/* 'bottom':'0', */
+'height':'1.8rem',
+'width':'3.9rem',
+'border-radius':'20px',
+'fontSize':'.75rem',
+'backgroundColor':'rgb(250,50,50,.5)',
+});
+
+$('#baidu').css({
+'right':'55px',
+});
+
 return false;
 }
 // 没值收起联想
@@ -70,6 +104,8 @@ if(searchtext.length>=''){
 setTimeout(function(){
 $lianxiang.hide();
 },100);
+
+$('#google').add('#baidu').hide();
 return false;
 }
 });
@@ -123,8 +159,7 @@ if ($('#tvlianjie').is(':hidden')){
 $('#tvzzc').show();
 $('#tvlianjie').show(200);
 }else{
-$('#tvzzc').hide();
-$('#tvlianjie').hide();
+$('#tvzzc').add('#tvlianjie').hide();
 }
 return false;
 });
@@ -172,7 +207,7 @@ $searchinput.click();
 // 返回键 popstate 返回原处
 window.addEventListener('popstate',function(){
 // 不延迟返回快了会带起联想在主页出现
-$appzzc.hide();
+($appzzc).add($lianxiang).hide();
 setTimeout(function(){
 $lianxiang.hide();
 },200);
@@ -193,6 +228,28 @@ $txhezi.css({
 'border':'1px solid rgb(63,66,70)',
 });
 }
+
+
+$('#google').add('#baidu').css({
+/* 'position':'fixed', */
+/* 'position':'sticky', */
+'position':'',
+/* 'top':'50px', */
+/* 'top':'50px', */
+'z-index':'',
+/* 'margin':'0 10px', */
+/* 'padding':'0 20px', */
+/* 'left':'0',
+'right':'0', */
+/* 'bottom':'0', */
+'height':'',
+'width':'',
+'border-radius':'',
+'fontSize':'',
+'backgroundColor':'',
+});
+
+
 // 有没有值
 if($searchinput.val()==''){
 $txhezi.css({
@@ -210,16 +267,16 @@ $searchinput.blur();
 },false);
 
 // 返回原处
-($appzzc).add($lianxiang).click(function(){
-$appzzc.hide();
-$lianxiang.hide();
+$($appzzc).add($lianxiang).add('#google').add('#baidu').click(function(){
+($appzzc).add($lianxiang).hide();
+$('#google').add('#baidu').show();
 history.back();
 });
 
 // 回车搜索时
 $searchinput.keypress(function(event){
 if (event.keyCode == 13){
-window.open('https://www.google.com/search?q='+$searchinput.val());
+/* window.open('https://www.google.com/search?q='+$searchinput.val()); */
 history.back();
 $searchinput.blur();
 }
@@ -239,8 +296,7 @@ $qingcu.hide();
 // 点清空按钮时
 $qingcu.click(function(){
 // 隐藏自己
-$qingcu.hide();
-$lianxiang.hide();
+($qingcu).add($lianxiang).hide();
 $searchinput.val('').focus();
 });
 

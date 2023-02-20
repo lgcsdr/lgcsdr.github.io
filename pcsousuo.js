@@ -1,26 +1,41 @@
 // 乱七八糟测试 input button
-var btnss=document.getElementsByClassName('zhilian');
-for(var z in btnss){
-btnss[z].onclick=function(){
+// 直连
+var zhilianzl=document.getElementsByClassName('zhilian');
+for(var z in zhilianzl){
+zhilianzl[z].onclick=function(){
 window.open(this.getAttribute('zhilianurl'));
 return false;
 }
 }
-
-var btns=document.getElementsByClassName('sousuo');
-for(var i in btns){
-btns[i].onclick=function(){
+// 搜索
+var sousuoss=document.getElementsByClassName('sousuo');
+for(var i in sousuoss){
+sousuoss[i].onclick=function(){
+s=''+document.getElementById('searchinput').value;
+window.open(
+this.getAttribute('sousuourl')+(s?''+this.getAttribute('s')+(s):'')
+);
+return false;
+}
+}
+/* var sousuoss=document.getElementsByClassName('sousuo');
+for(var i in sousuoss){
+sousuoss[i].onclick=function(){
 window.open(this.getAttribute('sousuourl')+document.getElementById('searchinput').value);
 return false;
 }
-}
+} */
 
-// 给某个搜索链接加后缀,特殊处理--泥巴
-var houzui=document.getElementById('nivod');
-houzui.onclick=function(){
-window.open(this.getAttribute('nivodurl')+
-document.getElementById('searchinput').value+('&catId=1'));
+// 给某个搜索加尾巴,特殊处理
+var weibawb=document.getElementsByClassName('weiba');
+for(var w in weibawb){
+weibawb[w].onclick=function(){
+s=''+document.getElementById('searchinput').value;
+window.open(
+this.getAttribute('weibaurl')+(s?''+this.getAttribute('s')+(s):'')+(s?''+this.getAttribute('sq')+(''):'')
+);
 return false;
+}
 }
 
 // 联想
@@ -141,8 +156,7 @@ if ($('#tvlianjie').is(':hidden')){
 $('#tvzzc').show();
 $('#tvlianjie').show(200);
 }else{
-$('#tvzzc').hide();
-$('#tvlianjie').hide();
+$('#tvzzc').add('#tvlianjie').hide();
 }
 return false;
 });
@@ -184,7 +198,7 @@ $txhezi.css({'border-radius':'24px',});
 // 回车搜索时 keydown keypress
 $searchinput.keypress(function(event){
 if (event.keyCode == 13){
-window.open('https://www.google.com/search?q='+$searchinput.val());
+/* window.open('https://www.google.com/search?q='+$searchinput.val()); */
 // 隐藏联想 输入框恢复原样
 $(window.document).click();
 // 失去焦点
