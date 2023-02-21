@@ -18,13 +18,6 @@ this.getAttribute('sousuourl')+(s?''+this.getAttribute('s')+(s):'')
 return false;
 }
 }
-/* var sousuoss=document.getElementsByClassName('sousuo');
-for(var i in sousuoss){
-sousuoss[i].onclick=function(){
-window.open(this.getAttribute('sousuourl')+document.getElementById('searchinput').value);
-return false;
-}
-} */
 
 // 给某个搜索加尾巴,特殊处理
 var weibawb=document.getElementsByClassName('weiba');
@@ -160,13 +153,6 @@ $('#fmzzc').add('#fmlianjie').hide();
 }
 return false;
 });
-/* // 点屏幕关闭遮罩层
-$('#syzzc').add('#sylianjie').click(function(e){
-e.stopPropagation();
-$('#syzzc').hide();
-$('#sylianjie').hide(200);
-return false;
-}); */
 
 // tv弹窗
 $('#tvweisi').click(function(e){
@@ -179,14 +165,6 @@ $('#tvzzc').add('#tvlianjie').hide();
 }
 return false;
 });
-/* // 点屏幕关闭遮罩层
-$('#tvzzc').add('#tvlianjie').click(function(e){
-e.stopPropagation();
-$('#tvzzc').hide();
-$("#tvlianjie").hide(200);
-return false;
-});
-*/
 
 // 点屏幕关闭遮罩层
 $('#fmzzc').add('#fmlianjie').add('#tvzzc').add('#tvlianjie').click(function(e){
@@ -196,25 +174,6 @@ $('#fmlianjie').add("#tvlianjie").hide(200);
 return false;
 });
 
-/* $('#syweisi').add('#tvweisi').click(function(e){
-// 阻止冒泡
-e.stopPropagation();
-if ($('#sylianjie').add('#tvlianjie').is(':hidden')){
-$('#syzzc').add('#tvzzc').show();
-$('#sylianjie').add('#tvlianjie').show(200);
-}else{
-$('#syzzc').add('#sylianjie').add('#tvzzc').add('#tvlianjie').hide();
-}
-return false;
-});
-// 点屏幕关闭遮罩层
-$('#syzzc').add('#sylianjie').add('#tvzzc').add('#tvlianjie').click(function(e){
-e.stopPropagation();
-$('#syzzc').add('#tvzzc').hide();
-$('#sylianjie').add("#tvlianjie").hide(200);
-return false;
-});
- */
 // 点搜索框时
 $searchinput.click(function(e){
 e.stopPropagation();
