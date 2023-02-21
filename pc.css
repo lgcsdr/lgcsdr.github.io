@@ -149,11 +149,11 @@ background-color:transparent;
 display:none;
 position:absolute;
 border-radius:9px;
-background-color:rgba(255,230,200,.8);
+background-color:rgba(255,230,200,.9);
 z-index:2;
 }
 .fmlianjies{
-background-color:rgba(42,174,103,.8);
+background-color:rgba(180,228,255,.9);
 }
 
 /* 弹性布局,输入框,清除按钮,新闻 */
@@ -330,10 +330,10 @@ color:rgb(255,255,255);
 .confucius details{color:rgb(215,216,219);}
 
 .fmlianjies{
-background-color:rgba(10,20,30,.8);
+background-color:rgba(50,60,70,.9);
 }
 .tvlianjies{
-background-color:rgba(150,50,50,.8);
+background-color:rgba(120,30,40,.9);
 }
 
 .txhezis{
