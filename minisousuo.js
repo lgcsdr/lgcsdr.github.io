@@ -161,6 +161,17 @@ $('input').val($('li.active').text());
 }
 });
 
+// fm弹窗
+$('#fmweisi').click(function(e){
+e.stopPropagation();
+if ($('#fmlianjie').is(':hidden')){
+$('#fmzzc').show();
+$('#fmlianjie').show(200);
+}else{
+$('#fmzzc').add('#fmlianjie').hide();
+}
+return false;
+});
 // tv弹窗
 $('#tvweisi').click(function(e){
 e.stopPropagation();
@@ -173,10 +184,10 @@ $('#tvzzc').add('#tvlianjie').hide();
 return false;
 });
 // 点屏幕关闭遮罩层
-$('#tvzzc').add('#tvlianjie').click(function(e){
+$('#fmzzc').add('#fmlianjie').add('#tvzzc').add('#tvlianjie').click(function(e){
 e.stopPropagation();
-$('#tvzzc').hide();
-$("#tvlianjie").hide(200);
+$('#fmzzc').add('#tvzzc').hide();
+$('#fmlianjie').add("#tvlianjie").hide(200);
 return false;
 });
 
