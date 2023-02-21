@@ -206,7 +206,7 @@ $searchinput.blur();
 }
 });
 
-// 清除按钮 监视内容变动
+// 清除按钮 监视 input
 $searchinput.on('input',function(){
 // 是否有值
 val=this.value.length;

@@ -66,10 +66,11 @@ $searchinput.on('click keyup',function(){
 if(event.keyCode == 38 || event.keyCode == 40 || event.keyCode == 32){
 return false;
 }
-// 输入框有值 开始 searchtext
+// 输入框有值 开始联想 searchtext
 searchtext=$(this).val();
 if(searchtext.length>=1){
 bindapi();
+$lianxiang.show();
 
 // 带起几个按钮 方便搜索
 $('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').show().css({
@@ -104,9 +105,9 @@ $('#zhihu').css({
 $('#wiki').css({
 'left':'213px',
 });
-
 return false;
 }
+
 // 没值收起联想
 if(searchtext.length>=''){
 setTimeout(function(){
@@ -183,7 +184,7 @@ return false;
 /* ($searchinput).add($qingcu).on('click focus',function(e){ */
 ($searchinput).add($qingcu).focus(function(e){
 e.stopPropagation();
-// 监视弹层 追加网址后缀 为了返回键能关闭遮罩层
+// 监视弹层 追加网址尾巴 为了返回键能关闭遮罩层
 if ($appzzc.css('display') === 'none'){
 window.history.pushState('null','','#sbfbu=1&pi=');
 $appzzc.css({'display':'block',});
@@ -195,7 +196,7 @@ $appzzc.css({'display':'none',});
 $('#news').hide();
 $appzzc.show();
 
-// 到顶部
+// 搜索框到顶部
 $txhezi.css({
 'position':'fixed',
 'top':'2px',
@@ -212,13 +213,25 @@ $txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
 $searchinput.click();
 });
 
-// 返回键 popstate 返回原处
+// 点返回键返回原处 popstate
 window.addEventListener('popstate',function(){
 // 不延迟返回快了会带起联想在主页出现
 ($appzzc).add($lianxiang).hide();
 setTimeout(function(){
 $lianxiang.hide();
 },200);
+
+$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').show().css({
+'position':'',
+'top':'',
+'z-index':'',
+'height':'',
+'width':'',
+'border-radius':'',
+'fontSize':'',
+'color':'',
+'backgroundColor':'',
+});
 
 $txhezi.css({
 'position':'',
@@ -232,22 +245,10 @@ $txhezi.css({
 if(window.matchMedia('(prefers-color-scheme:dark)').matches){
 $txhezi.css({
 'box-shadow':'0 0 90px rgb(255,255,255)',
-// 为了手机端浏览器开启黑暗模式后搜索框没有虚线
+// 为了手机端浏览器自带黑暗模式开启后搜索框没有了虚线
 'border':'1px solid rgb(63,66,70)',
 });
 }
-
-$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').css({
-'position':'',
-'top':'',
-'z-index':'',
-'height':'',
-'width':'',
-'border-radius':'',
-'fontSize':'',
-'color':'',
-'backgroundColor':'',
-});
 
 // 有没有值
 if($searchinput.val()==''){
@@ -264,28 +265,24 @@ $('#news').show();
 }
 
 $searchinput.blur();
-$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').show();
 },false);
 
-// 返回原处
+// 点击时 去掉网址尾巴返回原处 history
 $($appzzc).add($lianxiang).add('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').click(function(){
 ($appzzc).add($lianxiang).hide();
-$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').show();
 history.back();
 });
 
-// 回车搜索时
+// 回车搜索时 返回原处
 $searchinput.keypress(function(event){
 if (event.keyCode == 13){
-/* window.open('https://www.google.com/search?q='+$searchinput.val()); */
 history.back();
 $searchinput.blur();
 }
 });
 
-// 清除按钮 监视内容变动
+// 清除按钮 监视 input 是否有值
 $searchinput.on('input',function(){
-// 是否有值
 val=this.value.length;
 if(val>=1){
 $qingcu.show();
@@ -294,9 +291,8 @@ $qingcu.hide();
 }
 });
 
-// 点清空按钮时
+// 点清空按钮时 隐藏自己
 $qingcu.click(function(){
-// 隐藏自己
 ($qingcu).add($lianxiang).hide();
 $searchinput.val('').focus();
 });
