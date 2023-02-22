@@ -211,7 +211,7 @@ $appzzc.css({'display':'none',});
        e.preventDefault(); //取消一个事件的默认行为
        
        document.querySelector("#appzzc").style.overflow = "hidden";
-}, false)
+} )
  
 // 取消阻止页面滚动
 /* $("body").off("touchmove"); */
@@ -240,6 +240,43 @@ $txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
 
 $searchinput.click();
 });
+
+
+
+
+// 阻止页面滚动
+ $("appzzc").on("touchmove", function(e) { 
+       e.preventDefault(); //取消一个事件的默认行为
+       
+       document.querySelector("body").style.overflow = "hidden";
+       document.querySelector("#appzzc").style.overflow = "hidden";
+} )
+ 
+// 取消阻止页面滚动
+/* $("body").off("touchmove"); */
+
+
+
+// 向下滑动 1000px 出现顶部按钮
+window.onscroll=function(){scrollFunction()};
+
+function scrollFunction(){
+if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+/* document.getElementById("yincang").style.display="block"; */
+$searchinput.blur();
+}else{
+/* document.getElementById("yincang").style.display="none"; */
+$searchinput.val('').focus();
+}
+}
+
+
+
+
+
+
+
+
 
 // 点返回键返回原处 popstate
 window.addEventListener('popstate',function(){
