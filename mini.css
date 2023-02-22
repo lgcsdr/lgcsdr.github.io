@@ -16,17 +16,6 @@ background-color:rgb(251,252,255);
 /* border:1px solid rgb(0,0,0); */
 }
 
-
-body{
- 	height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-
-
 .kuandu{
 margin:auto;
 width:90%;
