@@ -195,9 +195,6 @@ return false;
 /* ($searchinput).add($qingcu).on('click focus',function(e){ */
 ($searchinput).add($qingcu).focus(function(e){
 e.stopPropagation();
-
-/* e.preventDefault(); */
-
 // 监视弹层 追加网址尾巴 为了返回键能关闭遮罩层
 if ($appzzc.css('display') === 'none'){
 window.history.pushState('null','','#sbfbu=1&pi=');
@@ -205,6 +202,21 @@ $appzzc.css({'display':'block',});
 }else{
 $appzzc.css({'display':'none',});
 }
+
+
+
+
+// 阻止页面滚动
+ $("body").on("touchmove", function(e) { 
+       e.preventDefault(); //取消一个事件的默认行为
+}, false)
+ 
+// 取消阻止页面滚动
+$("body").off("touchmove");
+
+
+
+
 
 // 隐藏新闻
 $('#news').hide();
