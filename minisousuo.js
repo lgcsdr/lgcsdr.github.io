@@ -207,12 +207,14 @@ $appzzc.css({'display':'none',});
 
 
 // 阻止页面滚动
- $("body").on("touchmove", function(e) { 
+ $("appzzc").on("touchmove", function(e) { 
        e.preventDefault(); //取消一个事件的默认行为
+       
+       document.querySelector("#appzzc").style.overflow = "hidden";
 }, false)
  
 // 取消阻止页面滚动
-$("body").off("touchmove");
+/* $("body").off("touchmove"); */
 
 
 
