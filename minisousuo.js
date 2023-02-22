@@ -196,7 +196,7 @@ return false;
 ($searchinput).add($qingcu).focus(function(e){
 e.stopPropagation();
 
-e.preventDefault();
+/* e.preventDefault(); */
 
 // 监视弹层 追加网址尾巴 为了返回键能关闭遮罩层
 if ($appzzc.css('display') === 'none'){
