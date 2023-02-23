@@ -171,9 +171,8 @@ fill:rgb(0,0,0);
 display:none;
 position:fixed;
 top:3.3rem;
-/* top:5.3rem; */
 width:90%;
-background-color:rgba(255,255,255,.5);
+background-color:rgb(251,252,255);
 /* background-color:transparent; */
 /* border:1px solid rgb(200,0,0); */
 }
@@ -223,8 +222,6 @@ display:flex;
 
 #appzzc{
 display:none;
-/* height:100%;
-width:100%; */
 position:fixed;
 top:0;
 left:0;
@@ -309,8 +306,7 @@ color:rgb(255,255,255);
 .svgtubiao{fill:rgb(255,255,255);}
 
 #lianxiang{
-background-color:rgba(32,33,36,.5);
-/* background-color:transparent; */
+background-color:rgba(32,33,36);
 }
 #lianxiang li.active{
 background-color:rgb(42,43,46);
