@@ -195,7 +195,13 @@ return false;
 /* ($searchinput).add($qingcu).on('click focus',function(e){ */
 ($searchinput).add($qingcu).focus(function(e){
 e.stopPropagation();
-
+// 监视弹层 追加网址尾巴 为了返回键能关闭遮罩层
+if ($appzzc.css('display') === 'none'){
+window.history.pushState('null','','#sbfbu=1&pi=');
+$appzzc.css({'display':'block',});
+}else{
+$appzzc.css({'display':'none',});
+}
 
 // 隐藏新闻
 $('#news').hide();
@@ -213,19 +219,7 @@ $txhezi.css({
 if(window.matchMedia('(prefers-color-scheme:dark)').matches){
 $txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
 
-
 $appzzc.show();
-
-// 监视弹层 追加网址尾巴 为了返回键能关闭遮罩层
-if ($appzzc.css('display') === 'none'){
-window.history.pushState('null','','#sbfbu=1&pi=');
-$appzzc.css({'display':'block',});
-}else{
-$appzzc.css({'display':'none',});
-}
-
-
-
 $searchinput.click();
 });
 
