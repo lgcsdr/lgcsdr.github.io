@@ -205,7 +205,7 @@ $appzzc.css({'display':'none',});
 
 // 隐藏新闻
 $('#news').hide();
-/* $appzzc.show(); */
+$appzzc.show();
 
 // 搜索框到顶部
 $txhezi.css({
