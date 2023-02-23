@@ -203,18 +203,9 @@ $appzzc.css({'display':'block',});
 $appzzc.css({'display':'none',});
 }
 
-
-
-$appzzc.css({
-'overflow':'hidden',
-document.querySelector("#appzzc").style.overflow = "hidden";
-});
-
-
-
 // 隐藏新闻
 $('#news').hide();
-$appzzc.show();
+/* $appzzc.show(); */
 
 // 搜索框到顶部
 $txhezi.css({
@@ -232,32 +223,6 @@ $txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
 
 $searchinput.click();
 });
-
-
-
-
-// 阻止页面滚动
-/*  $("appzzc").on("touchmove", function(e) { 
-       e.preventDefault(); //取消一个事件的默认行为
-       
-       document.querySelector("body").style.overflow = "hidden";
-       document.querySelector("#appzzc").style.overflow = "hidden";
-} )
-  */
-// 取消阻止页面滚动
-/* $("body").off("touchmove"); */
-
-
-
-
-
-
-
-
-
-
-
-
 
 // 点返回键返回原处 popstate
 window.addEventListener('popstate',function(){
