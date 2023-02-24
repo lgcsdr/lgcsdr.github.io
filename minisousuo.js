@@ -166,7 +166,7 @@ $('#fmweisi').click(function(e){
 e.stopPropagation();
 if ($('#fmlianjie').is(':hidden')){
 $('#fmzzc').show();
-$('#fmlianjie').show(200);
+$('#fmlianjie').show();
 }else{
 $('#fmzzc').add('#fmlianjie').hide();
 }
@@ -177,7 +177,7 @@ $('#tvweisi').click(function(e){
 e.stopPropagation();
 if ($('#tvlianjie').is(':hidden')){
 $('#tvzzc').show();
-$('#tvlianjie').show(200);
+$('#tvlianjie').show();
 }else{
 $('#tvzzc').add('#tvlianjie').hide();
 }
