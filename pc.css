@@ -9,7 +9,7 @@ outline:none;
 }
 body{
 margin:3% auto;
-font-family:KaiTi;
+/* font-family:KaiTi; */
 color:rgb(0,0,0);
 /* 美化可无 */
 background-image:url(https://open.saintic.com/api/bingPic);
@@ -48,6 +48,12 @@ width:100%; */
 .sengyinjz{
 display:inline-block;
 }
+
+.time,
+.confucius{
+font-family:KaiTi;
+}
+
 .time{
 display:inline-block;
 text-align:center;
