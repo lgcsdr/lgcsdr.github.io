@@ -179,7 +179,7 @@ width:100%;
 display:flex;
 height:3rem;
 padding:0 1rem;
-font-size:1.2rem;
+font-size:1.1rem;
 background-color:transparent;
 transition:box-shadow 1s;
 /* border:1px solid rgb(200,0,0); */
@@ -212,7 +212,7 @@ background-color:rgba(255,255,255,.9);
 #lianxiang li{
 padding:0 1rem;
 line-height:2.5rem;
-font-size:1.2rem;
+font-size:1rem;
 white-space:nowrap;
 overflow:auto;
 }
