@@ -102,6 +102,18 @@ return false;
 // 点联想li时
 $lianxiang.on('click','li',function(){
 $searchinput.val($(this).html());
+
+// 为了兼容讯飞中文
+$qingcu.show();
+$('#news').hide();
+$txhezi.css({
+'box-shadow':'0 0 90px rgb(7,193,96),0 0 3px rgb(200,200,200)',
+});
+if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+$txhezi.css({
+'box-shadow':'0 0 90px rgb(255,255,255),0 0 3px rgb(41,42,43)',
+});
+}
 });
 
 // 上下键
