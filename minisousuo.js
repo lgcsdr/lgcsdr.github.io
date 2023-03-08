@@ -73,7 +73,7 @@ bindapi();
 $lianxiang.show();
 
 // 带起几个按钮 方便搜索
-$('#google').add('#baidu').add('#zhihu').add('#wiki').add('#youtube').show().css({
+$('#google').add('#youtube').add('#baidu').add('#zhihu').add('#wiki').show().css({
 'position':'fixed',
 'top':'340px',
 'z-index':'1',
@@ -85,7 +85,7 @@ $('#google').add('#baidu').add('#zhihu').add('#wiki').add('#youtube').show().css
 'backgroundColor':'rgb(42,174,103,.5)',
 });
 if(window.matchMedia('(prefers-color-scheme:dark)').matches){
-$('#google').add('#baidu').add('#zhihu').add('#wiki').add('#youtube').css({
+$('#google').add('#youtube').add('#baidu').add('#zhihu').add('#wiki').css({
 'color':'rgb(255,255,255)',
 'backgroundColor':'rgb(250,50,50,.5)',
 });
@@ -94,16 +94,16 @@ $('#google').add('#baidu').add('#zhihu').add('#wiki').add('#youtube').css({
 $('#google').css({
 'left':'9px',
 });
-$('#baidu').css({
+$('#youtube').css({
 'left':'77px',
 });
-$('#zhihu').css({
+$('#baidu').css({
 'left':'145px',
 });
-$('#wiki').css({
+$('#zhihu').css({
 'left':'213px',
 });
-$('#youtube').css({
+$('#wiki').css({
 'left':'281px',
 });
 return false;
@@ -115,7 +115,7 @@ setTimeout(function(){
 $lianxiang.hide();
 },100);
 
-$('#google').add('#baidu').add('#zhihu').add('#wiki').add('#youtube').hide();
+$('#google').add('#youtube').add('#baidu').add('#zhihu').add('#wiki').hide();
 return false;
 }
 });
@@ -232,7 +232,7 @@ setTimeout(function(){
 $lianxiang.hide();
 },200);
 
-$('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').show().css({
+$('#google').add('#youtube').add('#baidu').add('#zhihu').add('#wiki').show().css({
 'position':'',
 'top':'',
 'z-index':'',
@@ -279,7 +279,7 @@ $searchinput.blur();
 },false);
 
 // 点击时 去掉网址尾巴返回原处 history
-$($appzzc).add($lianxiang).add('#youtube').add('#google').add('#baidu').add('#zhihu').add('#wiki').click(function(){
+$($appzzc).add($lianxiang).add('#google').add('#youtube').add('#baidu').add('#zhihu').add('#wiki').click(function(){
 ($appzzc).add($lianxiang).hide();
 history.back();
 });
