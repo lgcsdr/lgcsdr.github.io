@@ -19,8 +19,6 @@ background-color:rgb(251,252,255);
 /* border:1px solid rgb(0,0,0); */
 }
 /* background-position:center center;
-https://bing.ioliu.cn/v1/rand?&w=1920&h=1080
-https://bing.ioliu.cn/v1/rand/?w=1920&h=1200
 https://bing.ioliu.cn */
 
 .pcminibj{
@@ -313,8 +311,8 @@ right:4rem;
 }
 
 /* [miniweb=light] .baise, */
-[miniweb=light] .tqlianjie,
-[miniweb=light] .huangse{
+[miniweb=light] .huangse,
+[miniweb=light] .tqlianjie{
 margin-top:2rem;
 }
 

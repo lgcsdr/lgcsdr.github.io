@@ -272,8 +272,8 @@ font-weight:900;
 /* border:1px solid rgb(0,0,0); */
 }
 
-[miniweb=light] .tqlianjie,
-[miniweb=light] .tianqi{
+[miniweb=light] .tianqi,
+[miniweb=light] .tqlianjie{
 margin-top:2rem;
 }
 
