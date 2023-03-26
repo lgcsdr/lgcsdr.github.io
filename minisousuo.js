@@ -200,8 +200,25 @@ e.stopPropagation();
 if ($appzzc.css('display') === 'none'){
 window.history.pushState('null','','#sbfbu=1&pi=');
 $appzzc.css({'display':'block',});
+
+
+document.body.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+},
+{passive: false}
+);
+
 }else{
 $appzzc.css({'display':'none',});
+
+
+document.body.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+},
+{passive: true}
+);
+
+
 }
 
 // 隐藏新闻
@@ -224,11 +241,7 @@ $appzzc.show();
 $searchinput.click();
 
 
-document.body.addEventListener('touchmove', function(event) {
-  event.preventDefault();
-},
-{passive: false}
-);
+
 
 
 });
