@@ -235,14 +235,6 @@ $searchinput.focus();
 
 
 
-
-
-
-
-
-
-
-
 // 点返回键返回原处 popstate
 window.addEventListener('popstate',function(){
 // 不延迟返回快了会带起联想在主页出现
@@ -295,12 +287,17 @@ $('#news').show();
 }
 
 $searchinput.blur();
+
+{passive: true}
+
 },false);
 
 // 点击时 去掉网址尾巴返回原处 history
 $($appzzc).add($lianxiang).add('#google').add('#youtube').add('#baidu').add('#zhihu').add('#wiki').click(function(){
 ($appzzc).add($lianxiang).hide();
 history.back();
+
+{passive: true}
 });
 
 // 回车搜索时 返回原处
