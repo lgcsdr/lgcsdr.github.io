@@ -222,15 +222,20 @@ $txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
 
 $appzzc.show();
 $searchinput.click();
+
+document.body.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+},
+{passive: false}
+);
+
 });
 $searchinput.focus();
 
 
 
 
-document.body.addEventListener('touchmove', function(event) {
-  event.preventDefault();
-}, { passive: false });
+
 
 
 
