@@ -223,6 +223,20 @@ $txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
 $appzzc.show();
 $searchinput.click();
 });
+$searchinput.focus();
+
+
+
+
+document.body.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+}, { passive: false });
+
+
+
+
+
+
 
 // 点返回键返回原处 popstate
 window.addEventListener('popstate',function(){
