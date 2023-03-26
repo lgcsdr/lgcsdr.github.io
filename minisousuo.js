@@ -324,9 +324,19 @@ $searchinput.val('').focus();
 });
 
 
-$searchinput.val('2').focus();
+/* $searchinput.val('2').focus(); */
 
 /* $searchinput.click(); */
 /* $searchinput.focus(); */
 
+
+
+
 });
+
+
+window.onload = function() {
+  var inputBox = document.getElementById("searchinput");
+  inputBox.focus();
+  inputBox.scrollIntoView(true);
+};
