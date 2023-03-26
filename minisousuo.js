@@ -200,25 +200,8 @@ e.stopPropagation();
 if ($appzzc.css('display') === 'none'){
 window.history.pushState('null','','#sbfbu=1&pi=');
 $appzzc.css({'display':'block',});
-
-
-document.body.addEventListener('touchmove', function(event) {
-  event.preventDefault();
-},
-{passive: false}
-);
-
 }else{
 $appzzc.css({'display':'none',});
-
-
-document.body.addEventListener('touchmove', function(event) {
-  event.preventDefault();
-},
-{passive: true}
-);
-
-
 }
 
 // 隐藏新闻
@@ -245,8 +228,10 @@ $searchinput.click();
 
 
 });
-$searchinput.focus();
-
+/* $searchinput.focus(); */
+/* $searchinput.click(); */
+/* $txhezi.click(); */
+/* $txhezi.focus(); */
 
 
 
@@ -303,11 +288,6 @@ $('#news').show();
 
 $searchinput.blur();
 
-document.body.addEventListener('touchmove', function(event) {
-  event.preventDefault();
-},
-{passive: true }
-);
 
 },false);
 
@@ -316,11 +296,7 @@ $($appzzc).add($lianxiang).add('#google').add('#youtube').add('#baidu').add('#zh
 ($appzzc).add($lianxiang).hide();
 history.back();
 
-document.body.addEventListener('touchmove', function(event) {
-  event.preventDefault();
-},
-{passive: true }
-);
+
 });
 
 // 回车搜索时 返回原处
@@ -346,5 +322,11 @@ $qingcu.click(function(){
 ($qingcu).add($lianxiang).hide();
 $searchinput.val('').focus();
 });
+
+
+
+$searchinput.focus();
+$searchinput.click();
+
 
 });
