@@ -335,8 +335,18 @@ $searchinput.val('').focus();
 });
 
 
-window.onload = function() {
+/* window.onload = function() {
   var inputBox = document.getElementById("searchinput");
   inputBox.focus();
   inputBox.scrollIntoView(true);
 };
+ */
+/* window.onload = function() {
+  var inputBox = document.getElementById("searchinput");
+  inputBox.focus();
+  inputBox.click();
+}; */
+
+  window.onload = function() {
+    document.querySelector('input').focus();
+  }
