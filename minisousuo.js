@@ -324,9 +324,9 @@ $searchinput.val('').focus();
 });
 
 
+$searchinput.val('2').focus();
 
-$searchinput.focus();
-$searchinput.click();
-
+/* $searchinput.click(); */
+/* $searchinput.focus(); */
 
 });
