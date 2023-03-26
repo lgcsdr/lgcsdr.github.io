@@ -223,11 +223,13 @@ $txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
 $appzzc.show();
 $searchinput.click();
 
+
 document.body.addEventListener('touchmove', function(event) {
   event.preventDefault();
 },
 {passive: false}
 );
+
 
 });
 $searchinput.focus();
@@ -288,7 +290,11 @@ $('#news').show();
 
 $searchinput.blur();
 
-{passive: true}
+document.body.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+},
+{passive: true }
+);
 
 },false);
 
@@ -297,7 +303,11 @@ $($appzzc).add($lianxiang).add('#google').add('#youtube').add('#baidu').add('#zh
 ($appzzc).add($lianxiang).hide();
 history.back();
 
-{passive: true}
+document.body.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+},
+{passive: true }
+);
 });
 
 // 回车搜索时 返回原处
