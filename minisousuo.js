@@ -330,7 +330,7 @@ $searchinput.val('').focus();
 /* $searchinput.focus(); */
 
 
-
+($searchinput).trigger("click").focus();
 
 });
 
@@ -347,6 +347,6 @@ $searchinput.val('').focus();
   inputBox.click();
 }; */
 
-  window.onload = function() {
+/*   window.onload = function() {
     document.querySelector('input').focus();
-  }
+  } */
