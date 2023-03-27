@@ -222,11 +222,6 @@ $txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
 
 $appzzc.show();
 $searchinput.click();
-
-
-
-
-
 });
 /* $searchinput.focus(); */
 /* $searchinput.click(); */
@@ -287,16 +282,12 @@ $('#news').show();
 }
 
 $searchinput.blur();
-
-
 },false);
 
 // 点击时 去掉网址尾巴返回原处 history
 $($appzzc).add($lianxiang).add('#google').add('#youtube').add('#baidu').add('#zhihu').add('#wiki').click(function(){
 ($appzzc).add($lianxiang).hide();
 history.back();
-
-
 });
 
 // 回车搜索时 返回原处
@@ -323,30 +314,4 @@ $qingcu.click(function(){
 $searchinput.val('').focus();
 });
 
-
-/* $searchinput.val('2').focus(); */
-
-/* $searchinput.click(); */
-/* $searchinput.focus(); */
-
-
-($searchinput).trigger("click").focus();
-
 });
-
-
-/* window.onload = function() {
-  var inputBox = document.getElementById("searchinput");
-  inputBox.focus();
-  inputBox.scrollIntoView(true);
-};
- */
-/* window.onload = function() {
-  var inputBox = document.getElementById("searchinput");
-  inputBox.focus();
-  inputBox.click();
-}; */
-
-/*   window.onload = function() {
-    document.querySelector('input').focus();
-  } */
