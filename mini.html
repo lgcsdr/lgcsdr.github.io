@@ -39,15 +39,46 @@ window.location.href='index.html';
 <div>
 <button class="zhilian zgzs" zhilianurl="https://www.radio.cn/pc-portal/erji/radioStation.html">Radio</button>
 
-<!-- fm卫视弹窗 -->
+<!-- 直流弹窗 -->
+<button id="zlweisi">直流</button>
+<!-- 直流遮罩层,点击任何地方关闭直流弹窗 -->
+<div class="zlzzcs" id="zlzzc"></div>
+<!-- 直流链接 -->
+<div class="zllianjies" id="zllianjie">
+
+<div>
+<button class="zhilian" zhilianurl="https://ic6.101.ru:8000/stream/trust/mp3/128/263">大自然</button>
+<button class="zhilian" zhilianurl="https://uk2.streamingpulse.com/ssl/vcr1">威尼斯</button>
+<button class="zhilian" zhilianurl="https://mpc1.mediacp.eu/stream/globaltopcharts">贝多芬</button>
+<button class="zhilian" zhilianurl="https://mpc1.mediacp.eu/stream/allchamberwithpiano">协奏曲</button>
+</div>
+
+<div>
+<button class="zhilian" zhilianurl="https://mpc1.mediacp.eu/stream/solojazzguitar">吉他</button>
+<button class="zhilian" zhilianurl="https://25083.live.streamtheworld.com/KUSCMP128_SC">古典</button>
+<button class="zhilian" zhilianurl="https://ice1.streeemer.com:8020/radio.mp3">波束</button>
+<button class="zhilian" zhilianurl="https://ais-sa5.cdnstream1.com/b22139_128mp3">爵士</button>
+</div>
+
+<div>
+<button class="zhilian" zhilianurl="https://radiorecord.hostingradio.ru/rus96.aacp">混音</button>
+<button class="zhilian" zhilianurl="https://listen.soulradio.us/us">经典</button>
+<button class="zhilian" zhilianurl="https://gal.bitsyu.net/8102.php">古兰</button>
+
+<button class="zhilian" zhilianurl="http://ezfm.cri.cn">轻松</button>
+<button class="zhilian" zhilianurl="https://fm.douban.com">豆瓣</button>
+</div>
+
+</div>
+
+<!-- fm弹窗 -->
 <button id="fmweisi">调频</button>
-<!-- fm遮罩层,点击任何地方关闭tv弹窗 -->
+<!-- fm遮罩层,点击任何地方关闭fm弹窗 -->
 <div class="fmzzcs" id="fmzzc"></div>
-<!-- fm卫视链接 -->
+<!-- fm链接 -->
 <div class="fmlianjies" id="fmlianjie">
 
 <div>
-<button class="zhilian" zhilianurl="http://ezfm.cri.cn">轻松</button>
 <button class="zhilian" zhilianurl="https://m.youtube.com/results?search_query=老梁通史">梁宏达</button>
 <button class="zhilian" zhilianurl="https://m.youtube.com/@jackliu8858/playlists">听知识</button>
 <button class="zhilian" zhilianurl="https://m.youtube.com/@user-zk3yu9gk4y/playlists">相声社</button>
@@ -79,7 +110,6 @@ window.location.href='index.html';
 
 </div>
 
-<button class="zhilian" zhilianurl="https://fm.douban.com">豆瓣</button>
 <button class="sousuo" sousuourl="https://tonzhon.com" s="/search?keyword=">铜钟</button>
 <button class="sousuo" sousuourl="https://www.zz123.com" s="/search/?key=">种子</button>
 <button class="zhilian" zhilianurl="https://m.kuwo.cn/newh5app/search/">酷我</button>
@@ -87,7 +117,8 @@ window.location.href='index.html';
 <button class="sousuo" sousuourl="https://m.lrts.me" s="/search?keyword=">懒人</button>
 <button class="zhilian" zhilianurl="https://m.ximalaya.com">喜马</button>
 <button class="sousuo" sousuourl="https://m.qingting.fm" s="/search/all/">蜻蜓</button>
-<button class="zhilian" zhilianurl="https://m.vvvdj.com">dj</button>
+
+<button class="sousuo" sousuourl="https://m.vvvdj.com" s="/search/so?key=">dj</button>
 </div>
 
 <div class="sxjianju">
@@ -251,7 +282,7 @@ window.location.href='index.html';
 <button class="sousuo" sousuourl="https://main.m.taobao.com" s="/search/index.html?spm=1&pageType=1&q=">淘宝</button>
 <button class="sousuo" sousuourl="https://so.m.jd.com" s="/ware/search.action?keyword=">京东</button>
 <button class="sousuo" sousuourl="https://m.zol.com.cn" s="/article/search_all.php?kword=">中关村</button>
-<button class="zhilian gengduo" zhilianurl="gengduo.html">更多</button>
+<button class="zhilian gengduo" zhilianurl="gengduo.html">...</button>
 </div>
 
 <div class="sxjianju">
@@ -278,7 +309,7 @@ window.location.href='index.html';
 
 <footer>
 <div class="tqtxhz">
-<iframe class="tianqi" width="100%" height="15" scrolling="no" frameborder="0" allowtransparency="true" src="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=10&color=a0a06a&city=青岛"></iframe>
+<iframe class="tianqi" width="100%" height="15" scrolling="no" frameborder="0" allowtransparency="true" src="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=10&color=6f7176&city=青岛"></iframe>
 
 <span class="zhilian tqlianjie" zhilianurl="https://e.weather.com.cn/mweather/101200101.shtml"></span>
 </div>

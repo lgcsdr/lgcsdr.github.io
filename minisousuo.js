@@ -162,33 +162,44 @@ $('input').val($('li.active').text());
 }
 });
 
+// 直流弹窗
+$('#zlweisi').click(function(e){
+e.stopPropagation();
+if ($('#zllianjie').is(':hidden')){
+$('#zlzzc').add('#zllianjie').show();
+}else{
+$('#zlzzc').add('#zllianjie').hide();
+}
+return false;
+});
+
 // fm弹窗
 $('#fmweisi').click(function(e){
 e.stopPropagation();
 if ($('#fmlianjie').is(':hidden')){
-$('#fmzzc').show();
-$('#fmlianjie').show();
+$('#fmzzc').add('#fmlianjie').show();
 }else{
 $('#fmzzc').add('#fmlianjie').hide();
 }
 return false;
 });
+
 // tv弹窗
 $('#tvweisi').click(function(e){
 e.stopPropagation();
 if ($('#tvlianjie').is(':hidden')){
-$('#tvzzc').show();
-$('#tvlianjie').show();
+$('#tvzzc').add('#tvlianjie').show();
 }else{
 $('#tvzzc').add('#tvlianjie').hide();
 }
 return false;
 });
+
 // 点屏幕关闭遮罩层
-$('#fmzzc').add('#fmlianjie').add('#tvzzc').add('#tvlianjie').click(function(e){
+$('#zlzzc').add('#zllianjie').add('#fmzzc').add('#fmlianjie').add('#tvzzc').add('#tvlianjie').click(function(e){
 e.stopPropagation();
-$('#fmzzc').add('#tvzzc').hide();
-$('#fmlianjie').add("#tvlianjie").hide(200);
+$('#zlzzc').add('#fmzzc').add('#tvzzc').hide();
+$('#zllianjie').add('#fmlianjie').add("#tvlianjie").hide(200);
 return false;
 });
 
@@ -223,12 +234,6 @@ $txhezi.css({'border-bottom':'1px solid rgb(63,66,70)',});}
 $appzzc.show();
 $searchinput.click();
 });
-/* $searchinput.focus(); */
-/* $searchinput.click(); */
-/* $txhezi.click(); */
-/* $txhezi.focus(); */
-
-
 
 // 点返回键返回原处 popstate
 window.addEventListener('popstate',function(){

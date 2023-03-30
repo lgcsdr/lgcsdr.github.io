@@ -137,6 +137,7 @@ text-shadow:0 0 0 rgb(255,255,255);
 .googlefy{background-color:rgb(204,102,0);}
 
 /* tv遮罩层 */
+.zlzzcs,
 .fmzzcs,
 .tvzzcs{
 display:none;
@@ -148,16 +149,22 @@ bottom:0;
 z-index:2;
 background-color:transparent;
 }
+.zllianjies,
 .fmlianjies,
 .tvlianjies{
 display:none;
 position:absolute;
 border-radius:9px;
-background-color:rgba(255,230,200,.9);
 z-index:2;
 }
+.zllianjies{
+background-color:rgba(160,170,222,.9);
+}
 .fmlianjies{
-background-color:rgba(248,203,166,.9);
+background-color:rgba(200,200,160,.9);
+}
+.tvlianjies{
+background-color:rgba(255,230,200,.9);
 }
 
 /* 弹性布局,输入框,清除按钮,新闻 */
@@ -333,8 +340,11 @@ color:rgb(255,255,255);
 }
 .confucius details{color:rgb(215,216,219);}
 
+.zllianjies{
+background-color:rgba(61,72,90,.9);
+}
 .fmlianjies{
-background-color:rgba(51,52,60,.9);
+background-color:rgba(51,52,80,.9);
 }
 .tvlianjies{
 background-color:rgba(150,50,80,.9);
