@@ -17,7 +17,7 @@ return false;
 }
 }
 
-var weibawb=document.getElementsByClassName('weiba');
+/* var weibawb=document.getElementsByClassName('weiba');
 for(var w in weibawb){
 weibawb[w].onclick=function(){
 s=''+document.getElementById('searchinput').value;
@@ -26,7 +26,7 @@ this.getAttribute('weibaurl')+(s?''+this.getAttribute('s')+(s):'')+(s?''+this.ge
 );
 return false;
 }
-}
+} */
 
 // 联想
 $(function(){
