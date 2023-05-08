@@ -362,19 +362,19 @@ return false;
 }
 ShowTime();
 
-// 主题
-var colors=['light',''];
+// 净面
+var colors=['jingmian',''];
 var colorIndex = -3;
 var app=new(function(){
 document.querySelector('#shijian').addEventListener('click', onThemeClick);
 setTheme();
 function onThemeClick(){
-colorIndex=colorIndex < colors.length - 1 ? colorIndex + 1:0;
+colorIndex=colorIndex < colors.length - 0 ? colorIndex + 1:0;
 localStorage.shijian=colorIndex;
 setTheme();
 }
 function setTheme(){
-var shijian=localStorage.shijian > - 3 ? colors[localStorage.shijian]:'';
+var shijian=localStorage.shijian > - 1 ? colors[localStorage.shijian]:'';
 document.documentElement.setAttribute('miniweb', shijian);
 }
 return false;

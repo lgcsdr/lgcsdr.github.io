@@ -270,3 +270,16 @@ $txhezi.css({'border':'1px solid rgb(93,96,100)',});}
 });
 
 });
+
+// 天气 document.getElementById('tqjingmian').innerHTML=
+if(window.matchMedia('(prefers-color-scheme:light)').matches){
+document.getElementById('tqyubao').innerHTML='<iframe class="huangse" width="100%" height="15" scrolling="no" frameborder="0" allowtransparency="true" src="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=10&color=555&city=青岛"></iframe>'
+
+/* document.getElementById("tqyubao").src="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=10&color=555&city=青岛"; */
+}
+
+if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+document.getElementById('tqyubao').innerHTML='<iframe class="huangse" width="100%" height="15" scrolling="no" frameborder="0" allowtransparency="true" src="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=10&color=fff&city=青岛"></iframe>'
+
+/* document.getElementById("tqyubao").src="https://tianqiapi.com/api.php?style=tc&align=center&fontsize=10&color=fff&city=青岛"; */
+}

@@ -12,19 +12,19 @@ margin:3% auto;
 /* font-family:KaiTi; */
 color:rgb(0,0,0);
 /* 美化可无 */
-/* background-image:url(https://open.saintic.com/api/bingPic); */
+/* background-color:rgb(251,252,255); */
+background-image:url(GlacierGoats1.jpg);
+background-image:url(https://open.saintic.com/api/bingPic);
 /* background-image:url(https://www.guanyujiang.com/api/bingapi.php?rand=); */
-background-image:url(https://api.dujin.org/bing/1920.php);
+/* background-image:url(https://api.dujin.org/bing/1920.php); */
 /* background-image:url(https://www.yuanxiapi.cn/api/bing/); */
 background-repeat:no-repeat;
 background-attachment:fixed;
 background-position:center center;
-background-color:rgb(251,252,255);
 /* border:1px solid rgb(0,0,0); */
 }
-/*
-https://bing.ioliu.cn
-*/
+
+/* https://bing.ioliu.cn */
 
 .pcminibj{
 margin:auto;
@@ -265,9 +265,9 @@ white-space:nowrap;
 display:flex;
 }
 
-.tqtxhz{
-display:flex;
-}
+/* .tqtxhz{ */
+/* display:flex; */
+/* } */
 .tqlianjie{
 position:absolute;
 left:0;
@@ -281,19 +281,20 @@ width:13rem;
 display:none;
 } */
 
+
 /* 净面 */
 ::-webkit-search-cancel-button,
 ::-webkit-details-marker,
 ::-webkit-scrollbar,
-/* [miniweb=light] .sengyins, */
-/* [miniweb=light] .huangse, */
-[miniweb=light] .confucius,
-[miniweb=light] article{
+/* [miniweb=jingmian] .sengyins, */
+/* [miniweb=jingmian] .huangse, */
+[miniweb=jingmian] .confucius,
+[miniweb=jingmian] article{
 appearance:none;
 display:none;
 }
 
-html[miniweb=light] body{
+html[miniweb=jingmian] body{
 margin:12rem auto;
 color:rgb(255,255,255);
 /* background-image:radial-gradient(500px 150px,rgb(70,152,255,.3),rgb(251,252,255));
@@ -301,15 +302,15 @@ background-repeat:no-repeat!important;
 background-attachment:scroll; */
 }
 
-[miniweb=light] .pcminibj,
-[miniweb=light] .kuandu{
+[miniweb=jingmian] .pcminibj,
+[miniweb=jingmian] .kuandu{
 width:100%;
 background-color:transparent;
 /* border:1px solid rgb(0,0,0); */
 }
 
-[miniweb=light] .time,
-[miniweb=light] #sizong{
+[miniweb=jingmian] .time,
+[miniweb=jingmian] #sizong{
 width:100%;
 font-family:Arial Black;
 font-size:5rem;
@@ -317,16 +318,22 @@ font-weight:900;
 /* border:1px solid rgb(0,0,0); */
 }
 
-[miniweb=light] .syimg{
+[miniweb=jingmian] .syimg{
 top:9rem;
 right:4rem;
 }
 
-/* [miniweb=light] .baise, */
-[miniweb=light] .huangse,
-[miniweb=light] .tqlianjie{
+/* [miniweb=jingmian] .baise, */
+[miniweb=jingmian] .huangse,
+[miniweb=jingmian] .tqlianjie{
 margin-top:2rem;
+
+/* filter:invert(1) hue-rotate(180deg);
+font-size:5rem!important;
+font-weight:900;
+zoom:250%; */
 }
+
 
 @media (prefers-color-scheme:dark){
 body{
@@ -375,7 +382,7 @@ background-color:rgba(51,52,53,.9);
 background-color:rgb(71,72,73);
 }
 
-/* html[miniweb=light] body{
+/* html[miniweb=jingmian] body{
 background-color:rgb(32,33,36);
 background-image:radial-gradient(500px 150px,rgb(7,193,96,.2),rgb(32,33,36));
 } */
