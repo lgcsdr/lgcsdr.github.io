@@ -265,9 +265,6 @@ white-space:nowrap;
 display:flex;
 }
 
-/* .tqtxhz{ */
-/* display:flex; */
-/* } */
 .tqlianjie{
 position:absolute;
 left:0;
@@ -280,7 +277,6 @@ width:13rem;
 /* .baise{
 display:none;
 } */
-
 
 /* 净面 */
 ::-webkit-search-cancel-button,
@@ -333,7 +329,6 @@ font-size:5rem!important;
 font-weight:900;
 zoom:250%; */
 }
-
 
 @media (prefers-color-scheme:dark){
 body{
