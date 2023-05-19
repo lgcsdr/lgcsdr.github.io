@@ -4,12 +4,12 @@ var audio=null;
 function playpause(){
 if(audio==null){
 audio=new Audio('https://uk2.streamingpulse.com/ssl/vcr1');
-audio.pause();
+audio.pause(); /* 暂停 */
 }
 if(audio.paused){
-audio.play();
+audio.play(); /* 播放 */
 }else{
-audio.load();
+audio.load(); /* 重新加载 */
 }
 }
 
