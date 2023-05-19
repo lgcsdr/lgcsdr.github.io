@@ -57,6 +57,11 @@ a:hover{
 color:rgb(255,0,0);
 }
 
+@media (max-width:500px){
+body{
+background-color:rgb(238,243,252);
+}
+}
 @media (min-width:500px){
 .pcminbjgd{
 margin:0 auto;
