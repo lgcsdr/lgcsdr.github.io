@@ -187,11 +187,22 @@ $('#tvzzc').add('#tvlianjie').hide();
 return false;
 });
 
-// 点屏幕关闭遮罩层
-$('#zlzzc').add('#zllianjie').add('#fmzzc').add('#fmlianjie').add('#tvzzc').add('#tvlianjie').click(function(e){
+// gpt弹窗
+$('#gptai').click(function(e){
 e.stopPropagation();
-$('#zlzzc').add('#fmzzc').add('#tvzzc').hide();
-$('#zllianjie').add('#fmlianjie').add("#tvlianjie").hide(200);
+if ($('#gptlianjie').is(':hidden')){
+$('#gptzzc').add('#gptlianjie').show();
+}else{
+$('#gptzzc').add('#gptlianjie').hide();
+}
+return false;
+});
+
+// 点屏幕关闭遮罩层
+$('#zlzzc').add('#zllianjie').add('#fmzzc').add('#fmlianjie').add('#tvzzc').add('#tvlianjie').add('#gptzzc').add('#gptlianjie').click(function(e){
+e.stopPropagation();
+$('#zlzzc').add('#fmzzc').add('#tvzzc').add('#gptzzc').hide();
+$('#zllianjie').add('#fmlianjie').add("#tvlianjie").add('#gptlianjie').hide(200);
 return false;
 });
 

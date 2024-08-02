@@ -142,7 +142,8 @@ text-shadow:0 0 0 rgb(255,255,255);
 /* tv遮罩层 */
 .zlzzcs,
 .fmzzcs,
-.tvzzcs{
+.tvzzcs,
+.gptzzcs{
 display:none;
 position:fixed;
 top:0;
@@ -154,7 +155,8 @@ background-color:transparent;
 }
 .zllianjies,
 .fmlianjies,
-.tvlianjies{
+.tvlianjies,
+.gptlianjies{
 display:none;
 position:absolute;
 border-radius:9px;
@@ -168,6 +170,9 @@ background-color:rgba(200,200,160,.9);
 }
 .tvlianjies{
 background-color:rgba(255,230,200,.9);
+}
+.gptlianjies{
+background-color:rgba(200,130,110,.9);
 }
 
 /* 弹性布局,输入框,清除按钮,新闻 */
