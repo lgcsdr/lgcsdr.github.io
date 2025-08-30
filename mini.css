@@ -125,6 +125,9 @@ background-color:transparent;
 }
 .zllianjies,
 .fmlianjies,
+
+.djlianjies,
+
 .tvlianjies,
 .gptlianjies{
 display:none;
@@ -138,6 +141,11 @@ background-color:rgba(160,170,222,.9);
 .fmlianjies{
 background-color:rgba(200,200,160,.9);
 }
+
+.djlianjies{
+background-color:rgba(200,100,160,.9);
+}
+
 .tvlianjies{
 background-color:rgba(255,230,200,.9);
 }
@@ -306,6 +314,11 @@ background-color:rgba(61,72,90,.9);
 .fmlianjies{
 background-color:rgba(51,52,80,.9);
 }
+
+.djlianjies{
+background-color:rgba(77,45,60,.9);
+}
+
 .tvlianjies{
 background-color:rgba(150,50,80,.9);
 }
