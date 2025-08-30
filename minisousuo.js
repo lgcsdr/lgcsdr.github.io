@@ -184,9 +184,7 @@ $('#fmzzc').add('#fmlianjie').hide();
 return false;
 });
 
-
 // dj弹窗
-
 $('#djyinyue').click(function(e){
 e.stopPropagation();
 if ($('#djtlianjie').is(':hidden')){
@@ -196,10 +194,6 @@ $('#djzzc').add('#djtlianjie').hide();
 }
 return false;
 });
-
-
-
-
 
 // tv弹窗
 $('#tvweisi').click(function(e){
