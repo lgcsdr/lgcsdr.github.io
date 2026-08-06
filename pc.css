@@ -332,11 +332,11 @@ right:4rem;
 /* [miniweb=jingmian] .baise, */
 [miniweb=jingmian] .huanse,
 [miniweb=jingmian] .tqlianjie{
-margin-top:2rem;
+margin-top:1rem;
 /* filter:invert(1) hue-rotate(180deg); */
 /* font-size:5rem!important; */
 /* font-weight:900!important; */
-zoom:130%;
+zoom:130%!important;
 }
 
 @media (prefers-color-scheme:dark){
