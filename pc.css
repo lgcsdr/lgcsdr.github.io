@@ -142,9 +142,7 @@ text-shadow:0 0 0 rgb(255,255,255);
 /* tv遮罩层 */
 .zlzzcs,
 .fmzzcs,
-
 .djzzcs,
-
 .tvzzcs,
 .gptzzcs{
 display:none;
@@ -158,9 +156,7 @@ background-color:transparent;
 }
 .zllianjies,
 .fmlianjies,
-
 .djlianjies,
-
 .tvlianjies,
 .gptlianjies{
 display:none;
@@ -297,7 +293,7 @@ display:none;
 ::-webkit-details-marker,
 ::-webkit-scrollbar,
 /* [miniweb=jingmian] .sengyins, */
-/* [miniweb=jingmian] .huangse, */
+/* [miniweb=jingmian] .huanse, */
 [miniweb=jingmian] .confucius,
 [miniweb=jingmian] article{
 appearance:none;
@@ -334,14 +330,13 @@ right:4rem;
 }
 
 /* [miniweb=jingmian] .baise, */
-[miniweb=jingmian] .huangse,
+[miniweb=jingmian] .huanse,
 [miniweb=jingmian] .tqlianjie{
 margin-top:2rem;
-
-/* filter:invert(1) hue-rotate(180deg);
-font-size:5rem!important;
-font-weight:900;
-zoom:250%; */
+/* filter:invert(1) hue-rotate(180deg); */
+/* font-size:5rem!important; */
+/* font-weight:900!important; */
+zoom:130%;
 }
 
 @media (prefers-color-scheme:dark){
