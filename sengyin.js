@@ -3,7 +3,8 @@ syin.addEventListener('click', playpause, false);
 var audio=null;
 function playpause(){
 if(audio==null){
-audio=new Audio('https://uk2.streamingpulse.com/ssl/vcr1');
+/* audio=new Audio('https://uk2.streamingpulse.com/ssl/vcr1'); */
+audio=new Audio('https://m.lrts.me/player?index=0&entityType=3&sonId=570300000001&id=5703&pageNum=1');
 audio.pause(); /* 暂停 */
 }
 if(audio.paused){
